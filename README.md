@@ -28,7 +28,7 @@ In this phase, we will perform the following tasks:
    - S5: Document the types and amount of changes made to D to obtain D'.
 
 
-### Phase II
+## Phase II
 
 In Phase II, we will perform the actual data cleaning process according to the plan developed in Phase I. The cleaned dataset will be validated and evaluated for improvements in addressing the defined use case.
 

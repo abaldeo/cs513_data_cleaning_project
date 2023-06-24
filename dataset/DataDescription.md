@@ -1,8 +1,8 @@
 # Chicago Food Inspection Dataset
 
-##About Dataset
+## About Dataset
 
-##Content
+## Content
 The below description of this dataset is directly from the Chicago Department of Public Health's Food Protection Program:
  
 This information is derived from inspections of restaurants and other food
@@ -29,7 +29,7 @@ The Chicago Food Inspection dataset is derived from inspections performed by sta
 - Violations: Lists the distinct violations found during the inspection.
 
 
-##Context
+## Context
 This is a dataset hosted by the City of Chicago. The city has an open data platform found here and they update their information according the amount of data that is brought in. Explore the City of Chicago using Kaggle and all of the data sources available through the City of Chicago organization page!
 
 Note about 7/1/2018 change to food inspection procedures that affects the data in this dataset: http://bit.ly/2yWd2JB
@@ -37,7 +37,7 @@ Note about 7/1/2018 change to food inspection procedures that affects the data i
 *Disclaimer*: Attempts have been made to minimize any and all duplicate inspection reports. However, the dataset may still contain such duplicates and the appropriate precautions should be exercised when viewing or analyzing these data. The result of the inspections (pass, pass with conditions or fail) as well as the violations noted are based on the findings identified and reported by the inspector at the time of the inspection, and may not reflect the findings noted at other times. For more information about Food Inspections, go to https://www.cityofchicago.org/city/en/depts/cdph/provdrs/healthy_restaurants/svcs/food-protection-services.html.
 
 
-##Acknowledgements
+## Acknowledgements
 This dataset is maintained using Socrata's API and Kaggle's API. Socrata has assisted countless organizations with hosting their open data and has been an integral part of the process of bringing more data to the public.
 
 Data source: City of Chicago Data Portal
