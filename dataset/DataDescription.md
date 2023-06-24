@@ -1,7 +1,5 @@
 # Chicago Food Inspection Dataset
 
-## About Dataset
-
 ## Content
 The below description of this dataset is directly from the Chicago Department of Public Health's Food Protection Program:
  
