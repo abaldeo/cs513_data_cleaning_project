@@ -1,7 +1,7 @@
 ﻿CREATE TABLE `EstablishmentLocation` (
     `id` int AUTO_INCREMENT NOT NULL,
     `address` varchar(50) NOT NULL,
-    `city` char(7) NOT NULL,
+`city` varchar(50) NOT NULL,
     `state` char(2) NOT NULL,
     `zip` int NOT NULL,
     `latitude` double precision NOT NULL,
@@ -12,8 +12,8 @@
 
 CREATE TABLE `FoodEstablishment` (
     `license_number` int NOT NULL,
-    `dba_name` varchar(50) NOT NULL,
-    `aka_name` varchar(50) NOT NULL,
+`dba_name` varchar(100) NOT NULL,
+`aka_name` varchar(100) NOT NULL,
     `facilityType` varchar(50) NOT NULL,
     `location_id` int NOT NULL,
     PRIMARY KEY (`license_number`)
@@ -22,7 +22,7 @@ CREATE TABLE `FoodEstablishment` (
 CREATE TABLE `FoodInspection` (
     `inspection_id` int NOT NULL,
     `risk` varchar(15) NOT NULL,
-    `inspection_type` varchar(25) NOT NULL,
+`inspection_type` varchar(50) NOT NULL,
     `inspection_date` date NOT NULL,
     `license_number` int NOT NULL,
     PRIMARY KEY (`inspection_id`)
