@@ -9,7 +9,7 @@ staff from the Chicago Department of Public Health’s Food Protection Program. 
 done using a standardized procedure. The results of the inspection are inputted into a database,
 then reviewed and approved by a State of Illinois Licensed Environmental Health Practitioner
 (LEHP). A subset of data elements are extracted from this database and downloaded into this
-data portal. These elements are:
+data portal.  
 
 ## Dataset Description
 
