@@ -1,16 +1,7 @@
-﻿CREATE TABLE "FoodEstablishment" (
-    "license_number" int NOT NULL,
-"dba_name" varchar(100) NOT NULL,
-"aka_name" varchar(100) NOT NULL,
-    "facilityType" varchar(50) NOT NULL,
-    "location_id" int NOT NULL,
-    CONSTRAINT "pk_FoodEstablishment" PRIMARY KEY ("license_number")
-);
-
-CREATE TABLE "EstablishmentLocation" (
+﻿CREATE TABLE "EstablishmentLocation" (
     "id" SERIAL NOT NULL,
     "address" varchar(50) NOT NULL,
-"city" varchar(50) NOT NULL,
+    "city" varchar(50)   NOT NULL,
     "state" char(2) NOT NULL,
     "zip" int NOT NULL,
     "latitude" double precision NOT NULL,
@@ -19,25 +10,36 @@ CREATE TABLE "EstablishmentLocation" (
     CONSTRAINT "pk_EstablishmentLocation" PRIMARY KEY ("id")
 );
 
+CREATE TABLE "FoodEstablishment" (
+    "id" SERIAL NOT NULL,
+    "license_number" int NOT NULL,
+    "dba_name" varchar(100) NOT NULL,
+    "aka_name" varchar(100) NOT NULL,
+    "facilityType" varchar(50) NOT NULL,
+    "location_id" int NOT NULL,
+    CONSTRAINT "pk_FoodEstablishment" PRIMARY KEY ("id")
+);
+
 CREATE TABLE "FoodInspection" (
     "inspection_id" int NOT NULL,
     "risk" varchar(15) NOT NULL,
-"inspection_type" varchar(50) NOT NULL,
+    "inspection_type" varchar(50) NOT NULL,
     "inspection_date" date NOT NULL,
-    "license_number" int NOT NULL,
+    "establishment_id" int NOT NULL,
     CONSTRAINT "pk_FoodInspection" PRIMARY KEY ("inspection_id")
-);
-
-CREATE TABLE "InspectionViolation" (
-    "inspection_id" int NOT NULL,
-    "violation_code" int NOT NULL,
-    CONSTRAINT "pk_InspectionViolation" PRIMARY KEY ("inspection_id", "violation_code")
 );
 
 CREATE TABLE "ViolationCode" (
     "code" int NOT NULL,
     "description" text NOT NULL,
     CONSTRAINT "pk_ViolationCode" PRIMARY KEY ("code")
+);
+
+CREATE TABLE "InspectionViolation" (
+    "inspection_id" int NOT NULL,
+    "violation_code" int NOT NULL,
+    "comment" text NOT NULL,
+    CONSTRAINT "pk_InspectionViolation" PRIMARY KEY ("inspection_id", "violation_code")
 );
 
 ALTER TABLE
@@ -48,7 +50,7 @@ ADD
 ALTER TABLE
     "FoodInspection"
 ADD
-    CONSTRAINT "fk_FoodInspection_license_number" FOREIGN KEY("license_number") REFERENCES "FoodEstablishment" ("license_number");
+    CONSTRAINT "fk_FoodInspection_license_number" FOREIGN KEY("establishment_id") REFERENCES "FoodEstablishment" ("id");
 
 ALTER TABLE
     "InspectionViolation"
