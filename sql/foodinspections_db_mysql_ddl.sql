@@ -14,15 +14,18 @@ CREATE TABLE FoodEstablishment (
   license_number int,
   dba_name varchar(100) NOT NULL,
   aka_name varchar(100),
-  facilityType varchar(50),
+  facility_type varchar(50),
   location_id int REFERENCES EstablishmentLocation(id)
 );
 
 CREATE TABLE FoodInspection (
   inspection_id int PRIMARY KEY,
   risk varchar(15),
+  risk_level int,
+  risk_category varchar(10),
   inspection_type varchar(50),
   inspection_date date,
+  results varchar(20),
   establishment_id int REFERENCES FoodEstablishment(id)
 );
 
