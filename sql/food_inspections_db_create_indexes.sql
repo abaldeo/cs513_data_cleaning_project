@@ -1,8 +1,14 @@
 CREATE INDEX idx_address
 ON EstablishmentLocation(address, city, state, zip);
 
+CREATE INDEX idx_foodestablishment__location_id
+ON FoodEstablishment (location_id);
+
 CREATE INDEX idx_facility_type
 ON FoodEstablishment(facility_type);
+
+CREATE INDEX idx_foodinspection__establishment_id
+ON FoodInspection (establishment_id);
 
 CREATE INDEX idx_risk_category
 ON FoodInspection(risk_category);
