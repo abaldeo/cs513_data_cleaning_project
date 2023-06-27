@@ -12,18 +12,18 @@
 
 CREATE TABLE "FoodEstablishment" (
     "id" SERIAL NOT NULL,
-    "license_number" int NOT NULL,
+    "license_number" int  NULL,
     "dba_name" varchar(100) NOT NULL,
-    "aka_name" varchar(100) NOT NULL,
-    "facilityType" varchar(50) NOT NULL,
+    "aka_name" varchar(100)  NULL, --should be made NOT NULL,
+    "facilityType" varchar(50) NULL,
     "location_id" int NOT NULL,
     CONSTRAINT "pk_FoodEstablishment" PRIMARY KEY ("id")
 );
 
 CREATE TABLE "FoodInspection" (
     "inspection_id" int NOT NULL,
-    "risk" varchar(15) NOT NULL,
-    "inspection_type" varchar(50) NOT NULL,
+    "risk" varchar(15)  NULL, --should be made NOT NULL
+    "inspection_type" varchar(50)  NULL,
     "inspection_date" date NOT NULL,
     "establishment_id" int NOT NULL,
     CONSTRAINT "pk_FoodInspection" PRIMARY KEY ("inspection_id")

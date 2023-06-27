@@ -1,6 +1,6 @@
 CREATE TABLE EstablishmentLocation (
   id SERIAL PRIMARY KEY,
-  address varchar(50),
+  address varchar(50) NOT NULL,
   city varchar(50),
   state char(2),
   zip int,
@@ -15,7 +15,7 @@ ON TABLE EstablishmentLocation IS 'Stores location information for food establis
 CREATE TABLE FoodEstablishment (
   id SERIAL PRIMARY KEY,
   license_number int,
-  dba_name varchar(100),
+  dba_name varchar(100) NOT NULL,
   aka_name varchar(100),
   facilityType varchar(50),
   location_id int REFERENCES EstablishmentLocation(id)
