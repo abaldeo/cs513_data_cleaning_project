@@ -2,10 +2,10 @@ CREATE TABLE `establishmentlocation` (
   `id` INTEGER UNSIGNED PRIMARY KEY AUTO_INCREMENT,
   `address` VARCHAR(50) NOT NULL,
   `city` VARCHAR(50),
-  `state` VARCHAR(2),
+  `state` CHAR(2),
   `zip` CHAR(5),
-  `latitude` DECIMAL(9, 6),
-  `longitude` DECIMAL(9, 6),
+  `latitude` DECIMAL(10, 8),
+  `longitude` DECIMAL(10, 8),
   `location` POINT
 );
 
@@ -31,7 +31,7 @@ CREATE TABLE `foodinspection` (
   `risk_category` VARCHAR(10),
   `inspection_type` VARCHAR(50),
   `inspection_date` DATE,
-  `results` VARCHAR(20),
+  `results` VARCHAR(20) NOT NULL,
   `establishment_id` INTEGER UNSIGNED NOT NULL
 );
 
@@ -49,7 +49,7 @@ ALTER TABLE `foodinspection` ADD CONSTRAINT `fk_foodinspection__establishment_id
 
 CREATE TABLE `violationcode` (
   `code` TINYINT UNSIGNED PRIMARY KEY,
-  `description` TEXT
+  `description` TEXT NOT NULL
 );
 
 CREATE TABLE `inspectionviolation` (

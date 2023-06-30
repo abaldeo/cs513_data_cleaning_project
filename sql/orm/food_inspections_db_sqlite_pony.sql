@@ -2,10 +2,10 @@ CREATE TABLE "EstablishmentLocation" (
   "id" INTEGER PRIMARY KEY AUTOINCREMENT,
   "address" VARCHAR(50) NOT NULL,
   "city" VARCHAR(50),
-  "state" VARCHAR(2),
-  `zip` CHAR(5),
-  "latitude" DECIMAL(9, 6),
-  "longitude" DECIMAL(9, 6),
+  "state" CHAR(2),
+  "zip" CHAR(5),
+  "latitude" DECIMAL(10, 8),
+  "longitude" DECIMAL(10, 8),
   "location" POINT
 );
 
@@ -31,7 +31,7 @@ CREATE TABLE "FoodInspection" (
   "risk_category" VARCHAR(10),
   "inspection_type" VARCHAR(50),
   "inspection_date" DATE,
-  "results" VARCHAR(20),
+  "results" VARCHAR(20) NOT NULL,
   "establishment_id" INTEGER NOT NULL REFERENCES "FoodEstablishment" ("id")
 );
 
@@ -52,7 +52,7 @@ ON "FoodInspection" ("risk_category");
 
 CREATE TABLE "ViolationCode" (
   "code" TINYINT UNSIGNED NOT NULL PRIMARY KEY,
-  "description" TEXT
+  "description" TEXT NOT NULL
 );
 
 CREATE TABLE "InspectionViolation" (
