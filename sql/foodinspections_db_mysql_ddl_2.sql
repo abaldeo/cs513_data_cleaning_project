@@ -41,7 +41,7 @@ CREATE TABLE `ViolationCode` (
 CREATE TABLE `InspectionViolation` (
     `inspection_id` int NOT NULL,
     `violation_code` int NOT NULL,
-    `comment` text NULL,
+    `comment` text NOT NULL,
     PRIMARY KEY (`inspection_id`, `violation_code`)
 );
 

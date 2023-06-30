@@ -1,5 +1,5 @@
 CREATE TABLE EstablishmentLocation (
-  id SERIAL PRIMARY KEY,
+  id int PRIMARY KEY AUTO_INCREMENT,
   address varchar(50) NOT NULL,
   city varchar(50),
   state char(2),
@@ -10,7 +10,7 @@ CREATE TABLE EstablishmentLocation (
 );
 
 CREATE TABLE FoodEstablishment (
-  id SERIAL PRIMARY KEY,
+  id int PRIMARY KEY AUTO_INCREMENT,
   license_number int,
   dba_name varchar(100) NOT NULL,
   aka_name varchar(100),
@@ -25,11 +25,11 @@ CREATE TABLE FoodInspection (
   risk_category varchar(10),
   inspection_type varchar(50),
   inspection_date date,
-  results varchar(20),
+  results varchar(20) NOT NULL,
   establishment_id int REFERENCES FoodEstablishment(id)
 );
 
-CREATE TABLE ViolationCode (code int PRIMARY KEY, description text);
+CREATE TABLE ViolationCode (code int PRIMARY KEY, description text NOT NULL);
 
 CREATE TABLE InspectionViolation (
   inspection_id int REFERENCES FoodInspection(inspection_id),

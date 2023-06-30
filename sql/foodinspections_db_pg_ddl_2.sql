@@ -16,7 +16,7 @@ CREATE TABLE "FoodEstablishment" (
     "dba_name" varchar(100) NOT NULL,
     "aka_name" varchar(100)  NULL, --should be made NOT NULL,
     "facility_type" varchar(50) NULL,
-    "location_id" int NOT NULL,
+    "location_id" bigint NOT NULL,
     CONSTRAINT "pk_FoodEstablishment" PRIMARY KEY ("id")
 );
 
@@ -28,7 +28,7 @@ CREATE TABLE "FoodInspection" (
     "inspection_type" varchar(50)  NULL,
     "inspection_date" date NOT NULL,
     "results" varchar(20) NOT NULL,
-    "establishment_id" int NOT NULL,
+    "establishment_id" bigint NOT NULL,
     CONSTRAINT "pk_FoodInspection" PRIMARY KEY ("inspection_id")
 );
 

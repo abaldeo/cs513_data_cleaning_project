@@ -18,7 +18,7 @@ CREATE TABLE FoodEstablishment (
   dba_name varchar(100) NOT NULL,
   aka_name varchar(100),
   facility_type varchar(50),
-  location_id int REFERENCES EstablishmentLocation(id)
+  location_id bigint REFERENCES EstablishmentLocation(id)
 );
 
 COMMENT
@@ -30,15 +30,15 @@ CREATE TABLE FoodInspection (
   risk_level int,
   risk_category varchar(10),
   inspection_type varchar(50),
-  inspection_date date,
-  results varchar(20),
-  establishment_id int REFERENCES FoodEstablishment(id)
+  inspection_date date NOT NULL,
+  results varchar(20) NOT NULL,
+  establishment_id bigint REFERENCES FoodEstablishment(id)
 );
 
 COMMENT
 ON TABLE FoodInspection IS 'Stores food inspection information.';
 
-CREATE TABLE ViolationCode (code int PRIMARY KEY, description text);
+CREATE TABLE ViolationCode (code int PRIMARY KEY, description text NOT NULL);
 
 COMMENT
 ON TABLE ViolationCode IS 'Stores violation codes and their descriptions.';
