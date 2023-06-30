@@ -5,7 +5,7 @@ CREATE TABLE "establishmentlocation" (
   "state" CHAR(2),
   "zip" CHAR(5),
   "latitude" DECIMAL(10, 8),
-  "longitude" DECIMAL(10, 8),
+  "longitude" DECIMAL(11, 8),
   "location" POINT
 );
 

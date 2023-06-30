@@ -22,7 +22,7 @@ class EstablishmentLocation(db.Entity):
     state = Optional(str, 2, nullable=True)
     zip = Optional(str, 5, nullable=True)
     latitude = Optional(Decimal, precision=10, scale=8)
-    longitude = Optional(Decimal, precision=10, scale=8)
+    longitude = Optional(Decimal, precision=11, scale=8)
     location = Optional(str, nullable=True, sql_type='point')
     food_establishments = Optional(FoodEstablishment)
 
