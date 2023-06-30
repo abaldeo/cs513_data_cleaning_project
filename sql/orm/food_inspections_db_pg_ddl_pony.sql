@@ -35,7 +35,7 @@ CREATE TABLE "foodinspection" (
   "risk_level" SMALLINT,
   "risk_category" VARCHAR(10),
   "inspection_type" VARCHAR(50),
-  "inspection_date" DATE,
+  "inspection_date" DATE NOT NULL,
   "results" VARCHAR(20) NOT NULL,
   "establishment_id" BIGINT NOT NULL
 );
