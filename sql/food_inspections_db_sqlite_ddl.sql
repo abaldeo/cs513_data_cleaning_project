@@ -6,7 +6,8 @@ CREATE TABLE EstablishmentLocation (
     zip CHAR(5),
     latitude DECIMAL(10, 8),
     longitude DECIMAL(10, 8),
-    location POINT
+    location POINT,
+    UNIQUE (address, city, state, zip)
 );
 
 CREATE TABLE FoodEstablishment (
@@ -15,7 +16,8 @@ CREATE TABLE FoodEstablishment (
     dba_name VARCHAR(100) NOT NULL,
     aka_name VARCHAR(100),
     facility_type VARCHAR(50),
-    location_id INTEGER
+    location_id INTEGER,
+    UNIQUE (license_number, dba_name, aka_name, location_id)
 );
 
 CREATE TABLE FoodInspection (
