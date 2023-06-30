@@ -3,7 +3,7 @@
     `address` varchar(50) NOT NULL,
     `city` varchar(50) NOT NULL,
     `state` char(2) NOT NULL,
-    `zip` int NOT NULL,
+    `zip` CHAR(5) NOT NULL,
     `latitude` double precision NOT NULL,
     `longitude` double precision NOT NULL,
     `location` point NOT NULL,

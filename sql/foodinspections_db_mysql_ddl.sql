@@ -3,7 +3,7 @@ CREATE TABLE EstablishmentLocation (
   address varchar(50) NOT NULL,
   city varchar(50),
   state char(2),
-  zip int,
+  zip char(5),
   latitude double precision,
   longitude double precision,
   location point
