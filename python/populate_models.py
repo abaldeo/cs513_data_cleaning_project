@@ -1,5 +1,6 @@
 from models import *
 import pandas as pd
+import numpy as np
 import re 
 
 def format_food_inspection_df(df):
@@ -30,8 +31,8 @@ def format_food_inspection_df(df):
         df['zip'] = df['zip'].astype(str).apply(lambda x: x[:5]).replace({'nan': None,  'inf': None})
         df['city'] = df['city'].astype(str).replace({'nan': None,  'inf': None})
         df['location'] = df['location'].astype(str).replace({'nan': None,  'inf': None})
-        df['latitude'] = df['latitude'].astype(str).replace({'nan': None,  'inf': None}).astype(float)
-        df['longitude'] = df['longitude'].astype(str).replace({'nan': None,  'inf': None}).astype(float)
+        df['latitude'] =   df['latitude'].replace(np.nan, None)
+        df['longitude'] =  df['longitude'].replace(np.nan, None)
         df['state'] = df['state'].astype(str).replace({'nan': None,  'inf': None})
         return df 
 
