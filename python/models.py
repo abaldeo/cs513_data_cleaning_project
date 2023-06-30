@@ -33,15 +33,15 @@ class FoodInspection(db.Entity):
     risk_level = Optional(int, size=8)  # numeric risk value parsed from risk column
     risk_category = Optional(str, 10, nullable=True, index='idx_risk_category')  # risk label parsed from risk column
     inspection_type = Optional(str, 50, nullable=True, index='idx_inspection_type')  # type of inspection done
-    inspection_date = Optional(date, index='idx_inspection_date')  # when inspection took place
-    results = Optional(str, 20, index='idx_results')  # result of inspection
+    inspection_date = Required(date, index='idx_inspection_date')  # when inspection took place
+    results = Required(str, 20, index='idx_results')  # result of inspection
     establishment_id = Required(FoodEstablishment)  # foreign key to identify food establishment
     inspection_violations = Set('InspectionViolation', cascade_delete=False)
 
 
 class ViolationCode(db.Entity):
     code = PrimaryKey(int, size=8, unsigned=True)  # violation ID (not auto-generated)
-    description = Optional(str, sql_type='text')  # health code violation description
+    description = Required(str, sql_type='text')  # health code violation description
     inspection_violations = Set('InspectionViolation', cascade_delete=False)
 
 
