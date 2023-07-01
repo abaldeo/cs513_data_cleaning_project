@@ -1,5 +1,5 @@
-CREATE INDEX idx_address
-ON EstablishmentLocation(address, city, state, zip);
+CREATE INDEX idx_location
+ON EstablishmentLocation(location);
 
 CREATE INDEX idx_foodestablishment__location_id
 ON FoodEstablishment (location_id);
