@@ -24,7 +24,7 @@ CREATE TABLE FoodInspection (
   risk_level int,
   risk_category varchar(10),
   inspection_type varchar(50),
-  inspection_date date,
+  inspection_date date NOT NULL, 
   results varchar(20) NOT NULL,
   establishment_id int REFERENCES FoodEstablishment(id)
 );
