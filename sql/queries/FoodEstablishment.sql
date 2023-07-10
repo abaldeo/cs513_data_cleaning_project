@@ -54,7 +54,7 @@ select  count(  license_number),   count(distinct license_number) from FoodEstab
 select  distinct license_number, dba_name from FoodEstablishment
 
  
---license_number, dba_name , location_id need to be made unique 
+--license_number, dba_name , aka_name, location_id need to be made unique 
 
 select      license_number, count(distinct dba_name) from FoodEstablishment
 group by  license_number 
@@ -114,5 +114,25 @@ from FoodEstablishment
 f join EstablishmentLocation l on f.location_id = l.id  
 
 
+create temporary table temp as 
+select *
+from FoodEstablishment where aka_name is null 
 
+
+update FoodEstablishment set aka_name = coalesce(aka_name, dba_name) 
+  where aka_name is null 
+
+ 
+
+select   f.license_number, f.dba_name, f.aka_name , l.address, l.city, l.state,  count(1)
+from FoodEstablishment f join EstablishmentLocation l on f.location_id = l.id  
+group by   f.license_number, f.dba_name, f.aka_name , l.address, l.city, l.state 
+having count(  1)>1
+
+
+
+select * from FoodEstablishment 
+f join EstablishmentLocation l on f.location_id = l.id 
+where  f.dba_name='CUDDLE CARE' and address='4800 S LAKE PARK AVE'
+order by f.license_number
  
