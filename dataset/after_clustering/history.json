@@ -1,0 +1,596 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.trim()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Grocery & Restaurant",
+          "Grocery& Restaurant",
+          "Grocery/ Restaurant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grocery & Restaurant"
+      },
+      {
+        "from": [
+          "Convenience Store",
+          "(convenience Store)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Convenience Store"
+      },
+      {
+        "from": [
+          "Children's Services Facility",
+          "Childrens Services Facility"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Children's Services Facility"
+      },
+      {
+        "from": [
+          "Tavern-liquor",
+          "Tavern/liquor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tavern-liquor"
+      },
+      {
+        "from": [
+          "Gas Station",
+          "(gas Station)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gas Station"
+      },
+      {
+        "from": [
+          "Grocery Store / Gas Station",
+          "Gas Station/ Grocery Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gas Station/ Grocery Store"
+      },
+      {
+        "from": [
+          "Kids Cafe",
+          "Kids Cafe'"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Kids Cafe"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1023 Childern's Services Facility",
+          "1023 Childern's Service S Facility"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1023 Childern's Services Facility"
+      },
+      {
+        "from": [
+          "Mobile Frozen Desserts Dispenser-non-motorized",
+          "Mobile Frozen Desserts Dispenser-non- Motorized"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Frozen Desserts Dispenser-non-motorized"
+      },
+      {
+        "from": [
+          "Daycare 1023",
+          "Day Care 1023"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Daycare 1023"
+      },
+      {
+        "from": [
+          "Frozen Desserts Dispenser -non Motorized",
+          "Frozen Desserts Dispenser-non-motorized"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Frozen Desserts Dispenser-non-motorized"
+      },
+      {
+        "from": [
+          "Gas Station/store",
+          "Gas Station Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gas Station/Store"
+      },
+      {
+        "from": [
+          "Grocery Store/ Restaurant",
+          "Grocery Store/restaurant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grocery Store/Restaurant"
+      },
+      {
+        "from": [
+          "Daycare",
+          "Day Care"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Daycare"
+      },
+      {
+        "from": [
+          "Roof Tops",
+          "Rooftops"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Roof Tops"
+      },
+      {
+        "from": [
+          "1023-children's Services Facility",
+          "1023 Children's Services Facility"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1023 Childern's Services Facility"
+      },
+      {
+        "from": [
+          "Long Term Care",
+          "Long-term Care"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Long-term Care"
+      },
+      {
+        "from": [
+          "Charter School Cafeteria",
+          "Charter School/cafeteria"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Charter School/Cafeteria"
+      },
+      {
+        "from": [
+          "Daycare Combo 1586",
+          "Day Care Combo (1586)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Daycare Combo 1586"
+      },
+      {
+        "from": [
+          "Gas Station /grocery",
+          "Gas Station/grocery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gas Station/Grocery"
+      },
+      {
+        "from": [
+          "Rooftop",
+          "Roof Top"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rooftop"
+      },
+      {
+        "from": [
+          "Wrigley Roof Top",
+          "Wrigley Rooftop"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wrigley RoofTop"
+      },
+      {
+        "from": [
+          "Long Term Care Facility",
+          "Long-term Care Facility"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Long-term Care Facility"
+      },
+      {
+        "from": [
+          "Bakery/restaurant",
+          "Bakery/ Restaurant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bakery/Restaurant"
+      },
+      {
+        "from": [
+          "Assisted Living",
+          "Assissted Living"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Assisted Living"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Grocery/restaurant",
+          "Grocery & Restaurant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grocery/Restaurant"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Movie Theater",
+          "Movie Theatre"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Movie Theater"
+      },
+      {
+        "from": [
+          "Gas Station/ Grocery Store",
+          "Gas Station/Grocery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gas Station/ Grocery Store"
+      },
+      {
+        "from": [
+          "Church/special Events",
+          "Church/special Event"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Church/Special Events"
+      },
+      {
+        "from": [
+          "Mobile Prepared Food Vendor",
+          "Mobilprepared Food Vendor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Prepared Food Vendor"
+      },
+      {
+        "from": [
+          "Commissary",
+          "Commiasary"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Commissary"
+      },
+      {
+        "from": [
+          "Convenience Store",
+          "Convnience Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Convenience Store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Theater",
+          "Theatre"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Theater"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Long-term Care",
+          "Long-term Care Facility"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Long-term Care"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Shared Kitchen User (long Trem)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Shared Kitchen User (long Term)"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Mobile Desserts Vendor",
+          "Mobile Dessert Cart",
+          "Mobile Dessert Vendor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Desserts Vendor"
+      },
+      {
+        "from": [
+          "Grocery/liquor",
+          "Grocery/liquor Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grocery/liquor"
+      },
+      {
+        "from": [
+          "Banquet Rooms",
+          "Banquet Room"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Banquet Rooms"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Convenient Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Convenience Store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "IL"
+      }
+    ],
+    "description": "Mass edit cells in column State"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection Date using expression value.toDate()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Address using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Address using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Address using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DBA Name using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "AKA Name",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column AKA Name using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  }
+]
