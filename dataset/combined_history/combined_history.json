@@ -1,0 +1,7141 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DBA Name using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "AKA Name",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column AKA Name using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Address using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column City using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Zip",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Zip using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection Type using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Violations",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Violations using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection ID",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection ID using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "License #",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column License # using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Zip",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Zip using expression value.trim()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "OTHER/UNKNOWN"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DBA Name using expression value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "DBA Name",
+          "expression": "grel:facetCount(value, \"value\", \"DBA Name\")",
+          "columnName": "DBA Name",
+          "from": 0,
+          "to": 2200,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "AKA Name",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column AKA Name using expression value.toUppercase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "DBA Name",
+          "expression": "grel:facetCount(value, \"value\", \"DBA Name\")",
+          "columnName": "DBA Name",
+          "from": 0,
+          "to": 2200,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "DUNKIN DONUTS / BASKIN ROBBINS",
+          "DUNKIN DONUTS BASKIN ROBBINS",
+          "DUNKIN DONUTS/ BASKIN ROBBINS",
+          "DUNKIN DONUTS & BASKIN ROBBINS",
+          "BASKIN ROBBINS/ DUNKIN DONUTS",
+          "DUNKIN DONUTS /  BASKIN ROBBINS",
+          "DUNKIN DONUTS  BASKIN ROBBINS",
+          "DUNKIN DONUTS - BASKIN ROBBINS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DUNKIN DONUTS / BASKIN ROBBINS"
+      },
+      {
+        "from": [
+          "ILLINOIS SPORTSERVICE INC",
+          "ILLINOIS SPORTSERVICE INC.",
+          "ILLINOIS SPORTSERVICE, INC.",
+          "ILLINOIS SPORTSERVICE, INC",
+          "ILLINOIS SPORTSERVICE  INC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ILLINOIS SPORTSERVICE INC"
+      },
+      {
+        "from": [
+          "J & J FISH & CHICKEN",
+          "J J FISH & CHICKEN",
+          "J J  FISH  &  CHICKEN",
+          "J J  FISH & CHICKEN",
+          "J J FISH& CHICKEN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JJ FISH & CHICKEN"
+      },
+      {
+        "from": [
+          "HAROLD'S CHICKEN",
+          "HAROLDS CHICKEN",
+          "HAROLD'S  CHICKEN",
+          "HAROLD'S CHICKEN'",
+          "HAROLDS  CHICKEN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HAROLD'S CHICKEN SHACK"
+      },
+      {
+        "from": [
+          "ACE COFFEE BAR INC.",
+          "ACE COFFEE BAR, INC.",
+          "ACE COFFEE BAR, INC",
+          "ACE COFFEE BAR INC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ACE COFFEE BAR INC."
+      },
+      {
+        "from": [
+          "QUIZNOS SUB",
+          "QUIZNO'S SUB",
+          "QUIZNO'S  SUB",
+          "QUIZNOS  SUB"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "QUIZNOS SUB"
+      },
+      {
+        "from": [
+          "SHARKS FISH & CHICKEN",
+          "SHARK'S FISH & CHICKEN",
+          "SHARKS FISH &CHICKEN",
+          "SHARK'S FISH CHICKEN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SHARKS FISH & CHICKEN"
+      },
+      {
+        "from": [
+          "DUNKIN DONUTS / BASKIN ROBINS",
+          "DUNKIN DONUTS/ BASKIN ROBINS",
+          "DUNKIN DONUTS & BASKIN ROBINS",
+          "DUNKIN DONUTS /  BASKIN ROBINS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DUNKIN DONUTS / BASKIN ROBBINS"
+      },
+      {
+        "from": [
+          "HAROLD'S CHICKEN SHACK",
+          "HAROLD'S  CHICKEN SHACK",
+          "HAROLDS CHICKEN SHACK"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HAROLD'S CHICKEN SHACK"
+      },
+      {
+        "from": [
+          "PEPE'S MEXICAN RESTAURANT",
+          "PEPES MEXICAN  MEXICAN RESTAURANT",
+          "PEPES MEXICAN RESTAURANT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PEPE'S MEXICAN RESTAURANT"
+      },
+      {
+        "from": [
+          "INTELLIGENTSIA COFFEE & TEA INC.",
+          "INTELLIGENTSIA COFFEE & TEA INC",
+          "INTELLIGENTSIA COFFEE & TEA, INC."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INTELLIGENTSIA COFFEE & TEA INC."
+      },
+      {
+        "from": [
+          "DUNKIN DONUTS/BASKIN ROBBINS",
+          "DUNKIN' DONUTS/BASKIN ROBBINS",
+          "DUNKIN DONUTS-BASKIN ROBBINS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DUNKIN DONUTS / BASKIN ROBBINS"
+      },
+      {
+        "from": [
+          "7 - ELEVEN",
+          "7- ELEVEN",
+          "7 ELEVEN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "7-ELEVEN"
+      },
+      {
+        "from": [
+          "DUNKIN DONUTS",
+          "DUNKIN' DONUTS",
+          "DUNKIN  DONUTS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DUNKIN DONUTS"
+      },
+      {
+        "from": [
+          "FAMILY DOLLAR, INC.",
+          "FAMILY DOLLAR, INC",
+          "FAMILY DOLLAR INC."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FAMILY DOLLAR"
+      }
+    ],
+    "description": "Mass edit cells in column DBA Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "DBA Name",
+          "expression": "grel:facetCount(value, \"value\", \"DBA Name\")",
+          "columnName": "DBA Name",
+          "from": 0,
+          "to": 2200,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "STARBUCKS COFFEE #2224",
+          "STARBUCKS COFFEE #2252",
+          "STARBUCKS COFFEE #212",
+          "STARBUCKS COFFEE #226",
+          "STARBUCKS COFFEE #227",
+          "STARBUCKS COFFEE #2223",
+          "STARBUCKS COFFEE #2226",
+          "STARBUCKS COFFEE #2229",
+          "STARBUCKS COFFEE #225",
+          "STARBUCKS COFFEE #229",
+          "STARBUCKS COFFEE #232",
+          "STARBUCKS COFFEE #282",
+          "STARBUCKS COFFEE #221",
+          "STARBUCKS COFFEE #202",
+          "STARBUCKS COFFEE #228",
+          "STARBUCKS COFFEE #222",
+          "STARBUCKS COFFEE #272",
+          "STARBUCKS COFFEE #223"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STARBUCKS COFFE"
+      },
+      {
+        "from": [
+          "STARBUCKS COFFEE #236",
+          "STARBUCKS COFFEE #206",
+          "STARBUCKS COFFEE #226",
+          "STARBUCKS COFFEE #2261",
+          "STARBUCKS COFFEE #227",
+          "STARBUCKS COFFEE #2226",
+          "STARBUCKS COFFEE #225",
+          "STARBUCKS COFFEE #229",
+          "STARBUCK'S COFFEE #226",
+          "STARBUCKS COFFEE #216",
+          "STARBUCKS COFFEE #221",
+          "STARBUCKS COFFEE #2264",
+          "STARBUCKS COFFEE #228",
+          "STARBUCKS COFFEE #222",
+          "STARBUCKS COFFEE #223",
+          "STARBUCKS COFFEE #2286"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STARBUCKS COFFE"
+      },
+      {
+        "from": [
+          "STARBUCKS COFFEE #2234",
+          "STARBUCKS COFFEE #203",
+          "STARBUCKS COFFEE #226",
+          "STARBUCKS COFFEE #227",
+          "STARBUCKS COFFEE #233",
+          "STARBUCKS COFFEE #213",
+          "STARBUCKS COFFEE #2213",
+          "STARBUCKS COFFEE #2223",
+          "STARBUCKS COFFEE #2230",
+          "STARBUCKS COFFEE #225",
+          "STARBUCKS COFFEE #229",
+          "STARBUCKS COFFEE #221",
+          "STARBUCKS COFFEE #228",
+          "STARBUCKS COFFEE #222",
+          "STARBUCKS COFFEE #223"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STARBUCKS COFFE"
+      },
+      {
+        "from": [
+          "STARBUCKS COFFEE #2215",
+          "STARBUCKS COFFEE #211",
+          "STARBUCKS COFFEE #226",
+          "STARBUCKS COFFEE #2261",
+          "STARBUCKS COFFEE #227",
+          "STARBUCKS COFFEE #2213",
+          "STARBUCKS COFFEE #225",
+          "STARBUCKS COFFEE #229",
+          "STARBUCKS COFFEE #221",
+          "STARBUCKS COFFEE #2201",
+          "STARBUCKS COFFEE #228",
+          "STARBUCKS COFFEE #222",
+          "STARBUCKS COFFEE #223",
+          "STARBUCKS COFFEE #231"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STARBUCKS COFFE"
+      },
+      {
+        "from": [
+          "STARBUCKS COFFEE #209",
+          "STARBUCKS COFFEE #2929",
+          "STARBUCKS COFFEE #289",
+          "STARBUCKS COFFEE #226",
+          "STARBUCKS COFFEE #227",
+          "STARBUCKS COFFEE #2329",
+          "STARBUCKS COFFEE #2229",
+          "STARBUCKS COFFEE #225",
+          "STARBUCKS COFFEE #229",
+          "STARBUCKS COFFEE #221",
+          "STARBUCKS COFFEE #228",
+          "STARBUCKS COFFEE #222",
+          "STARBUCKS COFFEE #223"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STARBUCKS COFFE"
+      },
+      {
+        "from": [
+          "STARBUCKS COFFEE #236",
+          "STARBUCKS COFFEE #238",
+          "STARBUCKS COFFEE #212",
+          "STARBUCKS COFFEE #2329",
+          "STARBUCKS COFFEE #233",
+          "STARBUCKS COFFEE #232",
+          "STARBUCKS COFFEE #2372",
+          "STARBUCKS COFFEE #282",
+          "STARBUCKS COFFEE #202",
+          "STARBUCKS COFFEE #222",
+          "STARBUCKS COFFEE #272",
+          "STARBUCKS COFFEE #231"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STARBUCKS COFFE"
+      },
+      {
+        "from": [
+          "STARBUCKS COFFEE #2827",
+          "STARBUCKS COFFEE #2247",
+          "STARBUCKS COFFEE #2207",
+          "STARBUCKS COFFEE #226",
+          "STARBUCKS COFFEE #227",
+          "STARBUCKS COFFEE #2527",
+          "STARBUCKS COFFEE #225",
+          "STARBUCKS COFFEE #229",
+          "STARBUCKS COFFEE #221",
+          "STARBUCKS COFFEE #228",
+          "STARBUCKS COFFEE #222",
+          "STARBUCKS COFFEE #223"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STARBUCKS COFFE"
+      },
+      {
+        "from": [
+          "STARBUCKS COFFEE #2334",
+          "STARBUCKS COFFEE #236",
+          "STARBUCKS COFFEE #238",
+          "STARBUCKS COFFEE #203",
+          "STARBUCKS COFFEE #233",
+          "STARBUCKS COFFEE #2373",
+          "STARBUCKS COFFEE #213",
+          "STARBUCKS COFFEE #232",
+          "STARBUCKS COFFEE #2337",
+          "STARBUCKS COFFEE #2335",
+          "STARBUCKS COFFEE #223",
+          "STARBUCKS COFFEE #231"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STARBUCKS COFFE"
+      },
+      {
+        "from": [
+          "KENTUCKY FRIED CHICKEN 521043",
+          "KENTUCKY FRIED CHICKEN 521049",
+          "KENTUCKY FRIED CHICKEN 521040",
+          "KENTUCKY FRIED CHICKEN 521046",
+          "KENTUCKY FRIED CHICKEN 521038",
+          "KENTUCKY FRIED CHICKEN 521045",
+          "KENTUCKY FRIED CHICKEN 521047",
+          "KENTUCKY FRIED CHICKEN 521041",
+          "KENTUCKY FRIED CHICKEN 521042",
+          "KENTUCKY FRIED CHICKEN 521044",
+          "KENTUCKY FRIED CHICKEN 521048"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KENTUCKY FRIED CHICKEN"
+      },
+      {
+        "from": [
+          "KENTUCKY FRIED CHICKEN 521043",
+          "KENTUCKY FRIED CHICKEN 521049",
+          "KENTUCKY FRIED CHICKEN 521040",
+          "KENTUCKY FRIED CHICKEN 521046",
+          "KENTUCKY FRIED CHICKEN 521045",
+          "KENTUCKY FRIED CHICKEN 521047",
+          "KENTUCKY FRIED CHICKEN 521037",
+          "KENTUCKY FRIED CHICKEN 521041",
+          "KENTUCKY FRIED CHICKEN 521042",
+          "KENTUCKY FRIED CHICKEN 521044",
+          "KENTUCKY FRIED CHICKEN 521048"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KENTUCKY FRIED CHICKEN"
+      },
+      {
+        "from": [
+          "KENTUCKY FRIED CHICKEN 521043",
+          "KENTUCKY FRIED CHICKEN 521049",
+          "KENTUCKY FRIED CHICKEN 521040",
+          "KENTUCKY FRIED CHICKEN 521046",
+          "KENTUCKY FRIED CHICKEN 521036",
+          "KENTUCKY FRIED CHICKEN 521045",
+          "KENTUCKY FRIED CHICKEN 521047",
+          "KENTUCKY FRIED CHICKEN 521041",
+          "KENTUCKY FRIED CHICKEN 521042",
+          "KENTUCKY FRIED CHICKEN 521044",
+          "KENTUCKY FRIED CHICKEN 521048"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KENTUCKY FRIED CHICKEN"
+      },
+      {
+        "from": [
+          "KENTUCKY FRIED CHICKEN 521043",
+          "KENTUCKY FRIED CHICKEN 521049",
+          "KENTUCKY FRIED CHICKEN 521040",
+          "KENTUCKY FRIED CHICKEN 521046",
+          "KENTUCKY FRIED CHICKEN 521035",
+          "KENTUCKY FRIED CHICKEN 521045",
+          "KENTUCKY FRIED CHICKEN 521047",
+          "KENTUCKY FRIED CHICKEN 521041",
+          "KENTUCKY FRIED CHICKEN 521042",
+          "KENTUCKY FRIED CHICKEN 521044",
+          "KENTUCKY FRIED CHICKEN 521048"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KENTUCKY FRIED CHICKEN"
+      },
+      {
+        "from": [
+          "KENTUCKY FRIED CHICKEN 521043",
+          "KENTUCKY FRIED CHICKEN 521049",
+          "KENTUCKY FRIED CHICKEN 521039",
+          "KENTUCKY FRIED CHICKEN 521040",
+          "KENTUCKY FRIED CHICKEN 521046",
+          "KENTUCKY FRIED CHICKEN 521045",
+          "KENTUCKY FRIED CHICKEN 521047",
+          "KENTUCKY FRIED CHICKEN 521041",
+          "KENTUCKY FRIED CHICKEN 521042",
+          "KENTUCKY FRIED CHICKEN 521044",
+          "KENTUCKY FRIED CHICKEN 521048"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KENTUCKY FRIED CHICKEN"
+      },
+      {
+        "from": [
+          "KENTUCKY FRIED CHICKEN 521043",
+          "KENTUCKY FRIED CHICKEN 521049",
+          "KENTUCKY FRIED CHICKEN 521040",
+          "KENTUCKY FRIED CHICKEN 521046",
+          "KENTUCKY FRIED CHICKEN 521054",
+          "KENTUCKY FRIED CHICKEN 521045",
+          "KENTUCKY FRIED CHICKEN 521047",
+          "KENTUCKY FRIED CHICKEN 521041",
+          "KENTUCKY FRIED CHICKEN 521042",
+          "KENTUCKY FRIED CHICKEN 521044",
+          "KENTUCKY FRIED CHICKEN 521048"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KENTUCKY FRIED CHICKEN"
+      },
+      {
+        "from": [
+          "KENTUCKY FRIED CHICKEN 521043",
+          "KENTUCKY FRIED CHICKEN 521049",
+          "KENTUCKY FRIED CHICKEN 521040",
+          "KENTUCKY FRIED CHICKEN 521046",
+          "KENTUCKY FRIED CHICKEN 521045",
+          "KENTUCKY FRIED CHICKEN 521053",
+          "KENTUCKY FRIED CHICKEN 521047",
+          "KENTUCKY FRIED CHICKEN 521041",
+          "KENTUCKY FRIED CHICKEN 521042",
+          "KENTUCKY FRIED CHICKEN 521044",
+          "KENTUCKY FRIED CHICKEN 521048"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KENTUCKY FRIED CHICKEN"
+      },
+      {
+        "from": [
+          "KENTUCKY FRIED CHICKEN 521043",
+          "KENTUCKY FRIED CHICKEN 521049",
+          "KENTUCKY FRIED CHICKEN 521040",
+          "KENTUCKY FRIED CHICKEN 521046",
+          "KENTUCKY FRIED CHICKEN 521045",
+          "KENTUCKY FRIED CHICKEN 521047",
+          "KENTUCKY FRIED CHICKEN 521041",
+          "KENTUCKY FRIED CHICKEN 521042",
+          "KENTUCKY FRIED CHICKEN 521052",
+          "KENTUCKY FRIED CHICKEN 521044",
+          "KENTUCKY FRIED CHICKEN 521048"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KENTUCKY FRIED CHICKEN"
+      },
+      {
+        "from": [
+          "KENTUCKY FRIED CHICKEN 521043",
+          "KENTUCKY FRIED CHICKEN 521049",
+          "KENTUCKY FRIED CHICKEN 521040",
+          "KENTUCKY FRIED CHICKEN 521046",
+          "KENTUCKY FRIED CHICKEN 521045",
+          "KENTUCKY FRIED CHICKEN 521051",
+          "KENTUCKY FRIED CHICKEN 521047",
+          "KENTUCKY FRIED CHICKEN 521041",
+          "KENTUCKY FRIED CHICKEN 521042",
+          "KENTUCKY FRIED CHICKEN 521044",
+          "KENTUCKY FRIED CHICKEN 521048"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KENTUCKY FRIED CHICKEN"
+      },
+      {
+        "from": [
+          "KENTUCKY FRIED CHICKEN 521050",
+          "KENTUCKY FRIED CHICKEN 521043",
+          "KENTUCKY FRIED CHICKEN 521049",
+          "KENTUCKY FRIED CHICKEN 521040",
+          "KENTUCKY FRIED CHICKEN 521046",
+          "KENTUCKY FRIED CHICKEN 521045",
+          "KENTUCKY FRIED CHICKEN 521047",
+          "KENTUCKY FRIED CHICKEN 521041",
+          "KENTUCKY FRIED CHICKEN 521042",
+          "KENTUCKY FRIED CHICKEN 521044",
+          "KENTUCKY FRIED CHICKEN 521048"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KENTUCKY FRIED CHICKEN"
+      },
+      {
+        "from": [
+          "STARBUCKS COFFEE #238",
+          "STARBUCKS COFFEE #2428",
+          "STARBUCKS COFFEE #226",
+          "STARBUCKS COFFEE #227",
+          "STARBUCKS COFFEE #225",
+          "STARBUCKS COFFEE #229",
+          "STARBUCKS COFFEE #221",
+          "STARBUCKS COFFEE #228",
+          "STARBUCKS COFFEE #222",
+          "STARBUCKS COFFEE #223",
+          "STARBUCKS COFFEE #2286"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STARBUCKS COFFEE"
+      },
+      {
+        "from": [
+          "STARBUCKS COFFEE #2215",
+          "STARBUCKS COFFEE #2252",
+          "STARBUCKS COFFEE #2255",
+          "STARBUCKS COFFEE #226",
+          "STARBUCKS COFFEE #227",
+          "STARBUCKS COFFEE #225",
+          "STARBUCKS COFFEE #229",
+          "STARBUCKS COFFEE #221",
+          "STARBUCKS COFFEE #228",
+          "STARBUCKS COFFEE #222",
+          "STARBUCKS COFFEE #223"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STARBUCKS COFFEE"
+      },
+      {
+        "from": [
+          "STARBUCKS COFFEE #2412",
+          "STARBUCKS COFFEE #211",
+          "STARBUCKS COFFEE #212",
+          "STARBUCKS COFFEE #213",
+          "STARBUCKS COFFEE #232",
+          "STARBUCKS COFFEE #282",
+          "STARBUCKS COFFEE #216",
+          "STARBUCKS COFFEE #202",
+          "STARBUCKS COFFEE #222",
+          "STARBUCKS COFFEE #272"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STARBUCKS COFFEE"
+      },
+      {
+        "from": [
+          "STARBUCKS COFFEE #209",
+          "STARBUCKS COFFEE #206",
+          "STARBUCKS COFFEE #203",
+          "STARBUCKS COFFEE #212",
+          "STARBUCKS COFFEE #232",
+          "STARBUCKS COFFEE #282",
+          "STARBUCKS COFFEE #202",
+          "STARBUCKS COFFEE #204",
+          "STARBUCKS COFFEE #222",
+          "STARBUCKS COFFEE #272"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STARBUCKS COFFEE"
+      },
+      {
+        "from": [
+          "CVS/PHARMACY #8741",
+          "CVS/PHARMACY #8750",
+          "CVS/PHARMACY #8753",
+          "CVS/PHARMACY #8755",
+          "CVS/PHARMACY #8731",
+          "CVS/PHARMACY #8751",
+          "CVS/PHARMACY #8758",
+          "CVS/PHARMACY #8754",
+          "CVS/PHARMACY #8756",
+          "CVS/PHARMACY #8759"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CVS/PHARMACY"
+      },
+      {
+        "from": [
+          "CVS/PHARMACY #8750",
+          "CVS/PHARMACY #8753",
+          "CVS/PHARMACY #8755",
+          "CVS/PHARMACY #8745",
+          "CVS/PHARMACY #8751",
+          "CVS/PHARMACY #8758",
+          "CVS/PHARMACY #8735",
+          "CVS/PHARMACY #8754",
+          "CVS/PHARMACY #8756",
+          "CVS/PHARMACY #8759"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CVS/PHARMACY"
+      },
+      {
+        "from": [
+          "STARBUCKS COFFEE #236",
+          "STARBUCKS COFFEE #206",
+          "STARBUCKS COFFEE #238",
+          "STARBUCKS COFFEE #226",
+          "STARBUCKS COFFEE #233",
+          "STARBUCKS COFFEE #232",
+          "STARBUCKS COFFEE #216",
+          "STARBUCKS COFFEE #2369",
+          "STARBUCKS COFFEE #231"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STARBUCKS COFFEE"
+      },
+      {
+        "from": [
+          "STARBUCKS COFFEE #203",
+          "STARBUCKS COFFEE #211",
+          "STARBUCKS COFFEE #212",
+          "STARBUCKS COFFEE #233",
+          "STARBUCKS COFFEE #213",
+          "STARBUCKS COFFEE #2213",
+          "STARBUCKS COFFEE #2513",
+          "STARBUCKS COFFEE #216",
+          "STARBUCKS COFFEE #223"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STARBUCKS COFFEE"
+      },
+      {
+        "from": [
+          "CVS/PHARMACY #8750",
+          "CVS/PHARMACY #8753",
+          "CVS/PHARMACY #8755",
+          "CVS/PHARMACY #8740",
+          "CVS/PHARMACY #8751",
+          "CVS/PHARMACY #8758",
+          "CVS/PHARMACY #8754",
+          "CVS/PHARMACY #8756",
+          "CVS/PHARMACY #8759"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CVS/PHARMACY"
+      },
+      {
+        "from": [
+          "CVS/PHARMACY #8750",
+          "CVS/PHARMACY #8753",
+          "CVS/PHARMACY #8755",
+          "CVS/PHARMACY #8738",
+          "CVS/PHARMACY #8751",
+          "CVS/PHARMACY #8758",
+          "CVS/PHARMACY #8754",
+          "CVS/PHARMACY #8756",
+          "CVS/PHARMACY #8759"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CVS/PHARMACY"
+      },
+      {
+        "from": [
+          "CVS/PHARMACY #8750",
+          "CVS/PHARMACY #8753",
+          "CVS/PHARMACY #8755",
+          "CVS/PHARMACY #8751",
+          "CVS/PHARMACY #8758",
+          "CVS/PHARMACY #8739",
+          "CVS/PHARMACY #8754",
+          "CVS/PHARMACY #8756",
+          "CVS/PHARMACY #8759"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CVS/PHARMACY"
+      },
+      {
+        "from": [
+          "CVS/PHARMACY #8750",
+          "CVS/PHARMACY #8753",
+          "CVS/PHARMACY #8755",
+          "CVS/PHARMACY #8733",
+          "CVS/PHARMACY #8751",
+          "CVS/PHARMACY #8758",
+          "CVS/PHARMACY #8754",
+          "CVS/PHARMACY #8756",
+          "CVS/PHARMACY #8759"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CVS/PHARMACY"
+      }
+    ],
+    "description": "Mass edit cells in column DBA Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "DBA Name",
+          "expression": "grel:facetCount(value, \"value\", \"DBA Name\")",
+          "columnName": "DBA Name",
+          "from": 0,
+          "to": 2200,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "MCDONALD'S RESTAURANT",
+          "MCDONALDS RESTAURANT",
+          "MC DONALD'S RESTAURANT",
+          "MC DONALDS RESTAURANT",
+          "MCDONALD' S RESTAURANT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MCDONALD'S"
+      },
+      {
+        "from": [
+          "MCDONALD'S",
+          "MCDONALDS",
+          "MC DONALD'S",
+          "MC DONALDS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MCDONALD'S"
+      },
+      {
+        "from": [
+          "ILLINOIS SPORTSERVICE INC",
+          "ILLINOIS SPORT SERVICE INC.",
+          "ILLINOIS SPORTSSERVICE INC."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ILLINOIS SPORTSERVICE INC"
+      },
+      {
+        "from": [
+          "DUNKIN DONUTS / BASKIN ROBBINS",
+          "DUNKIN DONUTS/BASKINROBBINS",
+          "DUNKIN DONUTS/BASKIN-ROBBINS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DUNKIN DONUTS / BASKIN ROBBINS"
+      },
+      {
+        "from": [
+          "PAPA  JOHN'S",
+          "PAPA JOHNS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PAPA  JOHN'S"
+      },
+      {
+        "from": [
+          "STARBUCKS",
+          "STARBUCK'S"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STARBUCKS"
+      },
+      {
+        "from": [
+          "DOMINO'S PIZZA",
+          "DOMINOS PIZZA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DOMINO'S PIZZA"
+      },
+      {
+        "from": [
+          "JETS PIZZA",
+          "JET'S PIZZA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JET'S PIZZA"
+      },
+      {
+        "from": [
+          "WALGREENS # 05192",
+          "WALGREENS #05192"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WALGREENS"
+      },
+      {
+        "from": [
+          "SUBWAY SANDWICH",
+          "SUBWAY-SANDWICH"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SUBWAY"
+      }
+    ],
+    "description": "Mass edit cells in column DBA Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "DBA Name",
+          "expression": "grel:facetCount(value, \"value\", \"DBA Name\")",
+          "columnName": "DBA Name",
+          "from": 0,
+          "to": 2200,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "WALGREENS",
+          "WALGREENS #15065",
+          "WALGREENS #15196",
+          "WALGREENS #15281",
+          "WALGREENS # 06980",
+          "WALGREENS #232",
+          "WALGREENS #5089",
+          "WALGREENS #215",
+          "WALGREENS # 07179",
+          "WALGREENS #03950",
+          "WALGREENS #15921",
+          "WALGREENS #2073",
+          "WALGREENS #6270",
+          "WALGREEN'S #1171",
+          "WALGREENS # 03961",
+          "WALGREENS #03698",
+          "WALGREENS #03949",
+          "WALGREENS #04938",
+          "WALGREENS #05234",
+          "WALGREENS #1096",
+          "WALGREENS #1332",
+          "WALGREENS #15004",
+          "WALGREENS #211",
+          "WALGREENS #249",
+          "WALGREENS #4519",
+          "WALGREENS #4986",
+          "WALGREENS # 02340",
+          "WALGREENS # 04978",
+          "WALGREENS # 05124",
+          "WALGREENS # 05825",
+          "WALGREENS # 06238",
+          "WALGREENS #04152",
+          "WALGREENS #11492",
+          "WALGREENS #1375",
+          "WALGREENS #1417",
+          "WALGREENS #147",
+          "WALGREENS #162",
+          "WALGREENS #252",
+          "WALGREENS #2840",
+          "WALGREENS #4233",
+          "WALGREENS # 04862",
+          "WALGREENS # 05057",
+          "WALGREENS # 07054",
+          "WALGREENS # 07630",
+          "WALGREENS # 09000",
+          "WALGREENS # 1308",
+          "WALGREENS # 13106",
+          "WALGREENS # 13798",
+          "WALGREENS #04494",
+          "WALGREENS #04752",
+          "WALGREENS #05034",
+          "WALGREENS #09038",
+          "WALGREENS #12150",
+          "WALGREENS #15992",
+          "WALGREENS #16355",
+          "WALGREENS #2025",
+          "WALGREENS #226",
+          "WALGREENS #259",
+          "WALGREENS #3072",
+          "WALGREENS #4935",
+          "WALGREENS #5926",
+          "WALGREENS  # 10649",
+          "WALGREENS # 04936",
+          "WALGREENS # 05123",
+          "WALGREENS # 05356",
+          "WALGREENS # 06297",
+          "WALGREENS # 06376",
+          "WALGREENS # 09438",
+          "WALGREENS # 09470",
+          "WALGREENS #02387",
+          "WALGREENS #03074",
+          "WALGREENS #03539",
+          "WALGREENS #04306",
+          "WALGREENS #04349",
+          "WALGREENS #04461",
+          "WALGREENS #10350",
+          "WALGREENS #10558",
+          "WALGREENS #11223",
+          "WALGREENS #11410",
+          "WALGREENS #1147",
+          "WALGREENS #118",
+          "WALGREENS #12304",
+          "WALGREENS #12426",
+          "WALGREENS #1310",
+          "WALGREENS #1496",
+          "WALGREENS #15493",
+          "WALGREENS #15525",
+          "WALGREENS #16085",
+          "WALGREENS #1802",
+          "WALGREENS #194",
+          "WALGREENS #2432",
+          "WALGREENS #2903",
+          "WALGREENS #5121",
+          "WALGREENS #5868",
+          "WALGREENS #7559",
+          "WALGREENS # 01101",
+          "WALGREENS # 03321",
+          "WALGREENS # 04147",
+          "WALGREENS # 07250",
+          "WALGREENS # 07359",
+          "WALGREENS # 07515",
+          "WALGREENS # 07687",
+          "WALGREENS # 07876",
+          "WALGREENS # 09357",
+          "WALGREENS # 15971",
+          "WALGREENS #09709",
+          "WALGREENS #10424",
+          "WALGREENS #10771",
+          "WALGREENS #1298",
+          "WALGREENS #1308",
+          "WALGREENS #13973",
+          "WALGREENS #1495",
+          "WALGREENS #1503",
+          "WALGREENS #15197",
+          "WALGREENS #15526",
+          "WALGREENS #1594",
+          "WALGREENS #163",
+          "WALGREENS #258",
+          "WALGREENS #2586",
+          "WALGREENS #2877",
+          "WALGREENS #5033",
+          "WALGREENS #7360",
+          "WALGREEN S # 07267",
+          "WALGREEN'S #07055",
+          "WALGREENS # 047807",
+          "WALGREENS # 05867",
+          "WALGREENS # 06641",
+          "WALGREENS # 09001",
+          "WALGREENS #03395",
+          "WALGREENS #04937",
+          "WALGREENS #05867",
+          "WALGREENS #06727",
+          "WALGREENS #06762",
+          "WALGREENS #09001",
+          "WALGREENS #1031",
+          "WALGREENS #1110",
+          "WALGREENS #120",
+          "WALGREENS #15350",
+          "WALGREENS #15506",
+          "WALGREENS #15507",
+          "WALGREENS #1593",
+          "WALGREENS #186",
+          "WALGREENS #2036",
+          "WALGREENS #2210",
+          "WALGREENS #230",
+          "WALGREENS #2300",
+          "WALGREENS #2711",
+          "WALGREENS #2742",
+          "WALGREENS #2859",
+          "WALGREENS #2923",
+          "WALGREENS #807"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WALGREENS"
+      },
+      {
+        "from": [
+          "STARBUCKS COFFEE",
+          "STARBUCKS COFFE",
+          "STARBUCKS COFFEE #7948",
+          "STARBUCKS COFFEE #2370",
+          "STARBUCKS COFFEE #2510",
+          "STARBUCK'S COFFEE #2568",
+          "STARBUCKS COFFEE #15683",
+          "STARBUCKS COFFEE # 2624",
+          "STARBUCKS COFFEE #2410",
+          "STARBUCKS COFFEE #2445",
+          "STARBUCKS COFFEE #8954",
+          "STARBUCKS COFFEE #9942",
+          "STARBUCK'S COFFEE",
+          "STARBUCKS COFFEE  #2635",
+          "STARBUCKS COFFEE #11719",
+          "STARBUCKS COFFEE #19549",
+          "STARBUCKS COFFEE #2479",
+          "STARBUCK'S COFFEE #2636",
+          "STARBUCKS COFFEE #10957",
+          "STARBUCKS COFFEE #14256",
+          "STARBUCKS COFFEE #2401",
+          "STARBUCKS COFFEE #2689",
+          "STARBUCKS COFFEE #2949",
+          "STARBUCKS COFFEE #9426",
+          "STARBUCKS COFFEE #10506",
+          "STARBUCKS COFFEE #13319",
+          "STARBUCKS COFFEE #13710",
+          "STARBUCKS COFFEE #14433",
+          "STARBUCKS COFFEE #2484",
+          "STARBUCKS COFFEE #2491",
+          "STARBUCKS COFFEE #2515",
+          "STARBUCKS COFFEE #2877",
+          "STARBUCKS COFFEE #8972",
+          "STARBUCKS COFFEE 18013",
+          "STARBUCKS COFFEE # 16696",
+          "STARBUCKS COFFEE #10199",
+          "STARBUCKS COFFEE #10905",
+          "STARBUCKS COFFEE #10955",
+          "STARBUCKS COFFEE #11751",
+          "STARBUCKS COFFEE #13439",
+          "STARBUCKS COFFEE #13522",
+          "STARBUCKS COFFEE #2310",
+          "STARBUCKS COFFEE #2375",
+          "STARBUCKS COFFEE #2397",
+          "STARBUCKS COFFEE #2443",
+          "STARBUCKS COFFEE #2492",
+          "STARBUCKS COFFEE #2514",
+          "STARBUCKS COFFEE #2639",
+          "STARBUCKS COFFEE # 11719",
+          "STARBUCKS COFFEE # 13468",
+          "STARBUCKS COFFEE # 216",
+          "STARBUCKS COFFEE # 2449",
+          "STARBUCKS COFFEE #10594",
+          "STARBUCKS COFFEE #11048",
+          "STARBUCKS COFFEE #11125",
+          "STARBUCKS COFFEE #2494",
+          "STARBUCKS COFFEE #2545",
+          "STARBUCKS COFFEE #2565",
+          "STARBUCKS COFFEE #9757",
+          "STARBUCKS COOFEE #279",
+          "STARBBUCKS COFFEE #23829",
+          "STARBUCKS COFFEE  #22423",
+          "STARBUCKS COFFEE # 17743",
+          "STARBUCKS COFFEE #21751",
+          "STARBUCKS COFFEE #2378",
+          "STARBUCKS COFFEE #27892",
+          "STARBUCK'S COFFEE #27509",
+          "STARBUCKS COFFEE  #2213",
+          "STARBUCKS COFFEE #13468",
+          "STARBUCKS COFFEE #16309",
+          "STARBUCKS COFFEE #20797",
+          "STARBUCKS COFFEE #22423",
+          "STARBUCKS COFFEE #26368",
+          "STARBUCKS COFFEE #26720",
+          "STARBUCKS COFFEE #47565",
+          "STARBUCKS COFFEE #48615",
+          "STARBUCKS COFFEE # 28867",
+          "STARBUCKS COFFEE #2201A",
+          "STARBUCKS COFFEE #22949",
+          "STARBUCKS COFFEE #25092",
+          "STARBUCKS COFFEE #27508",
+          "STARBUCKS COFFEE #47022",
+          "STARBUCKS COFFEE #47593",
+          "STARBUCKS COFFEE #48513",
+          "STARBUCKS COFFEE  #204",
+          "STARBUCKS COFFEE  #2403",
+          "STARBUCKS COFFEE #10634",
+          "STARBUCKS COFFEE #2624",
+          "STARBUCKS COFFEE #2901"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STARBUCKS COFFEE"
+      },
+      {
+        "from": [
+          "7-ELEVEN",
+          "7 ELEVEN #34133A",
+          "7 ELEVEN #33729A",
+          "7 ELEVEN #36793 A",
+          "7 ELEVEN#3489104",
+          "7-ELEVEN #33725",
+          "7 -  ELEVEN  #33526",
+          "7 ELEVEN # 33727A",
+          "7-ELEVEN #29168",
+          "7-ELEVEN #33732A",
+          "7 ELEVEN #33726A",
+          "7 ELEVEN #35015H",
+          "7 ELEVEN #35504A",
+          "7 ELEVEN #35750H",
+          "7 ELEVEN #29150E",
+          "7-ELEVEN #18473",
+          "7-ELEVEN #20187",
+          "7-ELEVEN #337288",
+          "7-ELEVEN 33609",
+          "7 ELEVEN #33734H",
+          "7 ELEVEN #33843",
+          "7 ELEVEN 33591H",
+          "7-ELEVEN # 33731",
+          "7-ELEVEN #16809",
+          "7-ELEVEN #25431",
+          "7-ELEVEN #33956A",
+          "7-ELEVEN #34724",
+          "7-ELEVEN #33768H",
+          "7-ELEVEN #36106A",
+          "7 ELEVEN #33067H",
+          "7 ELEVEN #35632",
+          "7 ELEVEN #35632A",
+          "7 ELEVEN #35978H",
+          "7-ELEVEN # 37622A",
+          "7-ELEVEN #26825",
+          "7-ELEVEN #33705",
+          "7-ELEVEN #33920A",
+          "7-ELEVEN #36106 H",
+          "7-ELEVEN #36718A",
+          "7-ELEVEN 33139",
+          "7 ELEVEN # 36881A",
+          "7 ELEVEN #33508",
+          "7-ELEVEN #24606",
+          "7-ELEVEN #33835H",
+          "7-ELEVEN #33908A",
+          "7-ELEVEN #36061 H",
+          "7 ELEVEN #33875H",
+          "7 ELEVEN #34724A",
+          "7-ELEVEN # 32934E",
+          "7-ELEVEN #333921H",
+          "7-ELEVEN #33583",
+          "7-ELEVEN #33779",
+          "7-ELEVEN #35504",
+          "7-ELEVEN #35978A",
+          "7-ELEVEN #36061 A",
+          "7-ELEVEN #36718H",
+          "7-ELEVEN #37152 A",
+          "L & E VIENNA",
+          "7 - ELEVEN # 33582",
+          "7-ELEVEN #24329",
+          "7-ELEVEN #38046A",
+          "7 -ELEVEN #33841",
+          "7 ELEVEN #33809H",
+          "7-ELEVEN #13322",
+          "7-ELEVEN #22200",
+          "7-ELEVEN #27421",
+          "7-ELEVEN #33511",
+          "7-ELEVEN #33732",
+          "7-ELEVEN #33867"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "7-ELEVEN"
+      },
+      {
+        "from": [
+          "CVS/PHARMACY",
+          "CVS/PHARMACY #4061",
+          "CVS PHARMACY # 5987",
+          "CVS/PHARMACY #8511",
+          "CVS/PHARMACY #8695",
+          "CVS/PHARMACY #5836",
+          "CVS/PHARMACY #8507",
+          "CVS/PHARMACY #8747",
+          "CVS PHARMACY #2935",
+          "CVS PHARMACY #4094",
+          "CVS PHARMACY #7125",
+          "CVS/PHARMACY #1493",
+          "CVS/PHARMACY #2981",
+          "CVS/PHARMACY #8289",
+          "CVS/PHARMACY #8699",
+          "CVS PHARMACY #2862",
+          "CVS PHARMACY #4189",
+          "CVS PHARMACY #5394",
+          "CVS/ PHARMACY #8732",
+          "CVS/PHARMACY # 4793",
+          "CVS/PHARMACY #1054",
+          "CVS/PHARMACY #1676",
+          "CVS/PHARMACY #2810",
+          "CVS/PHARMACY #3674",
+          "CVS/PHARMACY #5681",
+          "CVS/PHARMACY #5768",
+          "CVS/PHARMACY #5795",
+          "CVS/PHARMACY #8698",
+          "CVS/PHARMACY #2798",
+          "CVS/PHARMACY #2845",
+          "CVS/PHARMACY #2846",
+          "CVS/PHARMACY #2934",
+          "CVS/PHARMACY #4781",
+          "CVS/PHARMACY #5001",
+          "CVS/PHARMACY #5482",
+          "CVS/PHARMACY #5770",
+          "CVS/PHARMACY #8506",
+          "CVS/PHARMACY #8519",
+          "CVS PHARMACY #5989",
+          "CVS/ PHARMACY #3170",
+          "CVS/PHARMACY # 8980",
+          "CVS/PHARMACY #0788",
+          "CVS/PHARMACY #2809",
+          "CVS/PHARMACY #3742",
+          "CVS/PHARMACY #4688",
+          "CVS/PHARMACY #4979",
+          "CVS/PHARMACY #7123",
+          "CVS/PHARMACY #8502",
+          "CVS/PHARMACY #8504",
+          "CVS/PHARMACY #8508",
+          "CVS/PHARMACY #8694",
+          "CVS/PHARMACY #8910"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CVS/PHARMACY"
+      },
+      {
+        "from": [
+          "BURGER KING #",
+          "BURGER KING",
+          "BURGER KING #181",
+          "BURGER KING #8312",
+          "BURGER KING #6358",
+          "BURGER KING #7623",
+          "BURGER KING #12371",
+          "BURGER KING #1455",
+          "BURGER KING #1232",
+          "BURGER KING #1272",
+          "BURGER KING #1512",
+          "BURGER KING #7674",
+          "BURGER KING #1308",
+          "BURGER KING #10366",
+          "BURGER KING #10797",
+          "BURGER KING #11297",
+          "BURGER KING #1250",
+          "BURGER KING #17392",
+          "BURGER KING #244",
+          "BURGER KING #2654",
+          "BURGER KING #3386",
+          "BURGER KING #10345",
+          "BURGER KING #1310",
+          "BURGER KING #5986",
+          "BURGER KING #16882",
+          "BURGER KING #207",
+          "BURGER KING #7288",
+          "BURGER KING # 12663",
+          "BURGER KING #11967",
+          "BURGER KING #7268",
+          "BURGER KING #142",
+          "BURGER KING #16598",
+          "BURGER KING #215",
+          "BURGER KING #5818",
+          "BURGER KING #6345",
+          "BURGER KING #7112",
+          "BURGER KING 19467",
+          "BURGER KING  #11297",
+          "BURGER KING #5495",
+          "BURGER KING # 3386",
+          "BURGER KING #1303",
+          "BURGER KING #14476",
+          "BURGER KING 16598",
+          "BURGER KING  #1512",
+          "BURGER KING # 10797",
+          "BURGER KING # 215",
+          "BURGER KING # 6345",
+          "BURGER KING # 14476",
+          "BURGER KING #12663",
+          "BURGER KING #22995",
+          "BURGER KING#7112"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BURGER KING"
+      },
+      {
+        "from": [
+          "FAMILY DOLLAR",
+          "FAMILY DOLLAR #6423",
+          "FAMILY DOLLAR #6083",
+          "FAMILY DOLLAR  #5719",
+          "FAMILY DOLLAR #1940",
+          "FAMILY DOLLAR #2465",
+          "FAMILY DOLLAR  #5392",
+          "FAMILY DOLLAR # 3952",
+          "FAMILY DOLLAR #1708",
+          "FAMILY DOLLAR #2431",
+          "FAMILY DOLLAR #3895",
+          "FAMILY DOLLAR #6514",
+          "FAMILY  DOLLAR",
+          "FAMILY DOLLAR   # 5983",
+          "FAMILY DOLLAR  # 5287",
+          "FAMILY DOLLAR # 4666",
+          "FAMILY DOLLAR # 5734",
+          "FAMILY DOLLAR # 6221",
+          "FAMILY DOLLAR #10079",
+          "FAMILY DOLLAR #10596",
+          "FAMILY DOLLAR #5478",
+          "FAMILY  DOLLAR  #5834",
+          "FAMILY DOLLAR  # 5195",
+          "FAMILY DOLLAR  #5002",
+          "FAMILY DOLLAR # 4162",
+          "FAMILY DOLLAR # 7653",
+          "FAMILY DOLLAR #1629",
+          "FAMILY DOLLAR #1732",
+          "FAMILY DOLLAR #31994",
+          "FAMILY DOLLAR #5630",
+          "FAMILY DOLLAR  #5440",
+          "FAMILY DOLLAR  #5532",
+          "FAMILY DOLLAR  #5877",
+          "FAMILY DOLLAR # 5692",
+          "FAMILY DOLLAR #10224",
+          "FAMILY DOLLAR #1544",
+          "FAMILY DOLLAR #1860",
+          "FAMILY DOLLAR #1938",
+          "FAMILY DOLLAR #2668",
+          "FAMILY DOLLAR #2877",
+          "FAMILY DOLLAR #3301",
+          "FAMILY DOLLAR #5063",
+          "FAMILY DOLLAR #5319",
+          "FAMILY DOLLAR #6092"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FAMILY DOLLAR"
+      },
+      {
+        "from": [
+          "SUBWAY 3634",
+          "SEPIA",
+          "SUBWAY #3333",
+          "SUBWAY #25073",
+          "SUBWAY 28330",
+          "SUB WAY",
+          "SUBWAY  #38326",
+          "SUBWAY #44541",
+          "SUBWAY 10266",
+          "SUBWAY 26199",
+          "ZOUP!",
+          "SUBWAY #45927",
+          "SUBWAY #51581",
+          "SUBWAY 14641",
+          "SUBWAY 7709",
+          "SUBWAY  5183",
+          "SUBWAY 48735",
+          "SUBWAY 1121",
+          "SUBWAY 50886",
+          "SUBWAY 24028",
+          "SUBWAY 275",
+          "SUBWAY #4267",
+          "SUBWAY #267771",
+          "SUBWAY #25917",
+          "SUBWAY 25064",
+          "SI-PIE",
+          "SUBWAY #7706",
+          "SOPO",
+          "SUBWAY # 23333",
+          "SUBWAY # 26771",
+          "SUBWAY #23983",
+          "SUBWAY #65029",
+          "SUBWAY 24379",
+          "SAPA",
+          "SUBWAY #23340",
+          "SOUP2YOU",
+          "SUBWAY #24265",
+          "SUBWAY #42676",
+          "SUBWAY 24454",
+          "SUBWAY 28327"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SUBWAY"
+      },
+      {
+        "from": [
+          "JEWEL FOOD STORE",
+          "JEWEL FOOD  STORE # 3345",
+          "JEWEL FOOD STORE #3030",
+          "JEWEL FOOD STORE #3181",
+          "JEWEL FOOD STORE #3368",
+          "JEWEL FOOD STORE #3043",
+          "JEWEL FOOD STORE #3241",
+          "JEWEL FOOD STORE #3296",
+          "JEWEL FOOD STORE #3092",
+          "JEWEL FOOD STORE #3443",
+          "JEWEL FOOD STORE #3407",
+          "JEWEL FOOD STORE #3344",
+          "JEWEL FOOD STORE #3376",
+          "JEWEL FOOD STORE #3442",
+          "JEWEL FOOD STORE #3224",
+          "JEWEL FOOD STORE #3210",
+          "JEWEL FOOD STORE #3514",
+          "JEWEL FOOD STORE #3721",
+          "JEWEL FOOD STORE #3282",
+          "JEWEL FOOD STORE #2500",
+          "JEWEL FOOD STORE #3176",
+          "JEWEL FOOD STORE #3454",
+          "JEWEL FOOD STORE #3455",
+          "JEWEL FOOD STORE #3114",
+          "JEWEL FOOD STORE #3170",
+          "JEWEL FOOD STORE #3441",
+          "JEWEL FOOD STORE #3470",
+          "JEWEL FOOD STORE #3501",
+          "JEWEL FOOD STORE #3302",
+          "JEWEL FOOD STORE #3477",
+          "JEWEL FOOD STORE #3349",
+          "JEWEL FOOD STORE #2502",
+          "JEWEL FOOD STORE #3057",
+          "JEWEL FOOD STORE#3632",
+          "JEWEL FOOD STORE #3139",
+          "JEWEL FOOD STORE #3089",
+          "JEWEL FOOD STORE #3232",
+          "JEWEL FOOD STORE #3234",
+          "JEWEL FOOD STORE #3430"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JEWEL FOOD STORE"
+      },
+      {
+        "from": [
+          "HAROLD'S CHICKEN SHACK",
+          "HAROLDS CHICKEN #2",
+          "HAROLD'S CHICKEN #24",
+          "HAROLD'S CHICKEN SHACK #55",
+          "HAROLD'S CHICKEN SHACK #52",
+          "HAROLD'S CHICKEN #5",
+          "HAROLD'S CHICKEN SHACK #35",
+          "HAROLD'S CHICKEN SHACK #27",
+          "HAROLD'S CHICKEN # 71",
+          "HAROLD'S CHICKEN SHACK #10",
+          "HAROLD'S CHICKEN #22",
+          "HAROLD'S CHICKEN SHACK #14",
+          "HAROLDS CHICKEN #55",
+          "HAROLD'S CHICKEN 57 LLC.",
+          "HAROLD'S CHICKEN #36",
+          "HAROLD'S CHICKEN SHACK #87",
+          "HAROLD'S CHICKEN #41B",
+          "HAROLD'S CHICKEN RESTAURANT",
+          "HAROLD'S CHICKEN SHACK #40",
+          "HAROLD'S CHICKEN SHACK #84",
+          "HAROLDS CHICKEN #19",
+          "HAROLD'S CHICKEN #19",
+          "HAROLD'S CHICKEN & FAMILY",
+          "HAROLD'S CHICKEN #41",
+          "HAROLD'S CHICKEN #55",
+          "HAROLD'S CHICKEN SHACK #4B",
+          "HAROLD'S CHICKEN SHACK #82",
+          "HAROLDS CHICKEN SHACK # 41",
+          "HAROLDS CHICKEN WEST LOOP 47",
+          "HAROLD'S CHICKEN #71",
+          "HAROLD'S CHICKEN SHACK  #39",
+          "HAROLD'S CHICKEN SHACK #1",
+          "HAROLD'S CHICKEN SHACK #15",
+          "HAROLD'S CHICKEN SHACK #2",
+          "HAROLD'S CHICKEN SHACK #53",
+          "HAROLD'S CHICKEN SHACK #6",
+          "HAROLD'S CHICKEN SHACK #86",
+          "HAROLDS CHICKEN SHACK #19"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HAROLD'S CHICKEN SHACK"
+      },
+      {
+        "from": [
+          "MCDONALD'S",
+          "MCDONALD'S #6491",
+          "MCDONALD'S #4305",
+          "MCDONALD'S #490",
+          "MCDONALDS  #29307",
+          "MCDONALD' S # 5618",
+          "MC DONALDS # 6771",
+          "MCDONALDS #27672",
+          "MCDONALDS #7069",
+          "MCDONALD'S #4308",
+          "MCDONALDS #6337",
+          "MCDONALDS #4655",
+          "MCDONALD'S #11290",
+          "MCDONALD'S #26364",
+          "MCDONALD'S #20104",
+          "MCDONALD'S #5813",
+          "MCDONALDS #12003",
+          "MCDONALDS #5471",
+          "MC DONALD' S # 22100",
+          "MC DONALD'S #11559",
+          "MCDONALD'S 26371",
+          "MC DONALD' S  # 6888",
+          "MCDONALD'S #6310",
+          "MCDONALDS 812",
+          "MC DONALDS # 25509",
+          "MCDONALD'S # 22821",
+          "MC DONALD'S #5697",
+          "MCDONALDS #7463",
+          "MC DONALD'S 6039",
+          "MCDONALD'S # 12785",
+          "MCDONALD'S # 17274",
+          "MCDONALD'S # 17277",
+          "MCDONALDS #  17278",
+          "MC DONALD'S #3901",
+          "MCDONALD'S #5246",
+          "MCDONALD'S #6337",
+          "MCDONALDS #490"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MCDONALD'S"
+      },
+      {
+        "from": [
+          "DOLLAR TREE",
+          "DOLLAR TREE # 4204",
+          "DOLLAR TREE #5705",
+          "DOLLAR TREE #4143",
+          "DOLLAR TREE #5461",
+          "DOLLAR TREE # 00733",
+          "DOLLAR TREE #5685",
+          "DOLLAR TREE #653",
+          "DOLLAR TREE #743",
+          "DOLLAR TREE#5617",
+          "DOLLAR TREE # 644",
+          "DOLLAR TREE # 657",
+          "DOLLAR TREE #05951",
+          "DOLLAR TREE #06417",
+          "DOLLAR TREE #4691",
+          "DOLLAR TREE #4693",
+          "DOLLAR TREE #4903",
+          "DOLLAR TREE #5537",
+          "DOLLAR TREE #5886",
+          "DOLLAR TREE #642",
+          "DOLLAR TREE #650",
+          "DOLLAR TREE #656",
+          "DOLLAR TREE #06214",
+          "DOLLAR TREE #06219",
+          "DOLLAR TREE #06354",
+          "DOLLAR TREE #06407",
+          "DOLLAR TREE #06621",
+          "DOLLAR TREE #06754",
+          "DOLLAR TREE #4215",
+          "DOLLAR TREE #5169",
+          "DOLLAR TREE #5986",
+          "DOLLAR TREE #640",
+          "DOLLAR TRUE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DOLLAR TREE"
+      },
+      {
+        "from": [
+          "FAMILY DOLLAR STORE #7050",
+          "FAMILY DOLLAR STORE #6618",
+          "FAMILY DOLLAR STORES",
+          "FAMILY DOLLAR STORE #6642",
+          "FAMILY DOLLAR STORE # 6772",
+          "FAMILY DOLLAR STORE # 7178",
+          "FAMILY DOLLAR STORE # 7294",
+          "FAMILY DOLLAR STORE #10729",
+          "FAMILY DOLLAR STORE #6730",
+          "FAMILY DOLLAR STORE #6944",
+          "FAMILY DOLLAR STORE #7149",
+          "FAMILY DOLLAR STORE  # 6918",
+          "FAMILY DOLLAR STORE  #6573",
+          "FAMILY DOLLAR STORE  #6594",
+          "FAMILY DOLLAR STORE # 7612",
+          "FAMILY DOLLAR STORE #6643",
+          "FAMILY DOLLAR STORE #7056",
+          "FAMILY DOLLAR STORE #7469",
+          "FAMILY DOLLAR STORE 1938",
+          "FAMLY DOLLAR STORE #6651",
+          "FAMILY DOLLAR STORE #10874",
+          "FAMILY DOLLAR STORE #6280",
+          "FAMILY DOLLAR STORE #6583",
+          "FAMILY DOLLAR STORE #6681",
+          "FAMILY DOLLAR STORE #7057",
+          "FAMILY DOLLAR STORE #7135",
+          "FAMILY DOLLAR STORE #7361"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FAMILY DOLLAR"
+      },
+      {
+        "from": [
+          "BLOCKBUSTER VIDEO #17229",
+          "BLOCKBUSTER VIDEO #17370",
+          "BLOCKBUSTER VIDEO #17395",
+          "BLOCKBUSTER VIDEO #17461",
+          "BLOCKBUSTER VIDEO #17026",
+          "BLOCKBUSTER VIDEO #17046",
+          "BLOCKBUSTER VIDEO #17060",
+          "BLOCKBUSTER VIDEO #17086",
+          "BLOCKBUSTER VIDEO #17238",
+          "BLOCKBUSTER VIDEO #17311",
+          "BLOCKBUSTER VIDEO #17336",
+          "BLOCKBUSTER VIDEO #17383",
+          "BLOCKBUSTER VIDEO #17393",
+          "BLOCKBUSTER VIDEO #17394",
+          "BLOCKBUSTER VIDEO #17412",
+          "BLOCKBUSTER VIDEO #17417",
+          "BLOCKBUSTER VIDEO #17426",
+          "BLOCKBUSTER VIDEO #17440",
+          "BLOCKBUSTER VIDEO #17453",
+          "BLOCKBUSTER VIDEO #17477",
+          "BLOCKBUSTER VIDEO #17485"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BLOCKBUSTER VIDEO"
+      },
+      {
+        "from": [
+          "CHURCH'S CHICKEN # 992",
+          "CHURCH'S CHICKEN # 982",
+          "CHURCH'S CHICKEN # 577",
+          "CHURCH'S CHICKEN # 584",
+          "CHURCH'S CHICKEN # 1053",
+          "CHURCH'S CHICKEN # 1315",
+          "CHURCH'S CHICKEN # 483",
+          "CHURCH'S CHICKEN # 970",
+          "CHURCH'S CHICKEN # 610",
+          "CHURCH'S CHICKEN # 1054",
+          "CHURCH'S CHICKEN # 1068",
+          "CHURCH'S CHICKEN # 1414",
+          "CHURCH'S CHICKEN # 1142",
+          "CHURCH'S CHICKEN #259",
+          "CHURCH'S CHICKEN #291",
+          "CHURCH'S CHICKEN # 478",
+          "CHURCH'S CHICKEN # 1155",
+          "CHURCH'S CHICKEN # 469",
+          "CHURCH'S CHICKEN # 304"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHURCH'S CHICKEN"
+      },
+      {
+        "from": [
+          "PANDA EXPRESS, INC",
+          "PANDA EXPRESS",
+          "PANDA EXPRESS #591",
+          "PANDA EXPRESS #1345",
+          "PANDA EXPRESS #1422",
+          "PANDA EXPRESS #389",
+          "PANDA EXPRESS, INC #1102",
+          "PANDA EXPRESS # 1370",
+          "PANDA EXPRESS #1975",
+          "PANDA EXPRESS #1878",
+          "PANDA EXPRESS #299",
+          "PANDA EXPRESS #2456",
+          "PANDA EXPRESS #1169",
+          "PANDA EXPRESS #365",
+          "PANDA EXPRESS #2522",
+          "PANDA EXPRESS RESTAURANT #2685",
+          "PANDA EXPRESS RESTAURANT",
+          "PANDA EXPRESS #236",
+          "PANDA EXPRESS #137"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PANDA EXPRESS"
+      },
+      {
+        "from": [
+          "DOMINICK'S # 113/1113",
+          "DOMINICK'S #1703",
+          "DOMINICK'S # 12/0012",
+          "DOMINICK'S # 130/1130",
+          "DOMINICK'S #1875",
+          "DOMINICK'S # 304/2304",
+          "DOMINICK'S #147/1147",
+          "DOMINICK'S #2889",
+          "DOMINICK'S #2890",
+          "DOMINICK'S",
+          "DOMINICK'S # 1100",
+          "DOMINICK'S #153/2153",
+          "DOMINICK'S #160/1698",
+          "DOMINICK'S # 86/1086",
+          "DOMINICK'S # 314/1314",
+          "DOMINICK'S # 75/4075",
+          "DOMINICK'S #169/1699",
+          "DOMINICK'S #68/1068"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DOMINICK'S"
+      },
+      {
+        "from": [
+          "7-ELEVEN #32889B",
+          "7-ELEVEN #33921B",
+          "7 ELEVEN #33582B",
+          "7-ELEVEN # 33723B",
+          "7-ELEVEN #33705B",
+          "7 ELEVEN #33854B",
+          "7-ELEVEN #33779B",
+          "7-ELEVEN #33856B",
+          "7-ELEVEN #36106 B",
+          "7-ELEVEN #33835B",
+          "7-ELEVEN #33875B",
+          "7-ELEVEN #33763B",
+          "7-ELEVEN #33734 B",
+          "7-ELEVEN #33856 B",
+          "7-ELEVEN #33841 B",
+          "7-ELEVEN #36718B",
+          "7-ELEVEN #37622B"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "7-ELEVEN"
+      },
+      {
+        "from": [
+          "EINSTEIN BROS. BAGELS #3505",
+          "EINSTEIN BROS. BAGELS # 1200",
+          "EINSTEIN BROS BAGELS # 1363",
+          "EINSTEIN BROS. BAGELS #1242",
+          "EINSTEIN BROS. BAGELS  # 2578",
+          "EINSTEIN BROS. BAGELS # 2436",
+          "EINSTEIN BROS. BAGELS #3559",
+          "EINSTEIN BROS. BAGELS #3561",
+          "EINSTEIN BROS BAGELS #3463",
+          "EINSTEIN BROS BAGEL HYDE PARK",
+          "EINSTEIN BROS. BAGELS",
+          "EINSTEIN BROS. BAGELS # 2330",
+          "EINSTEIN BROS. BAGELS #3426",
+          "EINSTEIN BROS BAGELS #3620",
+          "EINSTEIN BROS BAGELS # 2262",
+          "EINSTEIN BROS,BAGELS #3559"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EINSTEIN BROS. BAGELS"
+      },
+      {
+        "from": [
+          "PIZZA HUT",
+          "PIZZA HUT #405100",
+          "PIZZA HUT #405192",
+          "PIZZA HUT #714393",
+          "PIZZA HUT #714390",
+          "PIECE OUT",
+          "PIZZA HUT 317247",
+          "PIZZA HUT 317252",
+          "PIZZA HUT 317255",
+          "PIZZA HUT 317256",
+          "PIZZA HUT #405039",
+          "PIZZA HUT 317246",
+          "PIZZA HUT 317248",
+          "PIZZA HUT 317249",
+          "PIZZA HUT 317253",
+          "PIZZA HUT #714363"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PIZZA HUT"
+      },
+      {
+        "from": [
+          "WHITE CASTLE #27",
+          "WHITE CASTLE #23",
+          "WHITE CASTLE #21",
+          "WHITE CASTLE #49",
+          "WHITE CASTLE #57",
+          "WHITE CASTLE #61",
+          "WHITE CASTLE #63",
+          "WHITE CASTLE #64",
+          "WHITE CASTLE #58",
+          "WHITE CASTLE #25",
+          "WHITE CASTLE #24",
+          "WHITE CASTLE #26",
+          "WHITE CASTLE #53",
+          "WHITE CASTLE #54",
+          "WHITE CASTLE #55",
+          "WHITE CASTLE #18"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WHITE CASTLE"
+      },
+      {
+        "from": [
+          "EUREST DINING SERVICES",
+          "EUREST DINING",
+          "EUREST DINING SERVICES @ USG",
+          "EUREST DINING SERVICES AT CAFE 300",
+          "EUREST DINING SERVICES @ SAFER FOUNDATION",
+          "EUREST DINING SERVICES @ DRINKER, BIDDLE & REATH LLP",
+          "EUREST DINING SERVICES @ QUAKER OATS",
+          "EUREST DINING SERVICE @ ALBANY BANK & TRUST",
+          "EUREST DINING SERVICES @ CCH",
+          "EUREST DINING SERVICES @ CREDIT SUISSE CHICAGO",
+          "EUREST DINING SERVICES @ BOEING",
+          "EUREST DINING SERVICES @ GENERAL GROWTH",
+          "EUREST DINING SERVICES @ L'OREAL",
+          "EUREST DINING @ BANK OF AMERICA",
+          "EUREST DINING SERVICE AT SONNENSCHEIN NATH & ROSENTHAL",
+          "EUREST DINING SERVICES @ COMBINED INSURANCE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EUREST DINING SERVICES"
+      },
+      {
+        "from": [
+          "WHITE HEN PANTRY",
+          "WHITE HEN PANTRY #0-0201-3",
+          "WHITE HEN PANTRY #0-88154-4",
+          "WHITE HEN PANTRY #073205",
+          "WHITE HEN PANTRY # 0 8605-1",
+          "WHITE HEN PANTRY # 908309-5",
+          "WHITE HEN PANTRY #0-0-8505-1",
+          "WHITE HEN PANTRY #0-7413-4",
+          "WHITE HEN PANTRY #0-89015",
+          "WHITE HEN PANTRY #0-9703-1",
+          "WHITE HEN PANTRY #0-9703-7",
+          "WHITE HEN PANTRY #0-9703-9",
+          "WHITE HEN PANTRY #90-9006-3",
+          "WHITE HEN PANTRY #90-9703-1",
+          "WHITE HEN PANTRY 30-85085-2"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WHITE HEN PANTRY"
+      },
+      {
+        "from": [
+          "TACO BELL",
+          "TACO BELL #15855",
+          "TACO BELL #30408",
+          "TACO BELL #15875",
+          "TACO BELL #30404",
+          "TACO BELL_#4171",
+          "TACO BELL #5751",
+          "TACO  BELL #30409",
+          "TACO BELL #2513",
+          "TACO BELL #27900",
+          "TACO BELL #30407",
+          "TACO BELL 31279",
+          "TACO BELL #2028",
+          "TACO BELL #2702"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TACO BELL"
+      },
+      {
+        "from": [
+          "JAMBA JUICE",
+          "JAMBA JUICE #189",
+          "JAMBA  JUICE  #481",
+          "JAMBA JUICE #586",
+          "JAMBA JUICE  #576",
+          "JAMBA JUICE #343",
+          "JAMBA JUICE   #185",
+          "JAMBA JUICE  #343",
+          "JAMBA JUICE #628",
+          "JAMBA JUICE #629",
+          "JAMBA JUICE #630",
+          "JAMBA JUICE #511"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JAMBA JUICE"
+      },
+      {
+        "from": [
+          "DOLLAR TREE STORES #3128",
+          "DOLLAR TREE STORE, INC.",
+          "DOLLAR TREE STORES # 798",
+          "DOLLAR TREE STORES INC #733",
+          "DOLLAR TREE STORES #673",
+          "DOLLAR TREE STORES #07068",
+          "DOLLAR TREE STORES, INC #4056",
+          "DOLLAR TREE STORE # 642",
+          "DOLLAR TREE STORE #7227",
+          "DOLLAR TREE STORE #866",
+          "DOLLAR TREE STORES INC",
+          "DOLLAR TREE STORES, INC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DOLLAR TREE"
+      },
+      {
+        "from": [
+          "WENDY'S",
+          "INDIA HOUSE",
+          "WENDY'S #001206",
+          "WENDY'S #001106",
+          "WENDY'S #001168",
+          "WENDY'S #001461",
+          "WENDY'S #000981",
+          "WENDY'S #000899",
+          "WENDY'S #000860",
+          "WENDY'S #001110",
+          "ENDIS",
+          "WENDY'S 11743"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WENDY'S"
+      },
+      {
+        "from": [
+          "KENTUCKY FRIED CHICKEN",
+          "KENTUCKY FRIED CHICKEN 200 122",
+          "KENTUCKY FRIED CHICKEN 200-049",
+          "KENTUCKY FRIED CHICKEN #5290",
+          "KENTUCKY FRIED CHICKEN 200 106",
+          "KENTUCKY FRIED CHICKEN  #5286",
+          "KENTUCKY FRIED CHICKEN #5289",
+          "KENTUCKY FRIED CHICKEN Y200207",
+          "KENTUCKY FRIED CHICKEN #5287",
+          "KENTUCKY FRIED CHICKEN #5288",
+          "KENTUCKY FRIED CHICKEN 200 113"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KENTUCKY FRIED CHICKEN"
+      },
+      {
+        "from": [
+          "7-ELEVEN #33328C",
+          "7-ELEVEN #33508C",
+          "7-ELEVEN #33511C",
+          "7-ELEVEN # 33591C",
+          "7-ELEVEN # 33809C",
+          "7-ELEVEN #33496C",
+          "7-ELEVEN # 30099C",
+          "7-ELEVEN #27421 C",
+          "7-ELEVEN #33758 C",
+          "7-ELEVEN #33067 C",
+          "7-ELEVEN #33835 C"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "7-ELEVEN"
+      },
+      {
+        "from": [
+          "WENDY'S OLD FASHIONED HAMBURGERS",
+          "WENDY'S OLD FASHIONED HAMBURGERS OF NEW YORK",
+          "WENDY'S OLD FASHIONED HAMBURGERS OF NEW YORK, INC",
+          "WENDY'S OLD FASHIONED HAMBURGER",
+          "WENDY'S OLD FASHIONED HAMBURGERS OF NEW YORK INC",
+          "WENDY'S OLD FASHIONED HAMBURGERS OF NEW YORK INC.",
+          "WENDYS OLD FASHIONED HAMBURGERS",
+          "WENDY'S OLD FASHIONED HAMBURGERS OF NEW YORK, INC.",
+          "WENDY'S OLD FASHIONED HAMBURGERS OF NEW YORK,INC",
+          "WENDY'S OLD FASHIONED HAMBURGER'S OF NEW YORK, INC",
+          "WENDY'S OLD FASHIOND HAMBURGER"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WENDY'S"
+      },
+      {
+        "from": [
+          "DOLLAR GENERAL  STORE # 12061",
+          "DOLLAR  GENERAL  STORE#1833",
+          "DOLLAR GENERAL STORE #12422",
+          "DOLLAR GENERAL STORE #12544",
+          "DOLLAR GENERAL STORE # 15873",
+          "DOLLAR GENERAL STORE #12864",
+          "DOLLAR GENERAL STORE # 11784",
+          "DOLLAR GENERAL STORE #11821",
+          "DOLLAR GENERAL STORE #13157",
+          "DOLLAR GENERAL STORE #13489",
+          "DOLLAR GENERAL STORE #13777"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DOLLAR GENERAL"
+      },
+      {
+        "from": [
+          "DUNKIN DONUTS",
+          "DUNKIN DONUTS / BASKIN ROBBINS",
+          "DUNKIN DONUTS INC",
+          "DUNKIN DOUNUTS / BASKIN ROBINS",
+          "DUNKIN DONUTS/ BASKIN ROBBINS/ TOGO'S",
+          "DUNKIN DONUTS BASKIN ROBBINS TOGO'S",
+          "DUNKIN DONUTS/BASKIN ROBIN",
+          "DUNKIN DOUNUTS",
+          "DUNKIN DONUTS AND BASKIN ROBBINS",
+          "DUNKIN DONUTS & TOGO'S",
+          "DUNKIN DONUTS/BR/TOGO'S"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DUNKIN DONUTS"
+      },
+      {
+        "from": [
+          "ALDI INC # 62",
+          "ALDI INC #58",
+          "ALDI INC #64",
+          "ALDI INC #06",
+          "ALDI INC #53",
+          "ALDI INC #92",
+          "ALDI INC. #96",
+          "ALDI INC.#94",
+          "ALDI INC #03",
+          "ALDI INC #83"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ALDI INC"
+      },
+      {
+        "from": [
+          "7-ELEVEN #26210J",
+          "7 ELEVEN #27421J",
+          "7-ELEVEN #29726J",
+          "7 ELEVEN #33809J",
+          "7-ELEVEN #33809J",
+          "7 ELEVEN #29726J",
+          "7 ELEVEN #34724J",
+          "7 ELEVEN #33956 J",
+          "7- ELEVEN #33509J"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "7-ELEVEN"
+      }
+    ],
+    "description": "Mass edit cells in column DBA Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "DBA Name",
+          "expression": "grel:facetCount(value, \"value\", \"DBA Name\")",
+          "columnName": "DBA Name",
+          "from": 0,
+          "to": 2200,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SODEXO AMERICA, LLC",
+          "SODEXHO AMERICA, LLC",
+          "SODEXO AMERICA, LLC.",
+          "SODEXO AMERICA LLC",
+          "SODEXO AMERICA,LLC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SODEXO AMERICA, LLC"
+      },
+      {
+        "from": [
+          "SAVE-A-LOT  #859",
+          "SAVE-A-LOT  #852",
+          "SAVE-A-LOT #851",
+          "SAVE-A-LOT  #855",
+          "SAVE-A-LOT  #851"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SAVE-A-LOT"
+      },
+      {
+        "from": [
+          "SAVE-A-LOT  #862",
+          "SAVE-A-LOT  #859",
+          "SAVE-A-LOT  #852",
+          "SAVE-A-LOT  #855",
+          "SAVE-A-LOT  #851"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SAVE-A-LOT"
+      },
+      {
+        "from": [
+          "SAVE-A-LOT #882",
+          "SAVE-A-LOT #883",
+          "SAVE-A-LOT #885",
+          "SAVE-A-LOT #886"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SAVE-A-LOT"
+      },
+      {
+        "from": [
+          "LITTLE CAESAR PIZZA #1715",
+          "LITTLE CAESAR PIZZA #1729",
+          "LITTLE CAESAR PIZZA #1725",
+          "LITTLE CAESAR PIZZA #1726"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LITTLE CAESAR PIZZA"
+      },
+      {
+        "from": [
+          "SODEXO AMERICA, LLC",
+          "SODEXHO AMERICA, LLC",
+          "SODEXO AMERICA, LLC.",
+          "SODEXO AMERICA LLC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SODEXO AMERICA, LLC"
+      },
+      {
+        "from": [
+          "SODEXO AMERICA, LLC",
+          "SODEXO AMERICA, LLC.",
+          "SODEXO AMERICA LLC",
+          "SODEXO AMERICA,LLC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SODEXO AMERICA, LLC"
+      },
+      {
+        "from": [
+          "SODEXO AMERICA, LLC",
+          "SODEXO AMERICA LLC",
+          "SODEXO AMERICA,LLC",
+          "SODEXHO AMERICA LLC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SODEXO AMERICA, LLC"
+      },
+      {
+        "from": [
+          "SAVE-A-LOT  #859",
+          "SAVE-A-LOT  #852",
+          "SAVE-A-LOT  #855",
+          "SAVE-A-LOT  #851"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SAVE-A-LOT"
+      },
+      {
+        "from": [
+          "WHITE CASTLE SYSTEM, INC.",
+          "WHITE CASTLE SYSTEMS INC",
+          "WHITE CASTLE SYSTEM INC",
+          "WHITE CASTLE SYSTEM, INC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WHITE CASTLE SYSTEM INC."
+      },
+      {
+        "from": [
+          "JIMMY JOHNS",
+          "JIMMY JOHN'S",
+          "JIMMYY JOHN'S"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JIMMY JOHNS"
+      }
+    ],
+    "description": "Mass edit cells in column DBA Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "DBA Name",
+          "expression": "grel:facetCount(value, \"value\", \"DBA Name\")",
+          "columnName": "DBA Name",
+          "from": 0,
+          "to": 2200,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "STARBUCKS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "STARBUCKS COFFEE"
+      }
+    ],
+    "description": "Mass edit cells in column DBA Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "DBA Name",
+          "expression": "grel:facetCount(value, \"value\", \"DBA Name\")",
+          "columnName": "DBA Name",
+          "from": 0,
+          "to": 2200,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "KFC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KENTUCKY FRIED CHICKEN"
+      }
+    ],
+    "description": "Mass edit cells in column DBA Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "DBA Name",
+          "expression": "grel:facetCount(value, \"value\", \"DBA Name\")",
+          "columnName": "DBA Name",
+          "from": 0,
+          "to": 2200,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "J & J FISH"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JJ FISH & CHICKEN"
+      }
+    ],
+    "description": "Mass edit cells in column DBA Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "DBA Name",
+          "expression": "grel:facetCount(value, \"value\", \"DBA Name\")",
+          "columnName": "DBA Name",
+          "from": 0,
+          "to": 2200,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "WENDY'S PROPERTIES, LLC",
+          "WENDY'S PROPERTIES LLC",
+          "WENDY'S PROPERTIES, LLC."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WENDY'S PROPERTIES LLC"
+      },
+      {
+        "from": [
+          "MR. SUBMARINE",
+          "MR SUBMARINE",
+          "MR  SUBMARINE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MR. SUBMARINE"
+      },
+      {
+        "from": [
+          "CHILDREN'S LEARNING PLACE",
+          "CHILDREN'S LEARNING  PLACE",
+          "CHILDRENS LEARNING PLACE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHILDREN'S LEARNING PLACE"
+      },
+      {
+        "from": [
+          "DANY'S TACO'S",
+          "DANY'S TACOS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DANY'S TACOS"
+      },
+      {
+        "from": [
+          "FIRST  ACADEMY",
+          "FIRST ACADEMY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FIRST ACADEMY"
+      },
+      {
+        "from": [
+          "LADY GREGORY'S",
+          "LADY GREGORY,S"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LADY GREGORY'S"
+      },
+      {
+        "from": [
+          "BEVERLY BAKERY INC",
+          "BEVERLY BAKERY INC."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BEVERLY BAKERY INC"
+      },
+      {
+        "from": [
+          "SUSHI AVENUE, INC",
+          "SUSHI AVENUE, INC."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SUSHI AVENUE, INC"
+      },
+      {
+        "from": [
+          "LITTLE KIDDIES INC",
+          "LITTLE KIDDIES INC."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LITTLE KIDDIES INC"
+      },
+      {
+        "from": [
+          "FRESH MARKET PLACE",
+          "FRESH MARKET PLACE."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FRESH MARKET PLACE"
+      },
+      {
+        "from": [
+          "ARMAND'S PIZZERIA",
+          "ARMANDS PIZZERIA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ARMAND'S PIZZERIA"
+      },
+      {
+        "from": [
+          "POPEYE'S CHICKEN & BISCUITS",
+          "POPEYES (CHICKEN & BISCUITS)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "POPEYES"
+      },
+      {
+        "from": [
+          "RANDEE'S FOOD STORE",
+          "RANDEES FOOD STORE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RANDEE'S FOOD STORE"
+      },
+      {
+        "from": [
+          "LUGANO'S PIZZA",
+          "LUGANOS PIZZA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LUGANO'S PIZZA"
+      },
+      {
+        "from": [
+          "BP",
+          "B.P."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BP"
+      },
+      {
+        "from": [
+          "VINCES PIZZERIA & TAQUERIA",
+          "VINCE'S PIZZERIA & TAQUERIA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "VINCES PIZZERIA & TAQUERIA"
+      },
+      {
+        "from": [
+          "ABIGAIL'S ICE CREAM",
+          "ABIGAILS ICE CREAM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ABIGAIL'S ICE CREAM"
+      },
+      {
+        "from": [
+          "LINCOLN PARK PRE-SCHOOL",
+          "LINCOLN PARK PRESCHOOL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LINCOLN PARK PRESCHOOL"
+      },
+      {
+        "from": [
+          "UNCOMMON GROUND",
+          "UNCOMMON  GROUND"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "UNCOMMON GROUND"
+      },
+      {
+        "from": [
+          "CLARK/IRVING  APARTMENTS",
+          "CLARK/IRVING APARTMENTS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CLARK/IRVING APARTMENTS"
+      },
+      {
+        "from": [
+          "SENI  CATERING",
+          "SENI CATERING"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SENI CATERING"
+      },
+      {
+        "from": [
+          "RAYMOND'S TACOS",
+          "RAYMONDS TACOS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RAYMOND'S TACOS"
+      },
+      {
+        "from": [
+          "DELICIAS ICE CREAM",
+          "DELICIA'S ICE CREAM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DELICIAS ICE CREAM"
+      },
+      {
+        "from": [
+          "D'AGOSTINOS PIZZA",
+          "D'AGOSTINO'S PIZZA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "D'AGOSTINO'S PIZZA"
+      },
+      {
+        "from": [
+          "PAPA RAY'S PIZZA & WINGS",
+          "PAPA RAYS PIZZA & WINGS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PAPA RAY'S PIZZA & WINGS"
+      },
+      {
+        "from": [
+          "SOFIA'S PIZZA",
+          "SOFIA'S  PIZZA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SOFIA'S PIZZA"
+      },
+      {
+        "from": [
+          "PHILLYS ORIGINAL",
+          "PHILLY'S  ORIGINAL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PHILLYS ORIGINAL"
+      },
+      {
+        "from": [
+          "BP GAS STATION",
+          "B-P GAS STATION"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BP"
+      },
+      {
+        "from": [
+          "MR. GYROS",
+          "MR GYROS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MR. GYROS"
+      },
+      {
+        "from": [
+          "DOMINO'S",
+          "DOMINOS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DOMINO'S"
+      },
+      {
+        "from": [
+          "DEVIL  DAWGS",
+          "DEVIL DAWGS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DEVIL DAWGS"
+      },
+      {
+        "from": [
+          "J & J FISH AND CHICKEN",
+          "J AND J FISH AND CHICKEN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JJ FISH AND CHICKEN"
+      },
+      {
+        "from": [
+          "NIKO'S GYROS",
+          "NIKOS' GYROS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NIKO'S GYROS"
+      },
+      {
+        "from": [
+          "POTBELLY SANDWICH WORKS",
+          "POTBELLY SANDWICH  WORKS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "POTBELLY SANDWICH WORKS"
+      },
+      {
+        "from": [
+          "SPECIALTY'S CAFE & BAKERY",
+          "SPECIALTY'S CAFE BAKERY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SPECIALTY'S CAFE & BAKERY"
+      },
+      {
+        "from": [
+          "AL'S BEEF",
+          "ALS BEEF"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AL'S BEEF"
+      },
+      {
+        "from": [
+          "DOCKS",
+          "DOCK'S"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DOCKS"
+      },
+      {
+        "from": [
+          "BP GAS & FOOD MART.",
+          "BP GAS & FOOD MART"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BP GAS & FOOD MART"
+      },
+      {
+        "from": [
+          "LITTLE CAESAR'S PIZZA",
+          "LITTLE CAESARS PIZZA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LITTLE CAESARS PIZZA"
+      },
+      {
+        "from": [
+          "POPEYE'S CHICKEN",
+          "POPEYES CHICKEN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "POPEYES"
+      },
+      {
+        "from": [
+          "CHICAGO DOWNTOWN MARRIOTT",
+          "CHICAGO MARRIOTT DOWNTOWN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHICAGO MARRIOTT DOWNTOWN"
+      },
+      {
+        "from": [
+          "PAPA JOHN'S PIZZA",
+          "PAPA JOHNS PIZZA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PAPA JOHN'S"
+      },
+      {
+        "from": [
+          "ARBYS",
+          "ARBY'S"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ARBYS"
+      },
+      {
+        "from": [
+          "LITTLE CAESAR ENTERPRISES, INC.",
+          "LITTLE CAESAR ENTERPRISES, INC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LITTLE CAESAR ENTERPRISES INC."
+      },
+      {
+        "from": [
+          "CHUCKIE'S",
+          "CHUCKIES"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHUCKIE'S"
+      },
+      {
+        "from": [
+          "QUIZNOS",
+          "QUIZNO'S"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "QUIZNOS"
+      },
+      {
+        "from": [
+          "IHOP",
+          "I.H.O.P."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "IHOP"
+      },
+      {
+        "from": [
+          "GIORDANO'S PIZZA",
+          "GIORDANOS PIZZA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GIORDANO'S PIZZA"
+      },
+      {
+        "from": [
+          "HILTON GARDEN INN - CHICAGO",
+          "HILTON GARDEN INN CHICAGO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HILTON GARDEN INN - CHICAGO"
+      },
+      {
+        "from": [
+          "SALVATION  ARMY",
+          "SALVATION ARMY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SALVATION  ARMY"
+      },
+      {
+        "from": [
+          "POPEYE'S FRIED CHICKEN",
+          "POPEYES FRIED CHICKEN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "POPEYES"
+      },
+      {
+        "from": [
+          "LITTLE CAESARS",
+          "LITTLE CAESAR'S"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LITTLE CAESARS PIZZA"
+      },
+      {
+        "from": [
+          "CITY PROVISIONS CATERING AND E",
+          "CITY PROVISIONS CATERING AND E."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CITY PROVISIONS CATERING AND E"
+      },
+      {
+        "from": [
+          "GERRY'S FISH & CHICKEN",
+          "GERRY;S FISH & CHICKEN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GERRY'S FISH & CHICKEN"
+      },
+      {
+        "from": [
+          "DAIRY QUEEN ORANGE JULIUS",
+          "DAIRY QUEEN/ ORANGE JULIUS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DAIRY QUEEN / ORANGE JULIUS"
+      },
+      {
+        "from": [
+          "CITGO FUEL & MINI MART",
+          "CITGO FUEL& MINI MART"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CITGO FUEL & MINI MART"
+      },
+      {
+        "from": [
+          "CHICAGO CHEESE STEAK CO",
+          "CHICAGO CHEESE STEAK CO."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHICAGO CHEESE STEAK CO."
+      },
+      {
+        "from": [
+          "ROCKY'S TACOS",
+          "ROCKYS TACOS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ROCKY'S TACOS"
+      },
+      {
+        "from": [
+          "EL ORIGINAL CHAVAS TACOS, INC.",
+          "EL ORIGINAL CHAVAS TACOS, INC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EL ORIGINAL CHAVAS TACOS INC."
+      },
+      {
+        "from": [
+          "TORTORICE'S PIZZA",
+          "TORTORICES PIZZA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TORTORICE'S PIZZA"
+      },
+      {
+        "from": [
+          "DOLLOP COFFEE CO",
+          "DOLLOP  COFFEE CO."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DOLLOP COFFEE CO"
+      },
+      {
+        "from": [
+          "LEONAS",
+          "LEONA'S"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LEONA'S"
+      },
+      {
+        "from": [
+          "POPEYES FAMOUS FRIED CHICKEN",
+          "POPEYE'S FAMOUS FRIED CHICKEN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "POPEYES"
+      },
+      {
+        "from": [
+          "JJ FISH & CHICKEN",
+          "J&J FISH & CHICKEN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JJ FISH & CHICKEN"
+      },
+      {
+        "from": [
+          "JIMMY JOHNS SANDWICH SHOP",
+          "JIMMY JOHN'S SANDWICH SHOP"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JIMMY JOHNS"
+      }
+    ],
+    "description": "Mass edit cells in column DBA Name"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column City using expression value.toUppercase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CHICAGO",
+          "CCHICAGO",
+          "CHCHICAGO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHICAGO"
+      },
+      {
+        "from": [
+          "CHICAGO",
+          "CCHICAGO",
+          "CHICAGOI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHICAGO"
+      },
+      {
+        "from": [
+          "OLYMPIA FIELDS",
+          "OOLYMPIA FIELDS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OLYMPIA FIELDS"
+      },
+      {
+        "from": [
+          "CHICAGO",
+          "CHICAGOI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHICAGO"
+      },
+      {
+        "from": [
+          "CCHICAGO",
+          "CHCHICAGO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHICAGO"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CHICAGOCHICAGO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHICAGO"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CHCICAGO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHICAGO"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "312CHICAGO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHICAGO"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No Entry",
+          "NO ENTRY",
+          "no entry",
+          "No entry"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "No Entry"
+      },
+      {
+        "from": [
+          "SFP/COMPLAINT",
+          "SFP/Complaint",
+          "sfp/complaint"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SFP/COMPLAINT"
+      },
+      {
+        "from": [
+          "License",
+          "LICENSE",
+          "license"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "License"
+      },
+      {
+        "from": [
+          "SPECIAL TASK FORCE",
+          "Special Task Force"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SPECIAL TASK FORCE"
+      },
+      {
+        "from": [
+          "KIDS CAFE",
+          "Kids Cafe'"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KIDS CAFE"
+      },
+      {
+        "from": [
+          "Canvass",
+          "CANVASS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Canvass"
+      },
+      {
+        "from": [
+          "fire complaint",
+          "FIRE COMPLAINT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fire Complaint"
+      },
+      {
+        "from": [
+          "LICENSE CONSULTATION",
+          "License consultation"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LICENSE CONSULTATION"
+      },
+      {
+        "from": [
+          "Out of Business",
+          "OUT OF BUSINESS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Out of Business"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection Type using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Out Of Business",
+          "Out Ofbusiness"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Out Of Business"
+      },
+      {
+        "from": [
+          "Task Force",
+          "Taskforce"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Task Force"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Canvass",
+          "Canvas"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Canvass"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Canvass School/special Event"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Canvass School/Special Event"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Canvass Special Events"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Canvass School/Special Event"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Canvass/special Event"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Canvass School/Special Event"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Fire"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fire Complaint"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Fire/complain"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fire Complaint"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "License Task Force / Not -for-profit Club"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "License Task Force / Not-for-profit Club"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "License Task Force / Not-for-profit Club"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "License Task Force / Not-for-profit Club"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No Entry-short Complaint)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "No Entry"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.trim()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Grocery & Restaurant",
+          "Grocery& Restaurant",
+          "Grocery/ Restaurant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grocery & Restaurant"
+      },
+      {
+        "from": [
+          "Convenience Store",
+          "(convenience Store)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Convenience Store"
+      },
+      {
+        "from": [
+          "Children's Services Facility",
+          "Childrens Services Facility"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Children's Services Facility"
+      },
+      {
+        "from": [
+          "Tavern-liquor",
+          "Tavern/liquor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tavern-liquor"
+      },
+      {
+        "from": [
+          "Gas Station",
+          "(gas Station)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gas Station"
+      },
+      {
+        "from": [
+          "Grocery Store / Gas Station",
+          "Gas Station/ Grocery Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gas Station/ Grocery Store"
+      },
+      {
+        "from": [
+          "Kids Cafe",
+          "Kids Cafe'"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Kids Cafe"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1023 Childern's Services Facility",
+          "1023 Childern's Service S Facility"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1023 Childern's Services Facility"
+      },
+      {
+        "from": [
+          "Mobile Frozen Desserts Dispenser-non-motorized",
+          "Mobile Frozen Desserts Dispenser-non- Motorized"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Frozen Desserts Dispenser-non-motorized"
+      },
+      {
+        "from": [
+          "Daycare 1023",
+          "Day Care 1023"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Daycare 1023"
+      },
+      {
+        "from": [
+          "Frozen Desserts Dispenser -non Motorized",
+          "Frozen Desserts Dispenser-non-motorized"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Frozen Desserts Dispenser-non-motorized"
+      },
+      {
+        "from": [
+          "Gas Station/store",
+          "Gas Station Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gas Station/Store"
+      },
+      {
+        "from": [
+          "Grocery Store/ Restaurant",
+          "Grocery Store/restaurant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grocery Store/Restaurant"
+      },
+      {
+        "from": [
+          "Daycare",
+          "Day Care"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Daycare"
+      },
+      {
+        "from": [
+          "Roof Tops",
+          "Rooftops"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Roof Tops"
+      },
+      {
+        "from": [
+          "1023-children's Services Facility",
+          "1023 Children's Services Facility"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1023 Childern's Services Facility"
+      },
+      {
+        "from": [
+          "Long Term Care",
+          "Long-term Care"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Long-term Care"
+      },
+      {
+        "from": [
+          "Charter School Cafeteria",
+          "Charter School/cafeteria"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Charter School/Cafeteria"
+      },
+      {
+        "from": [
+          "Daycare Combo 1586",
+          "Day Care Combo (1586)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Daycare Combo 1586"
+      },
+      {
+        "from": [
+          "Gas Station /grocery",
+          "Gas Station/grocery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gas Station/Grocery"
+      },
+      {
+        "from": [
+          "Rooftop",
+          "Roof Top"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rooftop"
+      },
+      {
+        "from": [
+          "Wrigley Roof Top",
+          "Wrigley Rooftop"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wrigley RoofTop"
+      },
+      {
+        "from": [
+          "Long Term Care Facility",
+          "Long-term Care Facility"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Long-term Care Facility"
+      },
+      {
+        "from": [
+          "Bakery/restaurant",
+          "Bakery/ Restaurant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bakery/Restaurant"
+      },
+      {
+        "from": [
+          "Assisted Living",
+          "Assissted Living"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Assisted Living"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Grocery/restaurant",
+          "Grocery & Restaurant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grocery/Restaurant"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Movie Theater",
+          "Movie Theatre"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Movie Theater"
+      },
+      {
+        "from": [
+          "Gas Station/ Grocery Store",
+          "Gas Station/Grocery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gas Station/ Grocery Store"
+      },
+      {
+        "from": [
+          "Church/special Events",
+          "Church/special Event"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Church/Special Events"
+      },
+      {
+        "from": [
+          "Mobile Prepared Food Vendor",
+          "Mobilprepared Food Vendor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Prepared Food Vendor"
+      },
+      {
+        "from": [
+          "Commissary",
+          "Commiasary"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Commissary"
+      },
+      {
+        "from": [
+          "Convenience Store",
+          "Convnience Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Convenience Store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Theater",
+          "Theatre"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Theater"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Long-term Care",
+          "Long-term Care Facility"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Long-term Care"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Shared Kitchen User (long Trem)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Shared Kitchen User (long Term)"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Mobile Desserts Vendor",
+          "Mobile Dessert Cart",
+          "Mobile Dessert Vendor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Desserts Vendor"
+      },
+      {
+        "from": [
+          "Grocery/liquor",
+          "Grocery/liquor Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grocery/liquor"
+      },
+      {
+        "from": [
+          "Banquet Rooms",
+          "Banquet Room"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Banquet Rooms"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Convenient Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Convenience Store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "IL"
+      }
+    ],
+    "description": "Mass edit cells in column State"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection Date using expression value.toDate()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Address using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Address using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Address using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DBA Name using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "AKA Name",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column AKA Name using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Mobile Frozen Desserts Vendor",
+          "Mobile Frozen Desserts Dispenser-non-motorized",
+          "Mobile Frozen Dessert Vendor",
+          "Mobile Frozen Dessert Dispenser_non Motorized.",
+          "Mobile Frozen Dessert Disp/non-motorized",
+          "Mobile Frozen Desserts Dispenser-non-motor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Frozen Desserts Vendor"
+      },
+      {
+        "from": [
+          "Children's Services Facility",
+          "1023 Childern's Services Facility",
+          "1023 Childern's Service Facility",
+          "Childern's Services Facility",
+          "Childern's Service Facility"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Children's Services Facility"
+      },
+      {
+        "from": [
+          "Nursing Home",
+          "1005 Nursing Home"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nursing Home"
+      },
+      {
+        "from": [
+          "Gas Station/store",
+          "Gas Station/store Grocery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gas Station/store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Daycare",
+          "Daycare 1023",
+          "Day Care 2-14",
+          "Daycare 1586"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Daycare"
+      },
+      {
+        "from": [
+          "Herbalife",
+          "Herabalife",
+          "Herbal Life"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Herbal Life"
+      },
+      {
+        "from": [
+          "Tavern",
+          "Tavern/1006"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tavern"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Daycare Combo 1586",
+          "Daycare Combo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Daycare"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Gas Station",
+          "Gas Station/mini Mart",
+          "Gas Station/store",
+          "Gas Station/ Grocery Store",
+          "Gas Station/restaurant",
+          "Gas Station /subway Mini Mart."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gas Station Store"
+      },
+      {
+        "from": [
+          "Summer Feeding",
+          "Summer Feeding Prep Area"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Summer Feeding Prep Area"
+      },
+      {
+        "from": [
+          "Food Pantry",
+          "Food Pantry/church"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Food Pantry"
+      },
+      {
+        "from": [
+          "Riverwalk",
+          "Riverwalk Cafe"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Riverwalk Cafe"
+      },
+      {
+        "from": [
+          "Drug Store/grocery",
+          "Drug Store/w/ Food"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Drug Store"
+      },
+      {
+        "from": [
+          "Art Gallery W/wine And Beer",
+          "Art Gallery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Art Gallery W/wine And Beer"
+      },
+      {
+        "from": [
+          "Frozen Dessert Pushcarts",
+          "Frozen Desserts Dispenser-non-motorized"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Frozen Desserts Vendor"
+      },
+      {
+        "from": [
+          "Herbal Life Shop",
+          "Herbalife/zumba"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Herbal Life"
+      },
+      {
+        "from": [
+          "Health Center",
+          "Health Center/nutrition Classes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Health Center"
+      },
+      {
+        "from": [
+          "Children's Services Facility",
+          "Childern Activity Facility"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Children's Services Facility"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Daycare (2 - 6 Years)",
+          "Daycare (2 Years)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Daycare (2 - 6 Years)"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Mobile Food",
+          "Mobil Food 1315"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Food"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Grocery Store",
+          "Grocery Store/restaurant",
+          "Grocery Store/gas Station",
+          "Grocery Store/bakery",
+          "Grocery Store/taqueria",
+          "Grocery Store/cooking School",
+          "Grocery Store/deli"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grocery Store"
+      },
+      {
+        "from": [
+          "Convenience Store",
+          "Convenience",
+          "Convenience/drug Store",
+          "Convenience/gas Station"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Convenience Store"
+      },
+      {
+        "from": [
+          "Shared Kitchen User (long Term)",
+          "Shared Kitchen",
+          "Shared Kitchen User (short Term)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Shared Kitchen"
+      },
+      {
+        "from": [
+          "Retail Store Offers Cooking Classes",
+          "Retail Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Retail Store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Restaurant/bar",
+          "Restaurant(protein Shake Bar)",
+          "Restaurant/bar/theater"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Restaurant/bar"
+      },
+      {
+        "from": [
+          "Restaurant/grocery Store",
+          "Restaurant/grocery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grocery Store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Banquet",
+          "Banquets"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Banquet"
+      },
+      {
+        "from": [
+          "Restaurant/bar",
+          "Reataurant/bar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Restaurant/bar"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Herbal Life",
+          "Herbal Medicine",
+          "Herbal Remedy",
+          "Herbalcal",
+          "Herbal Drinks",
+          "Herbal",
+          "Herbal Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Herbal Store"
+      },
+      {
+        "from": [
+          "Bakery",
+          "Bakery/deli",
+          "Bakery/grocery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bakery"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Liquor",
+          "Fast Food/liquor",
+          "Packaged Liquor",
+          "Grocery/liquor",
+          "Tavern-liquor",
+          "Cat/liquor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Liquor"
+      },
+      {
+        "from": [
+          "Banquet Hall",
+          "Banquet",
+          "Banquet Rooms",
+          "Banquet Facility",
+          "Banquet Dining",
+          "Lounge/banquet Hall"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Banquet Hall"
+      },
+      {
+        "from": [
+          "Liquor",
+          "Liquor Store",
+          "Liquore Store/bar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Liquor Store"
+      },
+      {
+        "from": [
+          "Mobile Frozen Desserts Vendor",
+          "Mobile Desserts Vendor",
+          "Mobile Food Desserts Vendor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Desserts Vendor"
+      },
+      {
+        "from": [
+          "Rooftop",
+          "Rest/rooftop",
+          "Rooftop Patio"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rooftop"
+      },
+      {
+        "from": [
+          "After School Program",
+          "After School Care",
+          "Church/after School Program"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "After School Program"
+      },
+      {
+        "from": [
+          "Candy Store",
+          "Candy Maker",
+          "Candy Shop"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Candy Store"
+      },
+      {
+        "from": [
+          "Ice Cream Shop",
+          "Ice Cream",
+          "Ice Cream Parlor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ice Cream Shop"
+      },
+      {
+        "from": [
+          "Theater",
+          "Theater/bar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Theater"
+      },
+      {
+        "from": [
+          "Liquor Store",
+          "Liquore Store/bar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Liquor Store"
+      },
+      {
+        "from": [
+          "Culinary School",
+          "Culinary Arts School"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Culinary School"
+      },
+      {
+        "from": [
+          "Non -profit",
+          "Not For Profit"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Non-profit"
+      },
+      {
+        "from": [
+          "Hooka Lounge",
+          "Hooka Bar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hooka Bar"
+      },
+      {
+        "from": [
+          "Pantry",
+          "Food Pantry"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Food Pantry"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Custom Poultry Slaughter",
+          "Poultry Slaughter"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Poultry Slaughter"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Charter School",
+          "Charter School/cafeteria"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Charter School/cafeteria"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Special Event",
+          "Church/special Events"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Special Event"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.replace(\".\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.replace(\".\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.replace(\"&\",\" AND \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.replace(\"&\",\" AND \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+    {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DBA Name using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DBA Name using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DBA Name using expression value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "AKA Name",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column AKA Name using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "AKA Name",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column AKA Name using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "AKA Name",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column AKA Name using expression value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Mobile Frozen Desserts Vendor",
+          "Mobile Frozen Desserts Dispenser-non-motorized",
+          "Mobile Frozen Dessert Vendor",
+          "Mobile Frozen Dessert Dispenser_non Motorized.",
+          "Mobile Frozen Dessert Disp/non-motorized",
+          "Mobile Frozen Desserts Dispenser-non-motor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Frozen Desserts Vendor"
+      },
+      {
+        "from": [
+          "Children's Services Facility",
+          "1023 Childern's Services Facility",
+          "1023 Childern's Service Facility",
+          "Childern's Services Facility",
+          "Childern's Service Facility"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Children's Services Facility"
+      },
+      {
+        "from": [
+          "Nursing Home",
+          "1005 Nursing Home"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nursing Home"
+      },
+      {
+        "from": [
+          "Gas Station/store",
+          "Gas Station/store Grocery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gas Station/store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Daycare",
+          "Daycare 1023",
+          "Day Care 2-14",
+          "Daycare 1586"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Daycare"
+      },
+      {
+        "from": [
+          "Herbalife",
+          "Herabalife",
+          "Herbal Life"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Herbal Life"
+      },
+      {
+        "from": [
+          "Tavern",
+          "Tavern/1006"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tavern"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Daycare Combo 1586",
+          "Daycare Combo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Daycare"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Gas Station",
+          "Gas Station/mini Mart",
+          "Gas Station/store",
+          "Gas Station/ Grocery Store",
+          "Gas Station/restaurant",
+          "Gas Station /subway Mini Mart."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gas Station Store"
+      },
+      {
+        "from": [
+          "Summer Feeding",
+          "Summer Feeding Prep Area"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Summer Feeding Prep Area"
+      },
+      {
+        "from": [
+          "Food Pantry",
+          "Food Pantry/church"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Food Pantry"
+      },
+      {
+        "from": [
+          "Riverwalk",
+          "Riverwalk Cafe"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Riverwalk Cafe"
+      },
+      {
+        "from": [
+          "Drug Store/grocery",
+          "Drug Store/w/ Food"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Drug Store"
+      },
+      {
+        "from": [
+          "Art Gallery W/wine And Beer",
+          "Art Gallery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Art Gallery W/wine And Beer"
+      },
+      {
+        "from": [
+          "Frozen Dessert Pushcarts",
+          "Frozen Desserts Dispenser-non-motorized"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Frozen Desserts Vendor"
+      },
+      {
+        "from": [
+          "Herbal Life Shop",
+          "Herbalife/zumba"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Herbal Life"
+      },
+      {
+        "from": [
+          "Health Center",
+          "Health Center/nutrition Classes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Health Center"
+      },
+      {
+        "from": [
+          "Children's Services Facility",
+          "Childern Activity Facility"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Children's Services Facility"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Daycare (2 - 6 Years)",
+          "Daycare (2 Years)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Daycare (2 - 6 Years)"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Mobile Food",
+          "Mobil Food 1315"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Food"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Grocery Store",
+          "Grocery Store/restaurant",
+          "Grocery Store/gas Station",
+          "Grocery Store/bakery",
+          "Grocery Store/taqueria",
+          "Grocery Store/cooking School",
+          "Grocery Store/deli"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grocery Store"
+      },
+      {
+        "from": [
+          "Convenience Store",
+          "Convenience",
+          "Convenience/drug Store",
+          "Convenience/gas Station"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Convenience Store"
+      },
+      {
+        "from": [
+          "Shared Kitchen User (long Term)",
+          "Shared Kitchen",
+          "Shared Kitchen User (short Term)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Shared Kitchen"
+      },
+      {
+        "from": [
+          "Retail Store Offers Cooking Classes",
+          "Retail Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Retail Store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Restaurant/bar",
+          "Restaurant(protein Shake Bar)",
+          "Restaurant/bar/theater"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Restaurant/bar"
+      },
+      {
+        "from": [
+          "Restaurant/grocery Store",
+          "Restaurant/grocery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grocery Store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Banquet",
+          "Banquets"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Banquet"
+      },
+      {
+        "from": [
+          "Restaurant/bar",
+          "Reataurant/bar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Restaurant/bar"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Herbal Life",
+          "Herbal Medicine",
+          "Herbal Remedy",
+          "Herbalcal",
+          "Herbal Drinks",
+          "Herbal",
+          "Herbal Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Herbal Store"
+      },
+      {
+        "from": [
+          "Bakery",
+          "Bakery/deli",
+          "Bakery/grocery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bakery"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Liquor",
+          "Fast Food/liquor",
+          "Packaged Liquor",
+          "Grocery/liquor",
+          "Tavern-liquor",
+          "Cat/liquor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Liquor"
+      },
+      {
+        "from": [
+          "Banquet Hall",
+          "Banquet",
+          "Banquet Rooms",
+          "Banquet Facility",
+          "Banquet Dining",
+          "Lounge/banquet Hall"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Banquet Hall"
+      },
+      {
+        "from": [
+          "Liquor",
+          "Liquor Store",
+          "Liquore Store/bar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Liquor Store"
+      },
+      {
+        "from": [
+          "Mobile Frozen Desserts Vendor",
+          "Mobile Desserts Vendor",
+          "Mobile Food Desserts Vendor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Desserts Vendor"
+      },
+      {
+        "from": [
+          "Rooftop",
+          "Rest/rooftop",
+          "Rooftop Patio"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rooftop"
+      },
+      {
+        "from": [
+          "After School Program",
+          "After School Care",
+          "Church/after School Program"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "After School Program"
+      },
+      {
+        "from": [
+          "Candy Store",
+          "Candy Maker",
+          "Candy Shop"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Candy Store"
+      },
+      {
+        "from": [
+          "Ice Cream Shop",
+          "Ice Cream",
+          "Ice Cream Parlor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ice Cream Shop"
+      },
+      {
+        "from": [
+          "Theater",
+          "Theater/bar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Theater"
+      },
+      {
+        "from": [
+          "Liquor Store",
+          "Liquore Store/bar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Liquor Store"
+      },
+      {
+        "from": [
+          "Culinary School",
+          "Culinary Arts School"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Culinary School"
+      },
+      {
+        "from": [
+          "Non -profit",
+          "Not For Profit"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Non-profit"
+      },
+      {
+        "from": [
+          "Hooka Lounge",
+          "Hooka Bar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hooka Bar"
+      },
+      {
+        "from": [
+          "Pantry",
+          "Food Pantry"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Food Pantry"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Custom Poultry Slaughter",
+          "Poultry Slaughter"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Poultry Slaughter"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Charter School",
+          "Charter School/cafeteria"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Charter School/cafeteria"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Ice Cream Shop",
+          "Paleteria /icecream Shop"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ice Cream Shop"
+      },
+      {
+        "from": [
+          "Banquet Hall",
+          "Restaurantbanquet Halls"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Banquet Hall"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Cafeteria",
+          "Charter School/cafeteria",
+          "University Cafeteria",
+          "School Cafeteria"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "School Cafeteria"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Dollar Store",
+          "Grocery/dollar Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Dollar Store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Dollar Store",
+          "Dollar Store Selling Grocery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Dollar Store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DBA Name using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DBA Name using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DBA Name using expression value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "AKA Name",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column AKA Name using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "AKA Name",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column AKA Name using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "AKA Name",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column AKA Name using expression value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Mobile Frozen Desserts Vendor",
+          "Mobile Frozen Desserts Dispenser-non-motorized",
+          "Mobile Frozen Dessert Vendor",
+          "Mobile Frozen Dessert Dispenser_non Motorized.",
+          "Mobile Frozen Dessert Disp/non-motorized",
+          "Mobile Frozen Desserts Dispenser-non-motor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Frozen Desserts Vendor"
+      },
+      {
+        "from": [
+          "Children's Services Facility",
+          "1023 Childern's Services Facility",
+          "1023 Childern's Service Facility",
+          "Childern's Services Facility",
+          "Childern's Service Facility"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Children's Services Facility"
+      },
+      {
+        "from": [
+          "Nursing Home",
+          "1005 Nursing Home"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nursing Home"
+      },
+      {
+        "from": [
+          "Gas Station/store",
+          "Gas Station/store Grocery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gas Station/store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Daycare",
+          "Daycare 1023",
+          "Day Care 2-14",
+          "Daycare 1586"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Daycare"
+      },
+      {
+        "from": [
+          "Herbalife",
+          "Herabalife",
+          "Herbal Life"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Herbal Life"
+      },
+      {
+        "from": [
+          "Tavern",
+          "Tavern/1006"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tavern"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Daycare Combo 1586",
+          "Daycare Combo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Daycare"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Gas Station",
+          "Gas Station/mini Mart",
+          "Gas Station/store",
+          "Gas Station/ Grocery Store",
+          "Gas Station/restaurant",
+          "Gas Station /subway Mini Mart."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gas Station Store"
+      },
+      {
+        "from": [
+          "Summer Feeding",
+          "Summer Feeding Prep Area"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Summer Feeding Prep Area"
+      },
+      {
+        "from": [
+          "Food Pantry",
+          "Food Pantry/church"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Food Pantry"
+      },
+      {
+        "from": [
+          "Riverwalk",
+          "Riverwalk Cafe"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Riverwalk Cafe"
+      },
+      {
+        "from": [
+          "Drug Store/grocery",
+          "Drug Store/w/ Food"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Drug Store"
+      },
+      {
+        "from": [
+          "Art Gallery W/wine And Beer",
+          "Art Gallery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Art Gallery W/wine And Beer"
+      },
+      {
+        "from": [
+          "Frozen Dessert Pushcarts",
+          "Frozen Desserts Dispenser-non-motorized"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Frozen Desserts Vendor"
+      },
+      {
+        "from": [
+          "Herbal Life Shop",
+          "Herbalife/zumba"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Herbal Life"
+      },
+      {
+        "from": [
+          "Health Center",
+          "Health Center/nutrition Classes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Health Center"
+      },
+      {
+        "from": [
+          "Children's Services Facility",
+          "Childern Activity Facility"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Children's Services Facility"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Daycare (2 - 6 Years)",
+          "Daycare (2 Years)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Daycare (2 - 6 Years)"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Mobile Food",
+          "Mobil Food 1315"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Food"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Grocery Store",
+          "Grocery Store/restaurant",
+          "Grocery Store/gas Station",
+          "Grocery Store/bakery",
+          "Grocery Store/taqueria",
+          "Grocery Store/cooking School",
+          "Grocery Store/deli"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grocery Store"
+      },
+      {
+        "from": [
+          "Convenience Store",
+          "Convenience",
+          "Convenience/drug Store",
+          "Convenience/gas Station"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Convenience Store"
+      },
+      {
+        "from": [
+          "Shared Kitchen User (long Term)",
+          "Shared Kitchen",
+          "Shared Kitchen User (short Term)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Shared Kitchen"
+      },
+      {
+        "from": [
+          "Retail Store Offers Cooking Classes",
+          "Retail Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Retail Store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Restaurant/bar",
+          "Restaurant(protein Shake Bar)",
+          "Restaurant/bar/theater"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Restaurant/bar"
+      },
+      {
+        "from": [
+          "Restaurant/grocery Store",
+          "Restaurant/grocery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grocery Store"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Banquet",
+          "Banquets"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Banquet"
+      },
+      {
+        "from": [
+          "Restaurant/bar",
+          "Reataurant/bar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Restaurant/bar"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Herbal Life",
+          "Herbal Medicine",
+          "Herbal Remedy",
+          "Herbalcal",
+          "Herbal Drinks",
+          "Herbal",
+          "Herbal Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Herbal Store"
+      },
+      {
+        "from": [
+          "Bakery",
+          "Bakery/deli",
+          "Bakery/grocery"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bakery"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Liquor",
+          "Fast Food/liquor",
+          "Packaged Liquor",
+          "Grocery/liquor",
+          "Tavern-liquor",
+          "Cat/liquor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Liquor"
+      },
+      {
+        "from": [
+          "Banquet Hall",
+          "Banquet",
+          "Banquet Rooms",
+          "Banquet Facility",
+          "Banquet Dining",
+          "Lounge/banquet Hall"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Banquet Hall"
+      },
+      {
+        "from": [
+          "Liquor",
+          "Liquor Store",
+          "Liquore Store/bar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Liquor Store"
+      },
+      {
+        "from": [
+          "Mobile Frozen Desserts Vendor",
+          "Mobile Desserts Vendor",
+          "Mobile Food Desserts Vendor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile Desserts Vendor"
+      },
+      {
+        "from": [
+          "Rooftop",
+          "Rest/rooftop",
+          "Rooftop Patio"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rooftop"
+      },
+      {
+        "from": [
+          "After School Program",
+          "After School Care",
+          "Church/after School Program"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "After School Program"
+      },
+      {
+        "from": [
+          "Candy Store",
+          "Candy Maker",
+          "Candy Shop"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Candy Store"
+      },
+      {
+        "from": [
+          "Ice Cream Shop",
+          "Ice Cream",
+          "Ice Cream Parlor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ice Cream Shop"
+      },
+      {
+        "from": [
+          "Theater",
+          "Theater/bar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Theater"
+      },
+      {
+        "from": [
+          "Liquor Store",
+          "Liquore Store/bar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Liquor Store"
+      },
+      {
+        "from": [
+          "Culinary School",
+          "Culinary Arts School"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Culinary School"
+      },
+      {
+        "from": [
+          "Non -profit",
+          "Not For Profit"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Non-profit"
+      },
+      {
+        "from": [
+          "Hooka Lounge",
+          "Hooka Bar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hooka Bar"
+      },
+      {
+        "from": [
+          "Pantry",
+          "Food Pantry"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Food Pantry"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Custom Poultry Slaughter",
+          "Poultry Slaughter"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Poultry Slaughter"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Charter School",
+          "Charter School/cafeteria"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Charter School/cafeteria"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection Type using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Results",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Results using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Violations",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Violations using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1410 S Museum Campus Dr",
+          "1410 S Museum Campus Dr."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1410 S Museum Campus Dr"
+      },
+      {
+        "from": [
+          "2646 N Milwaukee Ave Ave",
+          "2646 N Milwaukee Ave"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "2646 N Milwaukee Ave"
+      },
+      {
+        "from": [
+          "5500 N St Louis Ave",
+          "5500 N St. Louis Ave"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "5500 N St. Louis Ave"
+      },
+      {
+        "from": [
+          "750 N Franklin St",
+          "750 N Franklin St."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "750 N Franklin St"
+      },
+      {
+        "from": [
+          "2301 S Indiana Ave",
+          "2301 S Indiana Ave."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "2301 S Indiana Ave"
+      },
+      {
+        "from": [
+          "124 E 35th St",
+          "124 E 35th St."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "124 E 35th St"
+      },
+      {
+        "from": [
+          "6319 S Dr Martin Luther King Jr Dr",
+          "6319 S Dr. Martin Luther King Jr Dr"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "6319 S Dr. Martin Luther King Jr Dr"
+      },
+      {
+        "from": [
+          "3920 N Clark St",
+          "3920 N Clark St."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "3920 N Clark St"
+      },
+      {
+        "from": [
+          "3323 W North Ave .",
+          "3323 W North Ave"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "3323 W North Ave"
+      },
+      {
+        "from": [
+          "4628 N N Cumberland Ave",
+          "4628 N Cumberland Ave"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "4628 N Cumberland Ave"
+      },
+      {
+        "from": [
+          "3901 S Dr Martin Luther King Jr Dr",
+          "3901 S Dr Martin Luther King Jr"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "3901 S Dr Martin Luther King Jr Dr"
+      }
+    ],
+    "description": "Mass edit cells in column Address"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "2263 E 95th St",
+          "2263 E 95 Th St"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "2263 E 95th St"
+      },
+      {
+        "from": [
+          "2401-2407 W Ogden Ave",
+          "2401- 2407 W Ogden Ave"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "2401-2407 W Ogden Ave"
+      },
+      {
+        "from": [
+          "4358 W 51st St",
+          "4358 W 51 St St"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "4358 W 51st St"
+      },
+      {
+        "from": [
+          "740 W 63st",
+          "740 W 63 St"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "740 W 63st"
+      },
+      {
+        "from": [
+          "1960 W 13th St",
+          "1960 W 13 Th St"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1960 W 13th St"
+      },
+      {
+        "from": [
+          "5200 - 5210 N Cicero Ave",
+          "5200-5210 N Cicero Ave"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "5200-5210 N Cicero Ave"
+      },
+      {
+        "from": [
+          "115 E 51st St",
+          "115 E 51 St St"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "115 E 51st St"
+      },
+      {
+        "from": [
+          "641-643 E 47th St",
+          "641 - 643 E 47th St"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "641-643 E 47th St"
+      },
+      {
+        "from": [
+          "4311-4315 N Kedzie Ave",
+          "4311 - 4315 N Kedzie Ave"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "4311-4315 N Kedzie Ave"
+      },
+      {
+        "from": [
+          "5456 - 5460 S Kedzie Ave",
+          "5456-5460 S Kedzie Ave"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "5456-5460 S Kedzie Ave"
+      },
+      {
+        "from": [
+          "10622-10624 S Halsted St",
+          "10622 -10624 S Halsted St"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "10622-10624 S Halsted St"
+      },
+      {
+        "from": [
+          "1519 W 18th St",
+          "1519 W 18 Th St"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1519 W 18th St"
+      },
+      {
+        "from": [
+          "1757-1759 W 18th St",
+          "1757 - 1759 W 18th St"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1757-1759 W 18th St"
+      },
+      {
+        "from": [
+          "3143 W 51st St",
+          "3143 W 51 St St"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "3143 W 51st St"
+      },
+      {
+        "from": [
+          "3000 -3002 W 26th St",
+          "3000-3002 W 26th St"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "3000-3002 W 26th St"
+      },
+      {
+        "from": [
+          "621-623 W Randolph St",
+          "621 -623 W Randolph St"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "621-623 W Randolph St"
+      },
+      {
+        "from": [
+          "2100 W 22nd Pl",
+          "2100 W 22 Nd Pl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "2100 W 22nd Pl"
+      }
+    ],
+    "description": "Mass edit cells in column Address"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "440-442 E 71st St",
+          "440 - 42 E 71st St"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "440-442 E 71st St"
+      }
+    ],
+    "description": "Mass edit cells in column Address"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "License-task Force",
+          "License Task Force / Not -for-profit Clu",
+          "License Task Force / Not-for-profit Club"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "License-task Force"
+      },
+      {
+        "from": [
+          "License Re-inspection",
+          "1315 License Reinspection"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "License Re-inspection"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Task Force Liquor 1475",
+          "Task Force Liquor 1470",
+          "Task Force Liquor 1474",
+          "Task Force Liquor (1481)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Task Force Liquor"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Reinspection",
+          "Reinspection Of 48 Hour Notice",
+          "Re-inspection Of Close-up"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Reinspection"
+      },
+      {
+        "from": [
+          "License-task Force",
+          "License Daycare 1586",
+          "License Task 1474"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "License-task Force"
+      },
+      {
+        "from": [
+          "License Re-inspection",
+          "License Renewal For Daycare",
+          "License Renewal Inspection For Daycare"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "License Re-inspection"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Task Force Liquor",
+          "Task Force Liquor Catering",
+          "Task Force Liquor Inspection 1474",
+          "Task Force(1470) Liquor Tavern"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Task Force Liquor"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Task Force Liquor",
+          "Task Force For Liquor 1474"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Task Force Liquor"
+      },
+      {
+        "from": [
+          "Not Ready",
+          "License/not Ready"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Not Ready"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Not Ready",
+          "Task Force Not Ready"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Task Force Not Ready"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value.replace(/\\d{4}/,\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection Type using expression value.replace(/\\d{4}/,\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection Type using expression value.trim()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Package Liquor",
+          "Task Force Package Liquor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Task Force Package Liquor"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.toTitlecase()"
+  },
+    {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Risk",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Risk using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "AKA Name",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column AKA Name using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Address using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column City using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Zip",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Zip using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection Type using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Violations",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Violations using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Location",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Location using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column City using expression value.toTitlecase()"
+  }
+]
