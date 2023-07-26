@@ -15,7 +15,8 @@ CREATE TABLE FoodEstablishment (
     dba_name VARCHAR(100) NOT NULL,
     aka_name VARCHAR(100),
     facility_type VARCHAR(50),
-    location_id INTEGER
+	location_id INTEGER,
+	FOREIGN KEY (location_id) REFERENCES EstablishmentLocation(id)
 );
 
 CREATE TABLE FoodInspection (
@@ -26,7 +27,8 @@ CREATE TABLE FoodInspection (
     inspection_type VARCHAR(50),
     inspection_date DATE NOT NULL,
     results VARCHAR(20) NOT NULL,
-    establishment_id INTEGER
+	establishment_id INTEGER,
+	FOREIGN KEY (establishment_id) REFERENCES FoodEstablishment(id)
 );
 
 CREATE TABLE ViolationCode (
