@@ -109,14 +109,6 @@ def split_row_dict(row_dict, cols):
     return {k: row_dict[k] for k in cols}
 
 def clean_location_df(df):
-    # return df.drop_duplicates(subset=['address', 'city', 'state', 'zip'])    \
-    # df['latitude'] =   df['latitude'].round(8)
-    # df['longitude'] =  df['longitude'].round(8)
-    # df['latitude_tmp']  =    df.apply(lambda row: str(row['latitude'])[:str(row['latitude']).find('.')+7], axis=1)
-    # df['longitude_tmp'] =  df.apply(lambda row: str(row['longitude'])[:str(row['longitude']).find('.')+7], axis=1)
-    # df['location_tmp'] = df.apply(lambda row: f"({row['latitude_tmp']}, {row['longitude_tmp']})", axis=1)
-    print(df.columns)
-    print(df[df.address == '4628 N Cumberland Ave'])
     df.loc[df['address'] == '3901 S Dr Martin Luther King Jr Dr', 'location'] = '(41.823619, -87.616378)'
     df.loc[df['address'] == '4628 N Cumberland Ave', 'location'] = '(41.96389053134971, -87.83683847050548)'
 
@@ -124,9 +116,6 @@ def clean_location_df(df):
     df = df.drop_duplicates(subset=['location'])
     # df = df.drop_duplicates(subset=['location_tmp'])   
     # df = df.drop_duplicates(subset=['address', 'city', 'state', 'zip'])
-    print(df[df.address == '4628 N Cumberland Ave'])
-    
-
     # df = df.drop(['latitude_tmp','longitude_tmp', 'location_tmp'], axis=1) 
     return df     
     
@@ -155,7 +144,7 @@ def main(dbfile, csvfile, cleandata):
     db.bind(provider='sqlite', filename=dbfile, create_db=False)    
     set_sql_debug(True)
     db.generate_mapping(create_tables=False) 
-    print('cleandata', cleandata)
+    print(f'cleandata flag: {cleandata}')
     # Load the CSV file into a pandas DataFrame
 
     df = pd.read_csv(f'../dataset/{csvfile}')
@@ -208,7 +197,6 @@ def main(dbfile, csvfile, cleandata):
                 for row in food_establishment_table.to_dict('records'):
                     establishment_record = split_row_dict(row, ['license_number', 'dba_name', 'aka_name', 'facility_type'])
                     assert establishment_record, 'establisment_record is empty'
-                    # location_id = select(l.id for l in EstablishmentLocation if l.address == row['address' and l.city == row['city'] and l.state ==row['state'] and l.zip == row['zip']] ).first() 
                     # location_id = EstablishmentLocation.select(lambda l: l.address == row['address'] and l.city == row['city'] and l.state ==row['state'] and l.zip == row['zip']).first().id 
                     location_id = EstablishmentLocation.select(lambda l: l.location == row['location']).first().id 
             
@@ -217,12 +205,10 @@ def main(dbfile, csvfile, cleandata):
                     # print(establishment_record)
                     establishments.append(establishment_record)
                     
-                    # establishment_df=    pd.DataFrame.from_dict(establishment_record, orient='index').T
-                    # print(establishment_df)
+
                 establishment_df = pd.DataFrame(establishments)
                 establishment_df.to_sql('FoodEstablishment', db.get_connection(), if_exists='append', index=False)
                     
-                    # establishment = FoodEstablishment(**establishment_record, location_id=location_id)
                 commit()
                 
                 
@@ -230,12 +216,12 @@ def main(dbfile, csvfile, cleandata):
                 loaded_food_establishment_df['license_number'] =  pd.to_numeric(loaded_food_establishment_df['license_number'], errors='coerce').astype('Int64')
                 loaded_food_establishment_df = loaded_food_establishment_df.rename(columns={'id': 'establishment_id'})
 
-                print(loaded_food_establishment_df.dtypes, loaded_food_establishment_df.columns)
-                print(food_inspection_table.dtypes, food_inspection_table.columns)
+                # print(loaded_food_establishment_df.dtypes, loaded_food_establishment_df.columns)
+                # print(food_inspection_table.dtypes, food_inspection_table.columns)
                 inspections_merged = pd.merge(food_inspection_table,loaded_food_establishment_df,on=['license_number', 'dba_name', 'aka_name'],how='inner')
-                print(inspections_merged.columns)
-                print(inspections_merged.isnull().sum())    
-                print(len(inspections_merged))
+                # print(inspections_merged.columns)
+                # print(inspections_merged.isnull().sum())    
+                # print(len(inspections_merged))
                 inspections_merged = inspections_merged.drop(['license_number', 'dba_name', 'aka_name'], axis=1)
                 inspections_merged.to_sql('FoodInspection', db.get_connection(), if_exists='append', index=False)
 
@@ -245,52 +231,6 @@ def main(dbfile, csvfile, cleandata):
                 inspection_violation_df = inspection_violation_df[inspection_violation_df['inspection_id'].isin(inspections_merged['inspection_id'])]
                 after_count = len(inspection_violation_df)
                 print(before_count, after_count, after_count-before_count)
-                
-                # for row in food_inspection_table.to_dict('records'):
-                #     inspection_record = split_row_dict(row, ['inspection_id',  'risk', 'risk_level', 'risk_category', 'inspection_type', 'inspection_date', 'results'])
-                #     assert inspection_record, 'inspection_record is empty'
-                                         
-                #     establishment_id = FoodEstablishment.select(lambda l: l.license_number == row['license_number'] and l.dba_name == row['dba_name'] and l.aka_name ==row['aka_name']  ).first() 
-                #     print("ESTABLISHMENT: " + establishment_id)
-                #     if not establishment_id: continue 
-                #     assert establishment_id, 'establishment is empty'
-                #     inspection_record['establishment_id'] = establishment_id
-                #     inspections.append(inspection_record)
- 
-                # inspection_df = pd.DataFrame(inspections)
-                # inspection_df.to_sql('FoodInspections', db.get_connection(), if_exists='append', index=False)
-                                                
-                # foodloc_df= pd.merge(food_establishment_table, establishment_location_table, on=['address', 'city', 'state', 'zip'], how='left')
-                # print(foodloc_df.columns )
-                # print(foodloc_df.isnull().sum())
-                # combined_df = pd.merge(food_inspection_table, foodloc_df, on=['license_number', 'dba_name', 'aka_name'], how='inner')
-                # combined_df = combined_df.drop_duplicates(subset=['inspection_id'])
-                
-                # print(len(combined_df))
-                # print(combined_df.isnull().sum())
-                # print(combined_df.columns)
-                # for row in combined_df.to_dict('records'):
-                #     location_record = split_row_dict(row, ['address', 'city', 'state', 'zip', 'latitude', 'longitude', 'location'])
-                #     assert location_record, 'location_record is empty'
-                #     location = EstablishmentLocation(**location_record)
-                #     establishment_record = split_row_dict(row, ['license_number', 'dba_name', 'aka_name', 'facility_type'])
-                #     assert establishment_record, 'establisment_record is empty'
-                #     establishment = FoodEstablishment(**establishment_record, location_id=location)
-                #     inspection_record = split_row_dict(row, ['inspection_id',  'risk', 'risk_level','risk_category', 'inspection_type', 'inspection_date', 'results'])
-                #     assert inspection_record, 'inspection_record is empty'
-                #     inspection = FoodInspection(**inspection_record, establishment_id=establishment)      
-                              
-                # location_records = establishment_location_table.to_dict('records')
-                # establishment_records = food_establishment_table.to_dict('records')
-                # insepction_records = food_inspection_table.to_dict('records')
-                # for loc_record, establishment_record, inspection_record in zip(location_records, establishment_records,insepction_records):
-                #     assert loc_record['location'] == establishment_record['location']
-                #     establishment_record.pop('location')
-                #     establishment_record.pop('inspection_id')
-                #     loc_record.pop('inspection_id')
-                #     location = EstablishmentLocation(**loc_record)
-                #     establishment = FoodEstablishment(**establishment_record, location_id=location)
-                #     inspection = FoodInspection(**inspection_record, establishment_id=establishment)
 
             else:
                 for row in df.to_dict('records'):
