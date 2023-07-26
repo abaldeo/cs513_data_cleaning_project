@@ -5,9 +5,9 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 DEFAULT_SCRIPTS = [
-    ("foodinspections.sqlite", "../sql/ddl/food_inspections_db_sqlite_ddl.sql"),
+    ("foodinspections_raw.sqlite", "../sql/ddl/food_inspections_db_sqlite_ddl.sql"),
     #("foodinspections.sqlite", "../sql/orm/food_inspections_db_sqlite_pony.sql"),
-    ("foodinspections.sqlite", "../sql/ddl/food_inspections_db_create_indexes.sql"),
+    ("foodinspections_raw.sqlite", "../sql/ddl/food_inspections_db_create_indexes.sql"),
     #("foodinspections.sqlite", "../sql/ddl/food_inspections_db_create_unique_indexes.sql"),
     #("foodinspections.sqlite", "../sql/ddl/food_inspections_db_add_constraints.sql"),
     ]
