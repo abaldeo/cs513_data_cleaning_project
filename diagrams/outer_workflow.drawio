@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-07-28T08:28:13.846Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" version="21.6.5" etag="8brCbQNPQ45EtY4tGA4w" type="device">
+<mxfile host="app.diagrams.net" modified="2023-07-28T08:37:21.345Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" version="21.6.5" etag="1rGpFceY3piesTws0Yq3" type="device">
   <diagram id="b76S8IMc-VFauBrSaB_W" name="Page-1">
     <mxGraphModel dx="1900" dy="1689" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -138,7 +138,7 @@
             <mxPoint x="340" y="1150" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-151" value="&lt;b&gt;Output: foodinspections_cleaned.sqlite,&lt;/b&gt;&lt;br&gt;&lt;b&gt;food_inspections_cleaned_extract.csv&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;" vertex="1" parent="1">
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-151" value="&lt;b&gt;Output: foodinspections_cleaned.sqlite,&lt;/b&gt;&lt;br&gt;&lt;b&gt;food_inspections_db_cleaned.csv&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;" vertex="1" parent="1">
           <mxGeometry x="200" y="1050" width="280" height="60" as="geometry" />
         </mxCell>
         <mxCell id="f-RVA5sCcQ6cIz6YvIvi-152" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="f-RVA5sCcQ6cIz6YvIvi-149" target="f-RVA5sCcQ6cIz6YvIvi-149">
