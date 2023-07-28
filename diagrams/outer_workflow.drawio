@@ -1,0 +1,188 @@
+<mxfile host="app.diagrams.net" modified="2023-07-28T08:28:13.846Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" version="21.6.5" etag="8brCbQNPQ45EtY4tGA4w" type="device">
+  <diagram id="b76S8IMc-VFauBrSaB_W" name="Page-1">
+    <mxGraphModel dx="1900" dy="1689" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="84" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="3" target="f-RVA5sCcQ6cIz6YvIvi-118" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="50.00000000000023" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="85" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="3" target="f-RVA5sCcQ6cIz6YvIvi-114" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-175" y="50.00000000000023" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3" value="&lt;b&gt;Input: Food_Inspections.csv&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="195" y="-60" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="91" value="" style="edgeStyle=none;rounded=1;html=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-25" y="160.00000000000023" as="sourcePoint" />
+            <mxPoint x="-25" y="200.00000000000023" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="67" value="&lt;b&gt;Output: Food_Inspections_general_cleaning.csv&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="195" y="200" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-138" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="68">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="337" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="68" value="&lt;b&gt;Output: Food_Inspections_clustered.csv&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="195" y="480" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-145" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="75">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="335" y="860" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="75" value="&lt;b&gt;Output: Food_Inspections_location.csv,&lt;br&gt;Backfill_Location_Info.ipynb&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="195" y="760" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="80" value="&lt;b&gt;Output:&amp;nbsp;Chicago_Food_Inspection_EDA.ipynb&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="-160" y="200" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-114" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;S0: Data Profiling &amp;amp; Exploratory Analysis using Python notebook&lt;/font&gt;&lt;/b&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="-160" y="40" width="280" height="120" as="geometry">
+            <mxRectangle x="-325" y="-190" width="80" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-115" value="1. Check for Missing values&lt;br&gt;2.&amp;nbsp;Check for Duplicate values" style="align=left;strokeColor=#36393d;fillColor=#cdeb8b;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="f-RVA5sCcQ6cIz6YvIvi-114">
+          <mxGeometry y="50" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-118" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;S1: General Data Cleaning uisng OpenRefine&amp;nbsp;&lt;/font&gt;&lt;/b&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="195" y="40" width="280" height="120" as="geometry">
+            <mxRectangle x="-325" y="-190" width="80" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-119" value="1.&amp;nbsp;Removed leading &amp;amp; trailing spaces&lt;br&gt;2.&amp;nbsp;Collapsed Consecutive white spaces&lt;br&gt;3.&amp;nbsp;Format to same case (uppercase/titlecase)&amp;nbsp;&lt;br&gt;4. Data type conversions" style="align=left;strokeColor=#36393d;fillColor=#cdeb8b;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="f-RVA5sCcQ6cIz6YvIvi-118">
+          <mxGeometry y="50" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-120" value="&lt;h1&gt;Phase II Outer Workflow&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-130" width="360" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-124" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;S2: Clustering Columns using OpenRefine&amp;nbsp;&lt;/font&gt;&lt;/b&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="185" y="300" width="300" height="140" as="geometry">
+            <mxRectangle x="-325" y="-190" width="80" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-125" value="Performed mass edits to cluster following cloumns&lt;br&gt;1.&amp;nbsp;Inspection Type&lt;br&gt;2. Facility Type&lt;br&gt;3. DBA Name&lt;br&gt;4. Address&lt;br&gt;5. City" style="align=left;strokeColor=#36393d;fillColor=#cdeb8b;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="f-RVA5sCcQ6cIz6YvIvi-124">
+          <mxGeometry y="50" width="300" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-129" style="edgeStyle=none;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="334.74" y="260" as="sourcePoint" />
+            <mxPoint x="334.37" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-130" style="edgeStyle=none;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="334.75" y="160" as="sourcePoint" />
+            <mxPoint x="334.37" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-132" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;S3: Repair Missing Location Data using Python Notebook&lt;/font&gt;&lt;/b&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="137" y="580" width="400" height="140" as="geometry">
+            <mxRectangle x="-325" y="-190" width="80" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-133" value="1. Use Geocoding API to backfill missing&lt;br&gt;&amp;nbsp;Location, Latitude, &amp;amp; Longitude values&amp;nbsp;&lt;br&gt;2. Use Reverse Geocoding API to backfill missing Zip, City &amp;amp; State values&lt;br&gt;" style="align=left;strokeColor=#36393d;fillColor=#cdeb8b;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="f-RVA5sCcQ6cIz6YvIvi-132">
+          <mxGeometry y="50" width="400" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-139" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f-RVA5sCcQ6cIz6YvIvi-133" target="75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-141" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;S5: Create Workflow Model&lt;/font&gt;&lt;/b&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="1150" width="300" height="140" as="geometry">
+            <mxRectangle x="-325" y="-190" width="80" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-142" value="1. Create Outer Workflow Diagram using Draw.io&lt;br&gt;2. Collect OpenRefine histories for Inner Workflow&lt;br&gt;3. Generate Inner Workflow model diagrams using&amp;nbsp;&lt;br&gt;OR2YW Tool" style="align=left;strokeColor=#36393d;fillColor=#cdeb8b;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="f-RVA5sCcQ6cIz6YvIvi-141">
+          <mxGeometry y="50" width="300" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-174" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="f-RVA5sCcQ6cIz6YvIvi-143" target="f-RVA5sCcQ6cIz6YvIvi-151">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-143" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;S4: Load data to SQLite using Python&lt;/font&gt;&lt;/b&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="140" y="860" width="400" height="150" as="geometry">
+            <mxRectangle x="-325" y="-190" width="80" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-144" value="1.&amp;nbsp;Create SQL Constraints for Unique FoodEstablishment &amp;amp;&amp;nbsp;&lt;br style=&quot;border-color: var(--border-color); text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;EstablishmentLocation&lt;/span&gt;&lt;br&gt;2. Parse &amp;amp; extract Violation Columns using Python &amp;amp; Regex&lt;br&gt;3.&amp;nbsp;Load Data into SQLite Database&lt;br&gt;4.&amp;nbsp;Perform data integrity checks via SQL&amp;nbsp;&lt;br&gt;5.&amp;nbsp;Extract Cleaned Data from SQLite to CSV flat file&lt;br&gt;" style="align=left;strokeColor=#36393d;fillColor=#cdeb8b;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="f-RVA5sCcQ6cIz6YvIvi-143">
+          <mxGeometry y="50" width="400" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-146" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;S6: Perform Data Visualization &amp;amp; U1 Analysis&lt;/font&gt;&lt;/b&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1150" width="400" height="140" as="geometry">
+            <mxRectangle x="-325" y="-190" width="80" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-147" value="2.&amp;nbsp;Load Data into Tableau&lt;br&gt;3.&amp;nbsp;Create &amp;amp; Publish Dashboard&lt;br style=&quot;border-color: var(--border-color); text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;to Tableau Public&lt;/span&gt;&lt;br&gt;4.&amp;nbsp;Perform U1 analysis&amp;nbsp;" style="align=left;strokeColor=#36393d;fillColor=#cdeb8b;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="f-RVA5sCcQ6cIz6YvIvi-146">
+          <mxGeometry y="50" width="400" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-189" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f-RVA5sCcQ6cIz6YvIvi-149" target="f-RVA5sCcQ6cIz6YvIvi-181">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-149" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Phase II Report&lt;/font&gt;&lt;/b&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="190" y="1450" width="300" height="140" as="geometry">
+            <mxRectangle x="-325" y="-190" width="80" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-150" value="1. Description of Data Cleaning procedure&lt;br&gt;2. Document Data quality improvements&amp;nbsp;&lt;br&gt;3. Conclusions &amp;amp; Summary&lt;br&gt;4. Upload Supplementary Materials" style="align=left;strokeColor=#36393d;fillColor=#cdeb8b;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="f-RVA5sCcQ6cIz6YvIvi-149">
+          <mxGeometry y="50" width="300" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-175" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f-RVA5sCcQ6cIz6YvIvi-151">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="1150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-151" value="&lt;b&gt;Output: foodinspections_cleaned.sqlite,&lt;/b&gt;&lt;br&gt;&lt;b&gt;food_inspections_cleaned_extract.csv&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1050" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-152" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="f-RVA5sCcQ6cIz6YvIvi-149" target="f-RVA5sCcQ6cIz6YvIvi-149">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-166" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="f-RVA5sCcQ6cIz6YvIvi-125" target="68">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-176" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="f-RVA5sCcQ6cIz6YvIvi-147" target="f-RVA5sCcQ6cIz6YvIvi-190">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="337" y="1340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-181" value="&lt;b&gt;Output:&amp;nbsp;CS513-Phase-2-report-final.pdf&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1630" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-182" value="&lt;b&gt;Output: inner_workflow.yw, &lt;br&gt;inner_workflow.png&lt;br&gt;inner_workflow.gv,&lt;br&gt;outer_workflow.drawio,&lt;br&gt;outer_workflow.png&lt;br&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="-170" y="1340" width="290" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-193" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f-RVA5sCcQ6cIz6YvIvi-183">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-25" y="1150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-183" value="&lt;b&gt;Input: multiple history.json&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="-165" y="1050" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-184" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f-RVA5sCcQ6cIz6YvIvi-125" target="f-RVA5sCcQ6cIz6YvIvi-183">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-192" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f-RVA5sCcQ6cIz6YvIvi-190">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="1450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-190" value="&lt;b&gt;Output:&amp;nbsp;ChicagoFoodInspectionDashboard.twb&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1340" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f-RVA5sCcQ6cIz6YvIvi-194" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f-RVA5sCcQ6cIz6YvIvi-142">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-30" y="1340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
