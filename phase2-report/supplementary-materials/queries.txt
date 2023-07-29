@@ -1,0 +1,75 @@
+--1. Missing State data check 
+SELECT count(*) - count(state) AS Nulls_in_state
+FROM EstablishmentLocation;
+
+--2. Missing City data check 
+SELECT count(*) - count(city) AS Nulls_in_city 
+FROM EstablishmentLocation; 
+
+--3. Missing Zip data check 
+SELECT count(*) - count(zip) AS Nulls_in_zip
+FROM EstablishmentLocation;
+
+--4. Missing Latitude data check 
+SELECT count(*) - count(latitude) AS Nulls_in_latitude
+FROM EstablishmentLocation;
+
+--5. Missing longitude data check 
+SELECT count(*) - count(longitude) AS Nulls_in_longitude
+FROM EstablishmentLocation;
+
+--6. Missing location data check 
+SELECT count(*) - count(location) AS Nulls_in_location
+FROM EstablishmentLocation;
+
+--7.  EstablishmentLocation count check 
+SELECT count(1)
+FROM EstablishmentLocation
+
+--8. Unique Location ICV check 
+SELECT address, city, STATE, zip, count(DISTINCT id)
+FROM EstablishmentLocation
+GROUP BY address, city, STATE, zip
+HAVING count(DISTINCT id) > 1;
+
+--9. Missing AKA Name check 
+SELECT COUNT(*) - COUNT(aka_name) AS NullsInAkaName
+FROM FoodEstablishment;
+
+--10. Missing Facility Type Check 
+SELECT COUNT(*) - COUNT(facility_type) AS NullsInFacilityType
+FROM FoodEstablishment;
+
+--11. FoodEstablishment count check  
+ SELECT count(1) 
+FROM FoodEstablishment; 
+
+--12. Unique Establishments ICV check 
+SELECT license_number, dba_name, aka_name, count(DISTINCT id) 
+FROM FoodEstablishment
+GROUP BY license_number, dba_name, aka_name 
+HAVING count(DISTINCT id) > 1; 
+
+--13. Violation Count check
+SELECT count(1) Violations_Count 
+FROM InspectionViolation 
+
+--14. Clustered/Distinct DBA Name Check
+SELECT count(DISTINCT dba_name) 
+FROM FoodEstablishment; 
+
+--15.  Clustered/Distinct DBA Name Check
+SELECT count(DISTINCT facility_type) 
+FROM FoodEstablishment; 
+
+--16. Clustered/Distinct Inspection Type Check
+SELECT count(DISTINCT inspection_type) 
+FROM FoodInspection; 
+
+--17. Clustered/Distinct Address Count Check 
+SELECT count(DISTINCT address) 
+FROM EstablishmentLocation; 
+
+--18. Clustered/Distinct City Count Check 
+SELECT count(DISTINCT city) 
+FROM EstablishmentLocation; 
