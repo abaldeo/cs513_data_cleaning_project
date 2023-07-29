@@ -1,0 +1,829 @@
+
+/* Start of top-level graph */
+digraph Workflow {
+rankdir=TB
+
+/* Title for graph */
+fontname=Helvetica; fontsize=18; labelloc=t
+label=Parallel_OR
+
+/* Start of double cluster for drawing box around nodes in workflow */
+subgraph cluster_workflow_box_outer { label=""; color=black; penwidth=2
+subgraph cluster_workflow_box_inner { label=""; penwidth=0
+
+/* Style for nodes representing atomic programs in workflow */
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing atomic programs in workflow */
+"core/text-transform0" [shape=record rankdir=LR label="{<f0> core/text-transform0 |<f1> Text transform on cells in column DBA Name using expression value.trim()}"];
+"core/text-transform1" [shape=record rankdir=LR label="{<f0> core/text-transform1 |<f1> Text transform on cells in column AKA Name using expression value.trim()}"];
+"core/text-transform2" [shape=record rankdir=LR label="{<f0> core/text-transform2 |<f1> Text transform on cells in column Facility Type using expression value.trim()}"];
+"core/text-transform3" [shape=record rankdir=LR label="{<f0> core/text-transform3 |<f1> Text transform on cells in column Address using expression value.trim()}"];
+"core/text-transform4" [shape=record rankdir=LR label="{<f0> core/text-transform4 |<f1> Text transform on cells in column City using expression value.trim()}"];
+"core/text-transform5" [shape=record rankdir=LR label="{<f0> core/text-transform5 |<f1> Text transform on cells in column Zip using expression value.trim()}"];
+"core/text-transform6" [shape=record rankdir=LR label="{<f0> core/text-transform6 |<f1> Text transform on cells in column Inspection Type using expression value.trim()}"];
+"core/text-transform7" [shape=record rankdir=LR label="{<f0> core/text-transform7 |<f1> Text transform on cells in column Violations using expression value.trim()}"];
+"core/text-transform8" [shape=record rankdir=LR label="{<f0> core/text-transform8 |<f1> Text transform on cells in column Inspection ID using expression value.toNumber()}"];
+"core/text-transform9" [shape=record rankdir=LR label="{<f0> core/text-transform9 |<f1> Text transform on cells in column License # using expression value.toNumber()}"];
+"core/text-transform10" [shape=record rankdir=LR label="{<f0> core/text-transform10 |<f1> Text transform on cells in column Zip using expression value.trim()}"];
+"core/mass-edit11" [shape=record rankdir=LR label="{<f0> core/mass-edit11 |<f1> Mass edit cells in column Facility Type}"];
+"core/text-transform12" [shape=record rankdir=LR label="{<f0> core/text-transform12 |<f1> Text transform on cells in column DBA Name using expression value.toUppercase()}"];
+"core/text-transform13" [shape=record rankdir=LR label="{<f0> core/text-transform13 |<f1> Text transform on cells in column AKA Name using expression value.toUppercase()}"];
+"core/mass-edit14" [shape=record rankdir=LR label="{<f0> core/mass-edit14 |<f1> Mass edit cells in column DBA Name}"];
+"core/mass-edit15" [shape=record rankdir=LR label="{<f0> core/mass-edit15 |<f1> Mass edit cells in column DBA Name}"];
+"core/mass-edit16" [shape=record rankdir=LR label="{<f0> core/mass-edit16 |<f1> Mass edit cells in column DBA Name}"];
+"core/mass-edit17" [shape=record rankdir=LR label="{<f0> core/mass-edit17 |<f1> Mass edit cells in column DBA Name}"];
+"core/mass-edit18" [shape=record rankdir=LR label="{<f0> core/mass-edit18 |<f1> Mass edit cells in column DBA Name}"];
+"core/mass-edit19" [shape=record rankdir=LR label="{<f0> core/mass-edit19 |<f1> Mass edit cells in column DBA Name}"];
+"core/mass-edit20" [shape=record rankdir=LR label="{<f0> core/mass-edit20 |<f1> Mass edit cells in column DBA Name}"];
+"core/mass-edit21" [shape=record rankdir=LR label="{<f0> core/mass-edit21 |<f1> Mass edit cells in column DBA Name}"];
+"core/mass-edit22" [shape=record rankdir=LR label="{<f0> core/mass-edit22 |<f1> Mass edit cells in column DBA Name}"];
+"core/text-transform23" [shape=record rankdir=LR label="{<f0> core/text-transform23 |<f1> Text transform on cells in column City using expression value.toUppercase()}"];
+"core/mass-edit24" [shape=record rankdir=LR label="{<f0> core/mass-edit24 |<f1> Mass edit cells in column City}"];
+"core/mass-edit25" [shape=record rankdir=LR label="{<f0> core/mass-edit25 |<f1> Mass edit cells in column City}"];
+"core/mass-edit26" [shape=record rankdir=LR label="{<f0> core/mass-edit26 |<f1> Mass edit cells in column City}"];
+"core/mass-edit27" [shape=record rankdir=LR label="{<f0> core/mass-edit27 |<f1> Mass edit cells in column City}"];
+"core/mass-edit28" [shape=record rankdir=LR label="{<f0> core/mass-edit28 |<f1> Mass edit cells in column Inspection Type}"];
+"core/text-transform29" [shape=record rankdir=LR label="{<f0> core/text-transform29 |<f1> Text transform on cells in column Inspection Type using expression value.toTitlecase()}"];
+"core/mass-edit30" [shape=record rankdir=LR label="{<f0> core/mass-edit30 |<f1> Mass edit cells in column Inspection Type}"];
+"core/mass-edit31" [shape=record rankdir=LR label="{<f0> core/mass-edit31 |<f1> Mass edit cells in column Inspection Type}"];
+"core/mass-edit32" [shape=record rankdir=LR label="{<f0> core/mass-edit32 |<f1> Mass edit cells in column Inspection Type}"];
+"core/mass-edit33" [shape=record rankdir=LR label="{<f0> core/mass-edit33 |<f1> Mass edit cells in column Inspection Type}"];
+"core/mass-edit34" [shape=record rankdir=LR label="{<f0> core/mass-edit34 |<f1> Mass edit cells in column Inspection Type}"];
+"core/mass-edit35" [shape=record rankdir=LR label="{<f0> core/mass-edit35 |<f1> Mass edit cells in column Inspection Type}"];
+"core/mass-edit36" [shape=record rankdir=LR label="{<f0> core/mass-edit36 |<f1> Mass edit cells in column Inspection Type}"];
+"core/mass-edit37" [shape=record rankdir=LR label="{<f0> core/mass-edit37 |<f1> Mass edit cells in column Inspection Type}"];
+"core/mass-edit38" [shape=record rankdir=LR label="{<f0> core/mass-edit38 |<f1> Mass edit cells in column Inspection Type}"];
+"core/mass-edit39" [shape=record rankdir=LR label="{<f0> core/mass-edit39 |<f1> Mass edit cells in column Inspection Type}"];
+"core/text-transform40" [shape=record rankdir=LR label="{<f0> core/text-transform40 |<f1> Text transform on cells in column Facility Type using expression value.toTitlecase()}"];
+"core/text-transform41" [shape=record rankdir=LR label="{<f0> core/text-transform41 |<f1> Text transform on cells in column Facility Type using expression value.replace(/[\\p\{Zs\}\\s]+/,' ')}"];
+"core/text-transform42" [shape=record rankdir=LR label="{<f0> core/text-transform42 |<f1> Text transform on cells in column Facility Type using expression value.trim()}"];
+"core/mass-edit43" [shape=record rankdir=LR label="{<f0> core/mass-edit43 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit44" [shape=record rankdir=LR label="{<f0> core/mass-edit44 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit45" [shape=record rankdir=LR label="{<f0> core/mass-edit45 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit46" [shape=record rankdir=LR label="{<f0> core/mass-edit46 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit47" [shape=record rankdir=LR label="{<f0> core/mass-edit47 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit48" [shape=record rankdir=LR label="{<f0> core/mass-edit48 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit49" [shape=record rankdir=LR label="{<f0> core/mass-edit49 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit50" [shape=record rankdir=LR label="{<f0> core/mass-edit50 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit51" [shape=record rankdir=LR label="{<f0> core/mass-edit51 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit52" [shape=record rankdir=LR label="{<f0> core/mass-edit52 |<f1> Mass edit cells in column State}"];
+"core/text-transform53" [shape=record rankdir=LR label="{<f0> core/text-transform53 |<f1> Text transform on cells in column Inspection Date using expression value.toDate()}"];
+"core/text-transform54" [shape=record rankdir=LR label="{<f0> core/text-transform54 |<f1> Text transform on cells in column Address using expression value.trim()}"];
+"core/text-transform55" [shape=record rankdir=LR label="{<f0> core/text-transform55 |<f1> Text transform on cells in column Address using expression value.replace(/[\\p\{Zs\}\\s]+/,' ')}"];
+"core/text-transform56" [shape=record rankdir=LR label="{<f0> core/text-transform56 |<f1> Text transform on cells in column Address using expression value.toTitlecase()}"];
+"core/text-transform57" [shape=record rankdir=LR label="{<f0> core/text-transform57 |<f1> Text transform on cells in column DBA Name using expression value.replace(/[\\p\{Zs\}\\s]+/,' ')}"];
+"core/text-transform58" [shape=record rankdir=LR label="{<f0> core/text-transform58 |<f1> Text transform on cells in column AKA Name using expression value.replace(/[\\p\{Zs\}\\s]+/,' ')}"];
+"core/text-transform59" [shape=record rankdir=LR label="{<f0> core/text-transform59 |<f1> Text transform on cells in column Facility Type using expression value.toTitlecase()}"];
+"core/mass-edit60" [shape=record rankdir=LR label="{<f0> core/mass-edit60 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit61" [shape=record rankdir=LR label="{<f0> core/mass-edit61 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit62" [shape=record rankdir=LR label="{<f0> core/mass-edit62 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit63" [shape=record rankdir=LR label="{<f0> core/mass-edit63 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit64" [shape=record rankdir=LR label="{<f0> core/mass-edit64 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit65" [shape=record rankdir=LR label="{<f0> core/mass-edit65 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit66" [shape=record rankdir=LR label="{<f0> core/mass-edit66 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit67" [shape=record rankdir=LR label="{<f0> core/mass-edit67 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit68" [shape=record rankdir=LR label="{<f0> core/mass-edit68 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit69" [shape=record rankdir=LR label="{<f0> core/mass-edit69 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit70" [shape=record rankdir=LR label="{<f0> core/mass-edit70 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit71" [shape=record rankdir=LR label="{<f0> core/mass-edit71 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit72" [shape=record rankdir=LR label="{<f0> core/mass-edit72 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit73" [shape=record rankdir=LR label="{<f0> core/mass-edit73 |<f1> Mass edit cells in column Facility Type}"];
+"core/text-transform74" [shape=record rankdir=LR label="{<f0> core/text-transform74 |<f1> Text transform on cells in column Facility Type using expression value.replace(\".\",\"\")}"];
+"core/text-transform75" [shape=record rankdir=LR label="{<f0> core/text-transform75 |<f1> Text transform on cells in column Facility Type using expression value.replace(\"&\",\" AND \")}"];
+"core/text-transform76" [shape=record rankdir=LR label="{<f0> core/text-transform76 |<f1> Text transform on cells in column Facility Type using expression value.replace(/[\\p\{Zs\}\\s]+/,' ')}"];
+"core/text-transform77" [shape=record rankdir=LR label="{<f0> core/text-transform77 |<f1> Text transform on cells in column DBA Name using expression value.trim()}"];
+"core/text-transform78" [shape=record rankdir=LR label="{<f0> core/text-transform78 |<f1> Text transform on cells in column DBA Name using expression value.replace(/[\\p\{Zs\}\\s]+/,' ')}"];
+"core/text-transform79" [shape=record rankdir=LR label="{<f0> core/text-transform79 |<f1> Text transform on cells in column DBA Name using expression value.toUppercase()}"];
+"core/text-transform80" [shape=record rankdir=LR label="{<f0> core/text-transform80 |<f1> Text transform on cells in column AKA Name using expression value.trim()}"];
+"core/text-transform81" [shape=record rankdir=LR label="{<f0> core/text-transform81 |<f1> Text transform on cells in column AKA Name using expression value.replace(/[\\p\{Zs\}\\s]+/,' ')}"];
+"core/text-transform82" [shape=record rankdir=LR label="{<f0> core/text-transform82 |<f1> Text transform on cells in column AKA Name using expression value.toUppercase()}"];
+"core/text-transform83" [shape=record rankdir=LR label="{<f0> core/text-transform83 |<f1> Text transform on cells in column Facility Type using expression value.trim()}"];
+"core/text-transform84" [shape=record rankdir=LR label="{<f0> core/text-transform84 |<f1> Text transform on cells in column Facility Type using expression value.replace(/[\\p\{Zs\}\\s]+/,' ')}"];
+"core/text-transform85" [shape=record rankdir=LR label="{<f0> core/text-transform85 |<f1> Text transform on cells in column Facility Type using expression value.toTitlecase()}"];
+"core/mass-edit86" [shape=record rankdir=LR label="{<f0> core/mass-edit86 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit87" [shape=record rankdir=LR label="{<f0> core/mass-edit87 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit88" [shape=record rankdir=LR label="{<f0> core/mass-edit88 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit89" [shape=record rankdir=LR label="{<f0> core/mass-edit89 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit90" [shape=record rankdir=LR label="{<f0> core/mass-edit90 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit91" [shape=record rankdir=LR label="{<f0> core/mass-edit91 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit92" [shape=record rankdir=LR label="{<f0> core/mass-edit92 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit93" [shape=record rankdir=LR label="{<f0> core/mass-edit93 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit94" [shape=record rankdir=LR label="{<f0> core/mass-edit94 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit95" [shape=record rankdir=LR label="{<f0> core/mass-edit95 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit96" [shape=record rankdir=LR label="{<f0> core/mass-edit96 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit97" [shape=record rankdir=LR label="{<f0> core/mass-edit97 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit98" [shape=record rankdir=LR label="{<f0> core/mass-edit98 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit99" [shape=record rankdir=LR label="{<f0> core/mass-edit99 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit100" [shape=record rankdir=LR label="{<f0> core/mass-edit100 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit101" [shape=record rankdir=LR label="{<f0> core/mass-edit101 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit102" [shape=record rankdir=LR label="{<f0> core/mass-edit102 |<f1> Mass edit cells in column Facility Type}"];
+"core/text-transform103" [shape=record rankdir=LR label="{<f0> core/text-transform103 |<f1> Text transform on cells in column DBA Name using expression value.trim()}"];
+"core/text-transform104" [shape=record rankdir=LR label="{<f0> core/text-transform104 |<f1> Text transform on cells in column DBA Name using expression value.replace(/[\\p\{Zs\}\\s]+/,' ')}"];
+"core/text-transform105" [shape=record rankdir=LR label="{<f0> core/text-transform105 |<f1> Text transform on cells in column DBA Name using expression value.toUppercase()}"];
+"core/text-transform106" [shape=record rankdir=LR label="{<f0> core/text-transform106 |<f1> Text transform on cells in column AKA Name using expression value.trim()}"];
+"core/text-transform107" [shape=record rankdir=LR label="{<f0> core/text-transform107 |<f1> Text transform on cells in column AKA Name using expression value.replace(/[\\p\{Zs\}\\s]+/,' ')}"];
+"core/text-transform108" [shape=record rankdir=LR label="{<f0> core/text-transform108 |<f1> Text transform on cells in column AKA Name using expression value.toUppercase()}"];
+"core/text-transform109" [shape=record rankdir=LR label="{<f0> core/text-transform109 |<f1> Text transform on cells in column Facility Type using expression value.trim()}"];
+"core/text-transform110" [shape=record rankdir=LR label="{<f0> core/text-transform110 |<f1> Text transform on cells in column Facility Type using expression value.replace(/[\\p\{Zs\}\\s]+/,' ')}"];
+"core/text-transform111" [shape=record rankdir=LR label="{<f0> core/text-transform111 |<f1> Text transform on cells in column Facility Type using expression value.toTitlecase()}"];
+"core/mass-edit112" [shape=record rankdir=LR label="{<f0> core/mass-edit112 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit113" [shape=record rankdir=LR label="{<f0> core/mass-edit113 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit114" [shape=record rankdir=LR label="{<f0> core/mass-edit114 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit115" [shape=record rankdir=LR label="{<f0> core/mass-edit115 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit116" [shape=record rankdir=LR label="{<f0> core/mass-edit116 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit117" [shape=record rankdir=LR label="{<f0> core/mass-edit117 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit118" [shape=record rankdir=LR label="{<f0> core/mass-edit118 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit119" [shape=record rankdir=LR label="{<f0> core/mass-edit119 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit120" [shape=record rankdir=LR label="{<f0> core/mass-edit120 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit121" [shape=record rankdir=LR label="{<f0> core/mass-edit121 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit122" [shape=record rankdir=LR label="{<f0> core/mass-edit122 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit123" [shape=record rankdir=LR label="{<f0> core/mass-edit123 |<f1> Mass edit cells in column Facility Type}"];
+"core/mass-edit124" [shape=record rankdir=LR label="{<f0> core/mass-edit124 |<f1> Mass edit cells in column Facility Type}"];
+"core/text-transform125" [shape=record rankdir=LR label="{<f0> core/text-transform125 |<f1> Text transform on cells in column Inspection Type using expression value.toTitlecase()}"];
+"core/text-transform126" [shape=record rankdir=LR label="{<f0> core/text-transform126 |<f1> Text transform on cells in column Results using expression value.toTitlecase()}"];
+"core/text-transform127" [shape=record rankdir=LR label="{<f0> core/text-transform127 |<f1> Text transform on cells in column Violations using expression value.replace(/[\\p\{Zs\}\\s]+/,' ')}"];
+"core/mass-edit128" [shape=record rankdir=LR label="{<f0> core/mass-edit128 |<f1> Mass edit cells in column Address}"];
+"core/mass-edit129" [shape=record rankdir=LR label="{<f0> core/mass-edit129 |<f1> Mass edit cells in column Address}"];
+"core/mass-edit130" [shape=record rankdir=LR label="{<f0> core/mass-edit130 |<f1> Mass edit cells in column Address}"];
+"core/mass-edit131" [shape=record rankdir=LR label="{<f0> core/mass-edit131 |<f1> Mass edit cells in column Inspection Type}"];
+"core/mass-edit132" [shape=record rankdir=LR label="{<f0> core/mass-edit132 |<f1> Mass edit cells in column Inspection Type}"];
+"core/mass-edit133" [shape=record rankdir=LR label="{<f0> core/mass-edit133 |<f1> Mass edit cells in column Inspection Type}"];
+"core/mass-edit134" [shape=record rankdir=LR label="{<f0> core/mass-edit134 |<f1> Mass edit cells in column Inspection Type}"];
+"core/mass-edit135" [shape=record rankdir=LR label="{<f0> core/mass-edit135 |<f1> Mass edit cells in column Inspection Type}"];
+"core/mass-edit136" [shape=record rankdir=LR label="{<f0> core/mass-edit136 |<f1> Mass edit cells in column Inspection Type}"];
+"core/text-transform137" [shape=record rankdir=LR label="{<f0> core/text-transform137 |<f1> Text transform on cells in column Inspection Type using expression value.replace(/\\d\{4\}/,\"\")}"];
+"core/text-transform138" [shape=record rankdir=LR label="{<f0> core/text-transform138 |<f1> Text transform on cells in column Inspection Type using expression value.trim()}"];
+"core/mass-edit139" [shape=record rankdir=LR label="{<f0> core/mass-edit139 |<f1> Mass edit cells in column Inspection Type}"];
+"core/text-transform140" [shape=record rankdir=LR label="{<f0> core/text-transform140 |<f1> Text transform on cells in column Facility Type using expression value.toTitlecase()}"];
+"core/text-transform141" [shape=record rankdir=LR label="{<f0> core/text-transform141 |<f1> Text transform on cells in column Risk using expression value.toString()}"];
+"core/text-transform142" [shape=record rankdir=LR label="{<f0> core/text-transform142 |<f1> Text transform on cells in column AKA Name using expression value.toString()}"];
+"core/text-transform143" [shape=record rankdir=LR label="{<f0> core/text-transform143 |<f1> Text transform on cells in column Address using expression value.toString()}"];
+"core/text-transform144" [shape=record rankdir=LR label="{<f0> core/text-transform144 |<f1> Text transform on cells in column City using expression value.toString()}"];
+"core/text-transform145" [shape=record rankdir=LR label="{<f0> core/text-transform145 |<f1> Text transform on cells in column Zip using expression value.toString()}"];
+"core/text-transform146" [shape=record rankdir=LR label="{<f0> core/text-transform146 |<f1> Text transform on cells in column Inspection Type using expression value.toString()}"];
+"core/text-transform147" [shape=record rankdir=LR label="{<f0> core/text-transform147 |<f1> Text transform on cells in column Violations using expression value.toString()}"];
+"core/text-transform148" [shape=record rankdir=LR label="{<f0> core/text-transform148 |<f1> Text transform on cells in column Location using expression value.toString()}"];
+"core/text-transform149" [shape=record rankdir=LR label="{<f0> core/text-transform149 |<f1> Text transform on cells in column City using expression value.toTitlecase()}"];
+CombineDataCleaningChanges
+
+/* Style for nodes representing non-parameter data channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes for non-parameter data channels in workflow */
+CleanData
+DBA_Name
+AKA_Name
+Facility_Type
+Address
+City
+Zip
+Inspection_Type
+Violations
+Inspection_ID
+"License_#"
+Zip_1
+Facility_Type_1
+DBA_Name_1
+AKA_Name_1
+DBA_Name_2
+DBA_Name_3
+DBA_Name_4
+DBA_Name_5
+DBA_Name_6
+DBA_Name_7
+DBA_Name_8
+DBA_Name_9
+DBA_Name_10
+City_1
+City_2
+City_3
+City_4
+City_5
+Inspection_Type_1
+Inspection_Type_2
+Inspection_Type_3
+Inspection_Type_4
+Inspection_Type_5
+Inspection_Type_6
+Inspection_Type_7
+Inspection_Type_8
+Inspection_Type_9
+Inspection_Type_10
+Inspection_Type_11
+Inspection_Type_12
+Facility_Type_2
+Facility_Type_3
+Facility_Type_4
+Facility_Type_5
+Facility_Type_6
+Facility_Type_7
+Facility_Type_8
+Facility_Type_9
+Facility_Type_10
+Facility_Type_11
+Facility_Type_12
+Facility_Type_13
+State
+Inspection_Date
+Address_1
+Address_2
+Address_3
+DBA_Name_11
+AKA_Name_2
+Facility_Type_14
+Facility_Type_15
+Facility_Type_16
+Facility_Type_17
+Facility_Type_18
+Facility_Type_19
+Facility_Type_20
+Facility_Type_21
+Facility_Type_22
+Facility_Type_23
+Facility_Type_24
+Facility_Type_25
+Facility_Type_26
+Facility_Type_27
+Facility_Type_28
+Facility_Type_29
+Facility_Type_30
+Facility_Type_31
+DBA_Name_12
+DBA_Name_13
+DBA_Name_14
+AKA_Name_3
+AKA_Name_4
+AKA_Name_5
+Facility_Type_32
+Facility_Type_33
+Facility_Type_34
+Facility_Type_35
+Facility_Type_36
+Facility_Type_37
+Facility_Type_38
+Facility_Type_39
+Facility_Type_40
+Facility_Type_41
+Facility_Type_42
+Facility_Type_43
+Facility_Type_44
+Facility_Type_45
+Facility_Type_46
+Facility_Type_47
+Facility_Type_48
+Facility_Type_49
+Facility_Type_50
+Facility_Type_51
+DBA_Name_15
+DBA_Name_16
+DBA_Name_17
+AKA_Name_6
+AKA_Name_7
+AKA_Name_8
+Facility_Type_52
+Facility_Type_53
+Facility_Type_54
+Facility_Type_55
+Facility_Type_56
+Facility_Type_57
+Facility_Type_58
+Facility_Type_59
+Facility_Type_60
+Facility_Type_61
+Facility_Type_62
+Facility_Type_63
+Facility_Type_64
+Facility_Type_65
+Facility_Type_66
+Facility_Type_67
+Inspection_Type_13
+Results
+Violations_1
+Address_4
+Address_5
+Address_6
+Inspection_Type_14
+Inspection_Type_15
+Inspection_Type_16
+Inspection_Type_17
+Inspection_Type_18
+Inspection_Type_19
+Inspection_Type_20
+Inspection_Type_21
+Inspection_Type_22
+Facility_Type_68
+Risk
+AKA_Name_9
+Address_7
+City_6
+Zip_2
+Inspection_Type_23
+Violations_2
+Location
+City_7
+DBA_Name_18
+AKA_Name_10
+Facility_Type_69
+Address_8
+City_8
+Zip_3
+Inspection_Type_24
+Violations_3
+Inspection_ID_1
+"License_#_1"
+State_1
+Inspection_Date_1
+Results_1
+Risk_1
+Location_1
+
+/* Style for nodes representing parameter channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing parameter channels in workflow */
+"expression:value.trim()"
+"expression:value.toNumber()"
+"expression:value"
+"expression:value.toUppercase()"
+"expression:value.toTitlecase()"
+"expression:value.replace(/[\\p{Zs}\\s]+/,'_')"
+"expression:value.toDate()"
+"expression:value.replace(\".\",\"\")"
+"expression:value.replace(\"&\",\"_AND_\")"
+"expression:value.replace(/\\d{4}/,\"\")"
+"expression:value.toString()"
+
+/* Edges representing connections between programs and channels */
+"core/text-transform0" -> DBA_Name_1
+"expression:value.trim()" -> "core/text-transform0"
+DBA_Name -> "core/text-transform0"
+"core/text-transform1" -> AKA_Name_1
+"expression:value.trim()" -> "core/text-transform1"
+AKA_Name -> "core/text-transform1"
+"core/text-transform2" -> Facility_Type_1
+"expression:value.trim()" -> "core/text-transform2"
+Facility_Type -> "core/text-transform2"
+"core/text-transform3" -> Address_1
+"expression:value.trim()" -> "core/text-transform3"
+Address -> "core/text-transform3"
+"core/text-transform4" -> City_1
+"expression:value.trim()" -> "core/text-transform4"
+City -> "core/text-transform4"
+"core/text-transform5" -> Zip_1
+"expression:value.trim()" -> "core/text-transform5"
+Zip -> "core/text-transform5"
+"core/text-transform6" -> Inspection_Type_1
+"expression:value.trim()" -> "core/text-transform6"
+Inspection_Type -> "core/text-transform6"
+"core/text-transform7" -> Violations_1
+"expression:value.trim()" -> "core/text-transform7"
+Violations -> "core/text-transform7"
+"core/text-transform8" -> Inspection_ID_1
+"expression:value.toNumber()" -> "core/text-transform8"
+Inspection_ID -> "core/text-transform8"
+"core/text-transform9" -> "License_#_1"
+"expression:value.toNumber()" -> "core/text-transform9"
+"License_#" -> "core/text-transform9"
+"core/text-transform10" -> Zip_2
+"expression:value.trim()" -> "core/text-transform10"
+Zip_1 -> "core/text-transform10"
+"core/mass-edit11" -> Facility_Type_2
+"expression:value" -> "core/mass-edit11"
+Facility_Type_1 -> "core/mass-edit11"
+"core/text-transform12" -> DBA_Name_2
+"expression:value.toUppercase()" -> "core/text-transform12"
+DBA_Name_1 -> "core/text-transform12"
+"core/text-transform13" -> AKA_Name_2
+"expression:value.toUppercase()" -> "core/text-transform13"
+AKA_Name_1 -> "core/text-transform13"
+"core/mass-edit14" -> DBA_Name_3
+"expression:value" -> "core/mass-edit14"
+DBA_Name_2 -> "core/mass-edit14"
+"core/mass-edit15" -> DBA_Name_4
+"expression:value" -> "core/mass-edit15"
+DBA_Name_3 -> "core/mass-edit15"
+"core/mass-edit16" -> DBA_Name_5
+"expression:value" -> "core/mass-edit16"
+DBA_Name_4 -> "core/mass-edit16"
+"core/mass-edit17" -> DBA_Name_6
+"expression:value" -> "core/mass-edit17"
+DBA_Name_5 -> "core/mass-edit17"
+"core/mass-edit18" -> DBA_Name_7
+"expression:value" -> "core/mass-edit18"
+DBA_Name_6 -> "core/mass-edit18"
+"core/mass-edit19" -> DBA_Name_8
+"expression:value" -> "core/mass-edit19"
+DBA_Name_7 -> "core/mass-edit19"
+"core/mass-edit20" -> DBA_Name_9
+"expression:value" -> "core/mass-edit20"
+DBA_Name_8 -> "core/mass-edit20"
+"core/mass-edit21" -> DBA_Name_10
+"expression:value" -> "core/mass-edit21"
+DBA_Name_9 -> "core/mass-edit21"
+"core/mass-edit22" -> DBA_Name_11
+"expression:value" -> "core/mass-edit22"
+DBA_Name_10 -> "core/mass-edit22"
+"core/text-transform23" -> City_2
+"expression:value.toUppercase()" -> "core/text-transform23"
+City_1 -> "core/text-transform23"
+"core/mass-edit24" -> City_3
+"expression:value" -> "core/mass-edit24"
+City_2 -> "core/mass-edit24"
+"core/mass-edit25" -> City_4
+"expression:value" -> "core/mass-edit25"
+City_3 -> "core/mass-edit25"
+"core/mass-edit26" -> City_5
+"expression:value" -> "core/mass-edit26"
+City_4 -> "core/mass-edit26"
+"core/mass-edit27" -> City_6
+"expression:value" -> "core/mass-edit27"
+City_5 -> "core/mass-edit27"
+"core/mass-edit28" -> Inspection_Type_2
+"expression:value" -> "core/mass-edit28"
+Inspection_Type_1 -> "core/mass-edit28"
+"core/text-transform29" -> Inspection_Type_3
+"expression:value.toTitlecase()" -> "core/text-transform29"
+Inspection_Type_2 -> "core/text-transform29"
+"core/mass-edit30" -> Inspection_Type_4
+"expression:value" -> "core/mass-edit30"
+Inspection_Type_3 -> "core/mass-edit30"
+"core/mass-edit31" -> Inspection_Type_5
+"expression:value" -> "core/mass-edit31"
+Inspection_Type_4 -> "core/mass-edit31"
+"core/mass-edit32" -> Inspection_Type_6
+"expression:value" -> "core/mass-edit32"
+Inspection_Type_5 -> "core/mass-edit32"
+"core/mass-edit33" -> Inspection_Type_7
+"expression:value" -> "core/mass-edit33"
+Inspection_Type_6 -> "core/mass-edit33"
+"core/mass-edit34" -> Inspection_Type_8
+"expression:value" -> "core/mass-edit34"
+Inspection_Type_7 -> "core/mass-edit34"
+"core/mass-edit35" -> Inspection_Type_9
+"expression:value" -> "core/mass-edit35"
+Inspection_Type_8 -> "core/mass-edit35"
+"core/mass-edit36" -> Inspection_Type_10
+"expression:value" -> "core/mass-edit36"
+Inspection_Type_9 -> "core/mass-edit36"
+"core/mass-edit37" -> Inspection_Type_11
+"expression:value" -> "core/mass-edit37"
+Inspection_Type_10 -> "core/mass-edit37"
+"core/mass-edit38" -> Inspection_Type_12
+"expression:value" -> "core/mass-edit38"
+Inspection_Type_11 -> "core/mass-edit38"
+"core/mass-edit39" -> Inspection_Type_13
+"expression:value" -> "core/mass-edit39"
+Inspection_Type_12 -> "core/mass-edit39"
+"core/text-transform40" -> Facility_Type_3
+"expression:value.toTitlecase()" -> "core/text-transform40"
+Facility_Type_2 -> "core/text-transform40"
+"core/text-transform41" -> Facility_Type_4
+"expression:value.replace(/[\\p{Zs}\\s]+/,'_')" -> "core/text-transform41"
+Facility_Type_3 -> "core/text-transform41"
+"core/text-transform42" -> Facility_Type_5
+"expression:value.trim()" -> "core/text-transform42"
+Facility_Type_4 -> "core/text-transform42"
+"core/mass-edit43" -> Facility_Type_6
+"expression:value" -> "core/mass-edit43"
+Facility_Type_5 -> "core/mass-edit43"
+"core/mass-edit44" -> Facility_Type_7
+"expression:value" -> "core/mass-edit44"
+Facility_Type_6 -> "core/mass-edit44"
+"core/mass-edit45" -> Facility_Type_8
+"expression:value" -> "core/mass-edit45"
+Facility_Type_7 -> "core/mass-edit45"
+"core/mass-edit46" -> Facility_Type_9
+"expression:value" -> "core/mass-edit46"
+Facility_Type_8 -> "core/mass-edit46"
+"core/mass-edit47" -> Facility_Type_10
+"expression:value" -> "core/mass-edit47"
+Facility_Type_9 -> "core/mass-edit47"
+"core/mass-edit48" -> Facility_Type_11
+"expression:value" -> "core/mass-edit48"
+Facility_Type_10 -> "core/mass-edit48"
+"core/mass-edit49" -> Facility_Type_12
+"expression:value" -> "core/mass-edit49"
+Facility_Type_11 -> "core/mass-edit49"
+"core/mass-edit50" -> Facility_Type_13
+"expression:value" -> "core/mass-edit50"
+Facility_Type_12 -> "core/mass-edit50"
+"core/mass-edit51" -> Facility_Type_14
+"expression:value" -> "core/mass-edit51"
+Facility_Type_13 -> "core/mass-edit51"
+"core/mass-edit52" -> State_1
+"expression:value" -> "core/mass-edit52"
+State -> "core/mass-edit52"
+"core/text-transform53" -> Inspection_Date_1
+"expression:value.toDate()" -> "core/text-transform53"
+Inspection_Date -> "core/text-transform53"
+"core/text-transform54" -> Address_2
+"expression:value.trim()" -> "core/text-transform54"
+Address_1 -> "core/text-transform54"
+"core/text-transform55" -> Address_3
+"expression:value.replace(/[\\p{Zs}\\s]+/,'_')" -> "core/text-transform55"
+Address_2 -> "core/text-transform55"
+"core/text-transform56" -> Address_4
+"expression:value.toTitlecase()" -> "core/text-transform56"
+Address_3 -> "core/text-transform56"
+"core/text-transform57" -> DBA_Name_12
+"expression:value.replace(/[\\p{Zs}\\s]+/,'_')" -> "core/text-transform57"
+DBA_Name_11 -> "core/text-transform57"
+"core/text-transform58" -> AKA_Name_3
+"expression:value.replace(/[\\p{Zs}\\s]+/,'_')" -> "core/text-transform58"
+AKA_Name_2 -> "core/text-transform58"
+"core/text-transform59" -> Facility_Type_15
+"expression:value.toTitlecase()" -> "core/text-transform59"
+Facility_Type_14 -> "core/text-transform59"
+"core/mass-edit60" -> Facility_Type_16
+"expression:value" -> "core/mass-edit60"
+Facility_Type_15 -> "core/mass-edit60"
+"core/mass-edit61" -> Facility_Type_17
+"expression:value" -> "core/mass-edit61"
+Facility_Type_16 -> "core/mass-edit61"
+"core/mass-edit62" -> Facility_Type_18
+"expression:value" -> "core/mass-edit62"
+Facility_Type_17 -> "core/mass-edit62"
+"core/mass-edit63" -> Facility_Type_19
+"expression:value" -> "core/mass-edit63"
+Facility_Type_18 -> "core/mass-edit63"
+"core/mass-edit64" -> Facility_Type_20
+"expression:value" -> "core/mass-edit64"
+Facility_Type_19 -> "core/mass-edit64"
+"core/mass-edit65" -> Facility_Type_21
+"expression:value" -> "core/mass-edit65"
+Facility_Type_20 -> "core/mass-edit65"
+"core/mass-edit66" -> Facility_Type_22
+"expression:value" -> "core/mass-edit66"
+Facility_Type_21 -> "core/mass-edit66"
+"core/mass-edit67" -> Facility_Type_23
+"expression:value" -> "core/mass-edit67"
+Facility_Type_22 -> "core/mass-edit67"
+"core/mass-edit68" -> Facility_Type_24
+"expression:value" -> "core/mass-edit68"
+Facility_Type_23 -> "core/mass-edit68"
+"core/mass-edit69" -> Facility_Type_25
+"expression:value" -> "core/mass-edit69"
+Facility_Type_24 -> "core/mass-edit69"
+"core/mass-edit70" -> Facility_Type_26
+"expression:value" -> "core/mass-edit70"
+Facility_Type_25 -> "core/mass-edit70"
+"core/mass-edit71" -> Facility_Type_27
+"expression:value" -> "core/mass-edit71"
+Facility_Type_26 -> "core/mass-edit71"
+"core/mass-edit72" -> Facility_Type_28
+"expression:value" -> "core/mass-edit72"
+Facility_Type_27 -> "core/mass-edit72"
+"core/mass-edit73" -> Facility_Type_29
+"expression:value" -> "core/mass-edit73"
+Facility_Type_28 -> "core/mass-edit73"
+"core/text-transform74" -> Facility_Type_30
+"expression:value.replace(\".\",\"\")" -> "core/text-transform74"
+Facility_Type_29 -> "core/text-transform74"
+"core/text-transform75" -> Facility_Type_31
+"expression:value.replace(\"&\",\"_AND_\")" -> "core/text-transform75"
+Facility_Type_30 -> "core/text-transform75"
+"core/text-transform76" -> Facility_Type_32
+"expression:value.replace(/[\\p{Zs}\\s]+/,'_')" -> "core/text-transform76"
+Facility_Type_31 -> "core/text-transform76"
+"core/text-transform77" -> DBA_Name_13
+"expression:value.trim()" -> "core/text-transform77"
+DBA_Name_12 -> "core/text-transform77"
+"core/text-transform78" -> DBA_Name_14
+"expression:value.replace(/[\\p{Zs}\\s]+/,'_')" -> "core/text-transform78"
+DBA_Name_13 -> "core/text-transform78"
+"core/text-transform79" -> DBA_Name_15
+"expression:value.toUppercase()" -> "core/text-transform79"
+DBA_Name_14 -> "core/text-transform79"
+"core/text-transform80" -> AKA_Name_4
+"expression:value.trim()" -> "core/text-transform80"
+AKA_Name_3 -> "core/text-transform80"
+"core/text-transform81" -> AKA_Name_5
+"expression:value.replace(/[\\p{Zs}\\s]+/,'_')" -> "core/text-transform81"
+AKA_Name_4 -> "core/text-transform81"
+"core/text-transform82" -> AKA_Name_6
+"expression:value.toUppercase()" -> "core/text-transform82"
+AKA_Name_5 -> "core/text-transform82"
+"core/text-transform83" -> Facility_Type_33
+"expression:value.trim()" -> "core/text-transform83"
+Facility_Type_32 -> "core/text-transform83"
+"core/text-transform84" -> Facility_Type_34
+"expression:value.replace(/[\\p{Zs}\\s]+/,'_')" -> "core/text-transform84"
+Facility_Type_33 -> "core/text-transform84"
+"core/text-transform85" -> Facility_Type_35
+"expression:value.toTitlecase()" -> "core/text-transform85"
+Facility_Type_34 -> "core/text-transform85"
+"core/mass-edit86" -> Facility_Type_36
+"expression:value" -> "core/mass-edit86"
+Facility_Type_35 -> "core/mass-edit86"
+"core/mass-edit87" -> Facility_Type_37
+"expression:value" -> "core/mass-edit87"
+Facility_Type_36 -> "core/mass-edit87"
+"core/mass-edit88" -> Facility_Type_38
+"expression:value" -> "core/mass-edit88"
+Facility_Type_37 -> "core/mass-edit88"
+"core/mass-edit89" -> Facility_Type_39
+"expression:value" -> "core/mass-edit89"
+Facility_Type_38 -> "core/mass-edit89"
+"core/mass-edit90" -> Facility_Type_40
+"expression:value" -> "core/mass-edit90"
+Facility_Type_39 -> "core/mass-edit90"
+"core/mass-edit91" -> Facility_Type_41
+"expression:value" -> "core/mass-edit91"
+Facility_Type_40 -> "core/mass-edit91"
+"core/mass-edit92" -> Facility_Type_42
+"expression:value" -> "core/mass-edit92"
+Facility_Type_41 -> "core/mass-edit92"
+"core/mass-edit93" -> Facility_Type_43
+"expression:value" -> "core/mass-edit93"
+Facility_Type_42 -> "core/mass-edit93"
+"core/mass-edit94" -> Facility_Type_44
+"expression:value" -> "core/mass-edit94"
+Facility_Type_43 -> "core/mass-edit94"
+"core/mass-edit95" -> Facility_Type_45
+"expression:value" -> "core/mass-edit95"
+Facility_Type_44 -> "core/mass-edit95"
+"core/mass-edit96" -> Facility_Type_46
+"expression:value" -> "core/mass-edit96"
+Facility_Type_45 -> "core/mass-edit96"
+"core/mass-edit97" -> Facility_Type_47
+"expression:value" -> "core/mass-edit97"
+Facility_Type_46 -> "core/mass-edit97"
+"core/mass-edit98" -> Facility_Type_48
+"expression:value" -> "core/mass-edit98"
+Facility_Type_47 -> "core/mass-edit98"
+"core/mass-edit99" -> Facility_Type_49
+"expression:value" -> "core/mass-edit99"
+Facility_Type_48 -> "core/mass-edit99"
+"core/mass-edit100" -> Facility_Type_50
+"expression:value" -> "core/mass-edit100"
+Facility_Type_49 -> "core/mass-edit100"
+"core/mass-edit101" -> Facility_Type_51
+"expression:value" -> "core/mass-edit101"
+Facility_Type_50 -> "core/mass-edit101"
+"core/mass-edit102" -> Facility_Type_52
+"expression:value" -> "core/mass-edit102"
+Facility_Type_51 -> "core/mass-edit102"
+"core/text-transform103" -> DBA_Name_16
+"expression:value.trim()" -> "core/text-transform103"
+DBA_Name_15 -> "core/text-transform103"
+"core/text-transform104" -> DBA_Name_17
+"expression:value.replace(/[\\p{Zs}\\s]+/,'_')" -> "core/text-transform104"
+DBA_Name_16 -> "core/text-transform104"
+"core/text-transform105" -> DBA_Name_18
+"expression:value.toUppercase()" -> "core/text-transform105"
+DBA_Name_17 -> "core/text-transform105"
+"core/text-transform106" -> AKA_Name_7
+"expression:value.trim()" -> "core/text-transform106"
+AKA_Name_6 -> "core/text-transform106"
+"core/text-transform107" -> AKA_Name_8
+"expression:value.replace(/[\\p{Zs}\\s]+/,'_')" -> "core/text-transform107"
+AKA_Name_7 -> "core/text-transform107"
+"core/text-transform108" -> AKA_Name_9
+"expression:value.toUppercase()" -> "core/text-transform108"
+AKA_Name_8 -> "core/text-transform108"
+"core/text-transform109" -> Facility_Type_53
+"expression:value.trim()" -> "core/text-transform109"
+Facility_Type_52 -> "core/text-transform109"
+"core/text-transform110" -> Facility_Type_54
+"expression:value.replace(/[\\p{Zs}\\s]+/,'_')" -> "core/text-transform110"
+Facility_Type_53 -> "core/text-transform110"
+"core/text-transform111" -> Facility_Type_55
+"expression:value.toTitlecase()" -> "core/text-transform111"
+Facility_Type_54 -> "core/text-transform111"
+"core/mass-edit112" -> Facility_Type_56
+"expression:value" -> "core/mass-edit112"
+Facility_Type_55 -> "core/mass-edit112"
+"core/mass-edit113" -> Facility_Type_57
+"expression:value" -> "core/mass-edit113"
+Facility_Type_56 -> "core/mass-edit113"
+"core/mass-edit114" -> Facility_Type_58
+"expression:value" -> "core/mass-edit114"
+Facility_Type_57 -> "core/mass-edit114"
+"core/mass-edit115" -> Facility_Type_59
+"expression:value" -> "core/mass-edit115"
+Facility_Type_58 -> "core/mass-edit115"
+"core/mass-edit116" -> Facility_Type_60
+"expression:value" -> "core/mass-edit116"
+Facility_Type_59 -> "core/mass-edit116"
+"core/mass-edit117" -> Facility_Type_61
+"expression:value" -> "core/mass-edit117"
+Facility_Type_60 -> "core/mass-edit117"
+"core/mass-edit118" -> Facility_Type_62
+"expression:value" -> "core/mass-edit118"
+Facility_Type_61 -> "core/mass-edit118"
+"core/mass-edit119" -> Facility_Type_63
+"expression:value" -> "core/mass-edit119"
+Facility_Type_62 -> "core/mass-edit119"
+"core/mass-edit120" -> Facility_Type_64
+"expression:value" -> "core/mass-edit120"
+Facility_Type_63 -> "core/mass-edit120"
+"core/mass-edit121" -> Facility_Type_65
+"expression:value" -> "core/mass-edit121"
+Facility_Type_64 -> "core/mass-edit121"
+"core/mass-edit122" -> Facility_Type_66
+"expression:value" -> "core/mass-edit122"
+Facility_Type_65 -> "core/mass-edit122"
+"core/mass-edit123" -> Facility_Type_67
+"expression:value" -> "core/mass-edit123"
+Facility_Type_66 -> "core/mass-edit123"
+"core/mass-edit124" -> Facility_Type_68
+"expression:value" -> "core/mass-edit124"
+Facility_Type_67 -> "core/mass-edit124"
+"core/text-transform125" -> Inspection_Type_14
+"expression:value.toTitlecase()" -> "core/text-transform125"
+Inspection_Type_13 -> "core/text-transform125"
+"core/text-transform126" -> Results_1
+"expression:value.toTitlecase()" -> "core/text-transform126"
+Results -> "core/text-transform126"
+"core/text-transform127" -> Violations_2
+"expression:value.replace(/[\\p{Zs}\\s]+/,'_')" -> "core/text-transform127"
+Violations_1 -> "core/text-transform127"
+"core/mass-edit128" -> Address_5
+"expression:value" -> "core/mass-edit128"
+Address_4 -> "core/mass-edit128"
+"core/mass-edit129" -> Address_6
+"expression:value" -> "core/mass-edit129"
+Address_5 -> "core/mass-edit129"
+"core/mass-edit130" -> Address_7
+"expression:value" -> "core/mass-edit130"
+Address_6 -> "core/mass-edit130"
+"core/mass-edit131" -> Inspection_Type_15
+"expression:value" -> "core/mass-edit131"
+Inspection_Type_14 -> "core/mass-edit131"
+"core/mass-edit132" -> Inspection_Type_16
+"expression:value" -> "core/mass-edit132"
+Inspection_Type_15 -> "core/mass-edit132"
+"core/mass-edit133" -> Inspection_Type_17
+"expression:value" -> "core/mass-edit133"
+Inspection_Type_16 -> "core/mass-edit133"
+"core/mass-edit134" -> Inspection_Type_18
+"expression:value" -> "core/mass-edit134"
+Inspection_Type_17 -> "core/mass-edit134"
+"core/mass-edit135" -> Inspection_Type_19
+"expression:value" -> "core/mass-edit135"
+Inspection_Type_18 -> "core/mass-edit135"
+"core/mass-edit136" -> Inspection_Type_20
+"expression:value" -> "core/mass-edit136"
+Inspection_Type_19 -> "core/mass-edit136"
+"core/text-transform137" -> Inspection_Type_21
+"expression:value.replace(/\\d{4}/,\"\")" -> "core/text-transform137"
+Inspection_Type_20 -> "core/text-transform137"
+"core/text-transform138" -> Inspection_Type_22
+"expression:value.trim()" -> "core/text-transform138"
+Inspection_Type_21 -> "core/text-transform138"
+"core/mass-edit139" -> Inspection_Type_23
+"expression:value" -> "core/mass-edit139"
+Inspection_Type_22 -> "core/mass-edit139"
+"core/text-transform140" -> Facility_Type_69
+"expression:value.toTitlecase()" -> "core/text-transform140"
+Facility_Type_68 -> "core/text-transform140"
+"core/text-transform141" -> Risk_1
+"expression:value.toString()" -> "core/text-transform141"
+Risk -> "core/text-transform141"
+"core/text-transform142" -> AKA_Name_10
+"expression:value.toString()" -> "core/text-transform142"
+AKA_Name_9 -> "core/text-transform142"
+"core/text-transform143" -> Address_8
+"expression:value.toString()" -> "core/text-transform143"
+Address_7 -> "core/text-transform143"
+"core/text-transform144" -> City_7
+"expression:value.toString()" -> "core/text-transform144"
+City_6 -> "core/text-transform144"
+"core/text-transform145" -> Zip_3
+"expression:value.toString()" -> "core/text-transform145"
+Zip_2 -> "core/text-transform145"
+"core/text-transform146" -> Inspection_Type_24
+"expression:value.toString()" -> "core/text-transform146"
+Inspection_Type_23 -> "core/text-transform146"
+"core/text-transform147" -> Violations_3
+"expression:value.toString()" -> "core/text-transform147"
+Violations_2 -> "core/text-transform147"
+"core/text-transform148" -> Location_1
+"expression:value.toString()" -> "core/text-transform148"
+Location -> "core/text-transform148"
+"core/text-transform149" -> City_8
+"expression:value.toTitlecase()" -> "core/text-transform149"
+City_7 -> "core/text-transform149"
+CombineDataCleaningChanges -> CleanData
+DBA_Name_18 -> CombineDataCleaningChanges
+AKA_Name_10 -> CombineDataCleaningChanges
+Facility_Type_69 -> CombineDataCleaningChanges
+Address_8 -> CombineDataCleaningChanges
+City_8 -> CombineDataCleaningChanges
+Zip_3 -> CombineDataCleaningChanges
+Inspection_Type_24 -> CombineDataCleaningChanges
+Violations_3 -> CombineDataCleaningChanges
+Inspection_ID_1 -> CombineDataCleaningChanges
+"License_#_1" -> CombineDataCleaningChanges
+State_1 -> CombineDataCleaningChanges
+Inspection_Date_1 -> CombineDataCleaningChanges
+Results_1 -> CombineDataCleaningChanges
+Risk_1 -> CombineDataCleaningChanges
+Location_1 -> CombineDataCleaningChanges
+
+/* End of double cluster for drawing box around nodes in workflow */
+}}
+
+/* End of top-level graph */
+}
