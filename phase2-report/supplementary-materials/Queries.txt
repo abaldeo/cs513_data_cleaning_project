@@ -73,3 +73,14 @@ FROM EstablishmentLocation;
 --18. Clustered/Distinct City Count Check 
 SELECT count(DISTINCT city) 
 FROM EstablishmentLocation; 
+
+--19. Check Inspection Type Clustering Result
+select distinct  Inspection_Type  from FoodInspection where  Inspection_Type  like '%task%force%' COLLATE NOCASE;
+
+--20. Check Inspection Type Clustering Result
+select distinct city from EstablishmentLocation where city like '%CHI%' COLLATE NOCASE;
+
+--21. Check Facility_Type Clustering Result
+select distinct Facility_Type from FoodEstablishment where Facility_Type like '%Children%' COLLATE NOCASE;
+ 
+ 
